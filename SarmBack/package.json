@@ -1,0 +1,29 @@
+{
+   "name": "SarmBack",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "build": "tsc",
+      "start": "ts-node src/index.ts",
+      "dev": "tsc-watch --onSuccess \"node build/index.js\""
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "devDependencies": {
+      "@types/node": "^8.10.66",
+      "ts-node": "3.3.0",
+      "tsc-watch": "^4.2.9",
+      "typescript": "^3.3.3333",
+      "typescript-tools": "^0.3.1"
+   },
+   "dependencies": {
+      "cors": "^2.8.5",
+      "express": "^4.17.1",
+      "morgan": "^1.10.0",
+      "pg": "^8.4.0",
+      "reflect-metadata": "^0.1.10",
+      "typeorm": "^0.2.29"
+   }
+}

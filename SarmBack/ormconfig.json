@@ -1,0 +1,24 @@
+{
+   "type": "postgres",
+   "host": "40.88.145.158",
+   "port": 5432,
+   "username": "sarm",
+   "password": "12345678aA!",
+   "database": "sarm",
+   "synchronize": false,
+   "logging": false,
+   "entities": [
+      "src/entity/**/*.ts"
+   ],
+   "migrations": [
+      "src/migration/**/*.ts"
+   ],
+   "subscribers": [
+      "src/subscriber/**/*.ts"
+   ],
+   "cli": {
+      "entitiesDir": "src/entity",
+      "migrationsDir": "src/migration",
+      "subscribersDir": "src/subscriber"
+   }
+}
