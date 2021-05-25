@@ -3,14 +3,14 @@
     
     <div fxLayout="column" >
         <div fxLayout="row" >
-            <mat-grid-list cols="1" style="margin-top:5%; " rowHeight="10vh">
+            <mat-grid-list cols="1" style="margin-top:10%; " rowHeight="40%">
                 <div class="center" style="text-align: center;">
-                    <img style="width:50%" src="assets/logo.png">
+                    <img style="width:40%" src="assets/logo.png">
                 </div>
             </mat-grid-list>
         </div> 
         <div fxLayout="row" >
-            <mat-grid-list cols="1" rowHeight="70vh">
+            <mat-grid-list cols="1" rowHeight="50vh">
                 <mat-grid-tile>
                     <mat-card style='width: 300px'>
                         <div class="center" style="text-align: center;">
@@ -22,9 +22,7 @@
                                 <mat-form-field style="width: 100%;" class="example-full-width">
                                     <mat-label>Email</mat-label>
                                     <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="emailMatcher" placeholder="mail@codelco.cl" >
-                                    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-                                        Por favor entre un email valido
-                                    </mat-error>
+                                    
                                     <mat-error *ngIf="emailFormControl.hasError('required')">
                                         Email es <strong>requerido</strong>
                                     </mat-error>
