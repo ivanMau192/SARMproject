@@ -1,0 +1,55 @@
+
+<div fxFlexFill fxLayoutAlign="center center">
+    
+    <div fxLayout="column" >
+        <div fxLayout="row" >
+            <mat-grid-list cols="1" style="margin-top:5%; " rowHeight="10vh">
+                <div class="center" style="text-align: center;">
+                    <img style="width:50%" src="assets/logo.png">
+                </div>
+            </mat-grid-list>
+        </div> 
+        <div fxLayout="row" >
+            <mat-grid-list cols="1" rowHeight="70vh">
+                <mat-grid-tile>
+                    <mat-card style='width: 300px'>
+                        <div class="center" style="text-align: center;">
+                            <h2>Inicio de sesion</h2>
+                            <mat-divider></mat-divider>
+                        </div>
+                        <div>
+                            <form class="Login-form">
+                                <mat-form-field style="width: 100%;" class="example-full-width">
+                                    <mat-label>Email</mat-label>
+                                    <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="emailMatcher" placeholder="mail@codelco.cl" >
+                                    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                                        Por favor entre un email valido
+                                    </mat-error>
+                                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                                        Email es <strong>requerido</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                                
+                                
+                                <mat-form-field style="width: 100%;" class="example-full-width">
+                                    <mat-label>Contraseña</mat-label>
+                                    <input type="password" matInput [formControl]="passwordFormControl" [errorStateMatcher]="passwordMatcher">
+                                    
+                                    <mat-error *ngIf="passwordFormControl.hasError('required')">
+                                        La contraseña es <strong>requireda</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                                <mat-form-field  appearance="none" style="text-align: center; width: 100%;" class="center example-full-width">
+                                    <input type="password" style="display:none" matInput>
+                                    <button mat-raised-button color="primary" (click)="login()">Iniciar Sesion</button>
+                                </mat-form-field>   
+                            </form>
+                        </div>
+                        
+                    </mat-card>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </div>
+    </div>    
+</div>
+
