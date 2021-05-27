@@ -17,3 +17,5 @@ Integración con plataformas externas para visualizar métricas
 Disminución de tiempos de trabajo debido a procesamiento manual de datos
 
 Aumento de productividad por el ahorro de tiempo
+
+
