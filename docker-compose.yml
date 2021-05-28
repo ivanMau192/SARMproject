@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+    sarmback:
+        build: ./SarmBack
+        volumes: 
+            - ./SarmBack:/usr/src/app/
+        ports:
+            - 3000:3000
+        command: npm run dev
+
+    sarmfront:
+        build: ./SarmFrontend
+        volumes: 
+            - ./SarmFrontend:/app
+        ports:
+            - 4200:4200
+        command: npm start
+        depends_on: sarmback
+
