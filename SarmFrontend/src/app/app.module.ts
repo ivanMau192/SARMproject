@@ -12,10 +12,12 @@ import {MatInputModule} from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { InitialViewComponent } from './components/initial-view/initial-view.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    InitialViewComponent
   ],
   imports: [
     BrowserModule,

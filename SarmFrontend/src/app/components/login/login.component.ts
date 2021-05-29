@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 
@@ -24,6 +24,8 @@ export class PasswordErrorStateMatcher implements ErrorStateMatcher {
 })
 export class LoginComponent implements OnInit {
 
+  @Output() loginChanged: EventEmitter<Object> = new EventEmitter()
+
   emailFormControl = new FormControl('', [
     Validators.required,
     Validators.email,
@@ -42,6 +44,7 @@ export class LoginComponent implements OnInit {
   login(){
     console.log(this.emailFormControl)
     console.log(this.passwordFormControl)
+    this.loginChanged.emit({status:true});
   }
 
 }

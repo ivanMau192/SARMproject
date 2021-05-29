@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'SarmFrontend';
+  loginStatus = {status:false}
+  countChangedHandler(status: Object) {
+    
+    
+    console.log(status)
+    this.loginStatus.status = status["status"]
+  }
 }
