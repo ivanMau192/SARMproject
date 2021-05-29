@@ -14,6 +14,8 @@ import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/materi
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { InitialViewComponent } from './components/initial-view/initial-view.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTooltipModule} from '@angular/material/tooltip';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatIconModule,
+    MatTooltipModule
   ],
   providers: [
     {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}

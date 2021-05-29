@@ -1,3 +1,4 @@
+import { EventEmitter, Output } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,6 +10,9 @@ export class InitialViewComponent implements OnInit {
 
   selectedModule = "initial"
 
+  @Output() loginChanged: EventEmitter<Object> = new EventEmitter()
+
+
   constructor() { }
 
   ngOnInit(): void {
@@ -16,6 +20,11 @@ export class InitialViewComponent implements OnInit {
 
   changeModule(selection:string){
     this.selectedModule=selection
+  }
+
+  logout(){
+    console.log("IN")
+    this.loginChanged.emit({status:false});
   }
 
 }

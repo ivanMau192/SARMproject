@@ -46,7 +46,18 @@
         </div> 
         
     </div>
-    <div fxFlex="70%">
-        <p> second div </p>
+    <div fxFlex="85%">
+        <div fxLayout="row" class="module-disp" style="height: 7vh; position:relative;" fxLayoutGap="10">
+            <div class="header">
+                <button (click)="logout()" matTooltip="Cerrar Sesion" style="margin-right: 13%;width:10%;" mat-button><mat-icon style="vertical-align:unset;font-size: 46px; margin-top: 1.33vh;" aria-hidden="false">logout</mat-icon></button>
+                
+                <div style="margin-right: 5%;width:10%; font-size: 24px;">Usuario</div>
+            </div>
+            <div class="divisor-header center" style="bottom: 0; position:absolute; "></div>
+            
+        </div>
+        <div fxLayout="row">
+            Body    
+        </div>
     </div>
 </div>
