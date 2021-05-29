@@ -1,1 +1,52 @@
-<p>initial-view works!</p>
+<div fxLayout="row" fxLayoutGap="10">
+    <div class="panel" fxFlex="15%">
+        <!-- Comienzo panel -->
+        <div fxLayout="row" fxLayoutGap="10">
+            <div >
+                <img class="center" style="width:80%;padding-left:0;margin-left: 1.5vw;" src="assets/logo.png">
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutGap="10">
+            <div class="divisor center"></div>
+        </div>
+        <div fxLayout="row" fxLayoutGap="10">
+            <div class="divisor center"></div>
+        </div>
+        
+        <!-- Comienzo opciones --> 
+
+        <div fxLayout="row" (click)="changeModule('initial')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
+            <div class="center" style="text-align: center;">Inicio</div>
+            <div class="divisor-white center"></div>
+            <div *ngIf ="selectedModule=='initial'" class="divisor-selected center"></div>
+        </div>
+        
+        <div fxLayout="row" (click)="changeModule('waste')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
+            <div class="center" style="text-align: center;">Residuos</div>
+            <div class="divisor-white center"></div>
+            <div *ngIf ="selectedModule=='waste'" class="divisor-selected center"></div>
+        </div> 
+
+        <div fxLayout="row" (click)="changeModule('wateroom')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
+            <div class="center" style="text-align: center;">Baños</div>
+            <div class="divisor-white center"></div>
+            <div *ngIf ="selectedModule=='wateroom'" class="divisor-selected center"></div>
+        </div> 
+
+        <div fxLayout="row" (click)="changeModule('comercial')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
+            <div class="center" style="text-align: center;">Comercial</div>
+            <div class="divisor-white center"></div>
+            <div *ngIf ="selectedModule=='comercial'" class="divisor-selected center"></div>
+        </div>
+
+        <div fxLayout="row" (click)="changeModule('users')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
+            <div class="center" style="text-align: center;">Usuarios</div>
+            <div class="divisor-white center"></div>
+            <div *ngIf ="selectedModule=='users'" class="divisor-selected center"></div>
+        </div> 
+        
+    </div>
+    <div fxFlex="70%">
+        <p> second div </p>
+    </div>
+</div>

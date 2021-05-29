@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InitialViewComponent implements OnInit {
 
+  selectedModule = "initial"
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  changeModule(selection:string){
+    this.selectedModule=selection
   }
 
 }
