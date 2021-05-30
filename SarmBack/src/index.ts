@@ -2,7 +2,10 @@ import morgan from 'morgan';
 import express from 'express';
 import cors from 'cors';
 import profilesRoutes from './routes/profiles.routes';
+import usersRoutes from './routes/users.routes';
+
 import { createConnection } from "typeorm";
+
 import "reflect-metadata";
 
 const app = express();
@@ -68,6 +71,7 @@ const HOST = '0.0.0.0';
 app.get('/', (req, res) => {
   res.send('Hello World');
   req.session.test = 1
+  req.session.var = "HOLA"
 });
 
 app.listen(PORT, HOST);
@@ -76,5 +80,5 @@ console.log(`Running on http://${HOST}:${PORT}`);
 createConnection().then(async connection => {
   console.log('DB conection OK');
   app.use(profilesRoutes);
-  
+  app.use(usersRoutes);
 })
