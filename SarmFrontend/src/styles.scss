@@ -32,7 +32,8 @@ $SarmFrontend-theme: mat-light-theme((
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($SarmFrontend-theme);
-
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-balham.css";
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }

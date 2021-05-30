@@ -16,11 +16,19 @@ import { InitialViewComponent } from './components/initial-view/initial-view.com
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatTabsModule} from '@angular/material/tabs';
+import { UsersComponent } from './components/users/users.component';
+import { AgGridModule } from 'ag-grid-angular';
+import { MatProfilesPickerRenderComponent } from './components/utils/mat-profiles-picker-render/mat-profiles-picker-render.component';
+import { MatFormFieldModule } from "@angular/material/form-field";
+import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    InitialViewComponent
+    InitialViewComponent,
+    UsersComponent,
+    MatProfilesPickerRenderComponent
   ],
   imports: [
     BrowserModule,
@@ -35,11 +43,17 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     ReactiveFormsModule,
     FlexLayoutModule,
     MatIconModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatTabsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    AgGridModule.withComponents([])
   ],
   providers: [
     {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [MatProfilesPickerRenderComponent]
 })
 export class AppModule { }
