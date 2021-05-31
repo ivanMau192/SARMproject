@@ -1,7 +1,8 @@
 <ng-container>
 
   <div>
-    <app-login></app-login>
+    <app-login *ngIf="!loginStatus.status" (loginChanged)="countChangedHandler($event)"></app-login>
+    <app-initial-view *ngIf="loginStatus.status" (loginChanged)="countChangedHandler($event)"></app-initial-view>
   </div>
 
 

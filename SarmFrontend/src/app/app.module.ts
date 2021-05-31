@@ -12,10 +12,23 @@ import {MatInputModule} from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { InitialViewComponent } from './components/initial-view/initial-view.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatTabsModule} from '@angular/material/tabs';
+import { UsersComponent } from './components/users/users.component';
+import { AgGridModule } from 'ag-grid-angular';
+import { MatProfilesPickerRenderComponent } from './components/utils/mat-profiles-picker-render/mat-profiles-picker-render.component';
+import { MatFormFieldModule } from "@angular/material/form-field";
+import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    InitialViewComponent,
+    UsersComponent,
+    MatProfilesPickerRenderComponent
   ],
   imports: [
     BrowserModule,
@@ -27,11 +40,20 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatInputModule,
     MatButtonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FlexLayoutModule,
+    MatIconModule,
+    MatTooltipModule,
+    MatTabsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    AgGridModule.withComponents([])
   ],
   providers: [
     {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [MatProfilesPickerRenderComponent]
 })
 export class AppModule { }

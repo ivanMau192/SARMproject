@@ -1,0 +1,63 @@
+<div fxLayout="row" fxLayoutGap="10">
+    <div class="panel" fxFlex="15%">
+        <!-- Comienzo panel -->
+        <div fxLayout="row" fxLayoutGap="10">
+            <div >
+                <img class="center" style="width:80%;padding-left:0;margin-left: 1.5vw;" src="assets/logo.png">
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutGap="10">
+            <div class="divisor center"></div>
+        </div>
+        <div fxLayout="row" fxLayoutGap="10">
+            <div class="divisor center"></div>
+        </div>
+        
+        <!-- Comienzo opciones --> 
+
+        <div fxLayout="row" (click)="changeModule('initial')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
+            <div class="center" style="text-align: center;">Inicio</div>
+            <div class="divisor-white center"></div>
+            <div *ngIf ="selectedModule=='initial'" class="divisor-selected center"></div>
+        </div>
+        
+        <div fxLayout="row" (click)="changeModule('waste')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
+            <div class="center" style="text-align: center;">Residuos</div>
+            <div class="divisor-white center"></div>
+            <div *ngIf ="selectedModule=='waste'" class="divisor-selected center"></div>
+        </div> 
+
+        <div fxLayout="row" (click)="changeModule('wateroom')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
+            <div class="center" style="text-align: center;">Baños</div>
+            <div class="divisor-white center"></div>
+            <div *ngIf ="selectedModule=='wateroom'" class="divisor-selected center"></div>
+        </div> 
+
+        <div fxLayout="row" (click)="changeModule('comercial')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
+            <div class="center" style="text-align: center;">Comercial</div>
+            <div class="divisor-white center"></div>
+            <div *ngIf ="selectedModule=='comercial'" class="divisor-selected center"></div>
+        </div>
+
+        <div fxLayout="row" (click)="changeModule('users')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
+            <div class="center" style="text-align: center;">Usuarios</div>
+            <div class="divisor-white center"></div>
+            <div *ngIf ="selectedModule=='users'" class="divisor-selected center"></div>
+        </div> 
+        
+    </div>
+    <div fxFlex="85%">
+        <div fxLayout="row" class="module-header" style="height: 7vh; position:relative;" fxLayoutGap="10">
+            <div class="header">
+                <button (click)="logout()" matTooltip="Cerrar Sesion" style="margin-right: 13%;width:10%;" mat-button><mat-icon style="vertical-align:unset;font-size: 46px; margin-top: 1.33vh;" aria-hidden="false">logout</mat-icon></button>
+                
+                <div style="margin-right: 5%;width:10%; font-size: 24px;">Usuario</div>
+            </div>
+            <div class="divisor-header center" style="bottom: 0; position:absolute; "></div>
+            
+        </div>
+        <div fxLayout="row" style="margin-top:3%">
+            <app-users style="width:100%" *ngIf ="selectedModule=='users'"></app-users> 
+        </div>
+    </div>
+</div>

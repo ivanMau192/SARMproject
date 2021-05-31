@@ -1,0 +1,54 @@
+.panel{
+    height: 100vh;
+    background: #03506F;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color:white;
+    
+}
+.divisor{
+    background-color: #0A043C;
+    width: 90%;
+    height: 3px;
+    padding:0;
+}
+
+.divisor-white{
+    background-color: white;
+    width: 90%;
+    height: 3px;
+    padding:0;
+}
+
+
+.module-disp{
+    display: block !important;
+}
+.module-header{
+    display: block !important;
+}
+.module-disp:hover{
+    background:#ff6c556e;
+}
+.divisor-selected{
+    background-color: #FF6D55;
+    width: 70%;
+    height: 3px;
+    padding:0;
+    margin-top: 5%;
+}
+.divisor-header{
+    background-color: #0A043C;
+    width: 90%;
+    height: 3px;
+    padding:0;
+    margin-left: 3.4vw;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    height:100%;
+    width:30%;
+}
