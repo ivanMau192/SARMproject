@@ -7,10 +7,5 @@ export class ProfilesController {
         return res.send(req.session);
     }
 
-    funcionNueva = async (req: Request, res: Response): Promise<Response> => {
-        console.log("EJECUTANDO FUNCION")
-        return res.send("asdasdasdasdas");
-    }
-
 
 }

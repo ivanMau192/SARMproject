@@ -6,8 +6,14 @@ import { Contracts } from '../entity/Contracts';
 export class UsersController {
     getUsers = async (req: Request, res: Response): Promise<Response> => {
         console.log("Obteniendo desde usuarios")
-        console.log(req.body)
-        console.log(req.body.param1)
+        if (!req.body.user_id){
+            console.log("Crear usuario")
+            console.log(req.body)
+        }
+        else{
+            console.log("Modificar usuario")
+            console.log(req.body)
+        }
         let out = {status:"Ok si fue satisfactorio, Error si ocurrio un error", data:""}
         return res.send(out);
     }
