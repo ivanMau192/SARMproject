@@ -10,7 +10,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatInputModule} from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
+import { ErrorStateMatcher, MatNativeDateModule, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { InitialViewComponent } from './components/initial-view/initial-view.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -22,13 +22,18 @@ import { AgGridModule } from 'ag-grid-angular';
 import { MatProfilesPickerRenderComponent } from './components/utils/mat-profiles-picker-render/mat-profiles-picker-render.component';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import {MatSelectModule} from '@angular/material/select';
+import { WastesComponent } from './components/wastes/wastes.component';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     InitialViewComponent,
     UsersComponent,
-    MatProfilesPickerRenderComponent
+    MatProfilesPickerRenderComponent,
+    WastesComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +53,9 @@ import {MatSelectModule} from '@angular/material/select';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    MatMenuModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     AgGridModule.withComponents([])
   ],
   providers: [
