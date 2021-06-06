@@ -26,6 +26,10 @@ import { WastesComponent } from './components/wastes/wastes.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { BathroomsComponent } from './components/bathrooms/bathrooms.component';
+import { FileUploadComponent } from './botoom-sheet/file-upload/file-upload.component';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+
+
 
 @NgModule({
   declarations: [
@@ -35,7 +39,8 @@ import { BathroomsComponent } from './components/bathrooms/bathrooms.component';
     UsersComponent,
     MatProfilesPickerRenderComponent,
     WastesComponent,
-    BathroomsComponent
+    BathroomsComponent,
+    FileUploadComponent
   ],
   imports: [
     BrowserModule,
@@ -58,12 +63,16 @@ import { BathroomsComponent } from './components/bathrooms/bathrooms.component';
     MatMenuModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatBottomSheetModule,
     AgGridModule.withComponents([])
   ],
   providers: [
     {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
   ],
   bootstrap: [AppComponent],
-  entryComponents: [MatProfilesPickerRenderComponent]
+  entryComponents: [
+    MatProfilesPickerRenderComponent,
+    FileUploadComponent
+  ]
 })
 export class AppModule { }

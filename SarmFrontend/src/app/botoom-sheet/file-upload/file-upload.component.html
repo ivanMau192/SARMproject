@@ -1,0 +1,25 @@
+<input style="margin-left:1vw;margin-top: 1vw;" type="file" class="form-control" (change)="addfile($event)" placeholder="Upload file" accept=".csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+<button style="margin-left:1vw;margin-top: 1vw;" *ngIf="userRowData.length>0" mat-button (click)="dismissModal()">Cargar</button>
+<div style="margin-left:2vw;margin-top: 1vw;"><h3>Servicio</h3></div>
+            <ag-grid-angular 
+                style="height: 9vh; margin:1%" 
+                class="ag-theme-balham"
+                [rowData]="serviceRowData"
+                [defaultColDef]="defaultColDef"
+                [columnDefs]="servColumnsDefs"
+                [frameworkComponents]="frameworkComponents"
+                
+                >
+            </ag-grid-angular>
+            <div class="divisor"></div>
+            <div style="margin-left:2vw;margin-top: 1vw;"><h3>Servicios</h3></div>
+            <ag-grid-angular 
+                style="height: 54vh; margin:1%" 
+                class="ag-theme-balham"
+                [rowData]="userRowData"
+                [defaultColDef]="defaultColDef"
+                [columnDefs]="userColumnsDefs"
+                [frameworkComponents]="frameworkComponents"
+                (gridReady)="onGridReady($event)"
+                >
+            </ag-grid-angular>
