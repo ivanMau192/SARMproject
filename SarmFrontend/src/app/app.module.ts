@@ -25,6 +25,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { WastesComponent } from './components/wastes/wastes.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { BathroomsComponent } from './components/bathrooms/bathrooms.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     InitialViewComponent,
     UsersComponent,
     MatProfilesPickerRenderComponent,
-    WastesComponent
+    WastesComponent,
+    BathroomsComponent
   ],
   imports: [
     BrowserModule,

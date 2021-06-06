@@ -27,10 +27,10 @@
             <div *ngIf ="selectedModule=='waste'" class="divisor-selected center"></div>
         </div> 
 
-        <div fxLayout="row" (click)="changeModule('wateroom')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
+        <div fxLayout="row" (click)="changeModule('bathrooms')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
             <div class="center" style="text-align: center;">Baños</div>
             <div class="divisor-white center"></div>
-            <div *ngIf ="selectedModule=='wateroom'" class="divisor-selected center"></div>
+            <div *ngIf ="selectedModule=='bathrooms'" class="divisor-selected center"></div>
         </div> 
 
         <div fxLayout="row" (click)="changeModule('comercial')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
@@ -59,6 +59,8 @@
         <div fxLayout="row" style="margin-top:3%">
             <app-users style="width:100%" *ngIf ="selectedModule=='users'"></app-users> 
             <app-wastes style="width:100%" *ngIf ="selectedModule=='waste'"></app-wastes>
+            <app-bathrooms style="width:100%" *ngIf ="selectedModule=='bathrooms'"></app-bathrooms>
+            
         </div>
     </div>
 </div>
