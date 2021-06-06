@@ -1,7 +1,11 @@
 <div style="width:100%">
     <mat-tab-group mat-stretch-tabs style="width:100%">
         <mat-tab label="Baños">
+            <div>
+
+            </div>
             <button style="margin-left:1vw;margin-top: 1vw;" mat-button [matMenuTriggerFor]="menu">Filtros</button>
+            <input style="margin-left:1vw;margin-top: 1vw;" type="file" class="form-control" (change)="addfile($event)" placeholder="Upload file" accept=".csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
             <mat-menu #menu="matMenu" class="filter-wrapper" [hasBackdrop]="false">
                 <div style="margin: 2vh;" (click)="$event.stopPropagation()" (keydown)="$event.stopPropagation()">
                     <form >
@@ -22,7 +26,7 @@
             </mat-menu>
             <div style="margin-left:2vw;margin-top: 1vw;"><h3>Servicio</h3></div>
             <ag-grid-angular 
-                style="height: 7vh; margin:1%" 
+                style="height: 9vh; margin:1%" 
                 class="ag-theme-balham"
                 [rowData]="serviceRowData"
                 [defaultColDef]="defaultColDef"
@@ -34,7 +38,7 @@
             <div class="divisor"></div>
             <div style="margin-left:2vw;margin-top: 1vw;"><h3>Servicios</h3></div>
             <ag-grid-angular 
-                style="height: 53vh; margin:1%" 
+                style="height: 54vh; margin:1%" 
                 class="ag-theme-balham"
                 [rowData]="userRowData"
                 [defaultColDef]="defaultColDef"

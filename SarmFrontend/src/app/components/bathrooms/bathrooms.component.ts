@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import * as XLSX from 'xlsx'
+
 @Component({
   selector: 'app-bathrooms',
   templateUrl: './bathrooms.component.html',
@@ -9,6 +11,9 @@ export class BathroomsComponent implements OnInit {
 
   gridApi: any;
   gridColumnApi: any;
+  file: any;
+  arrayBuffer;
+  filelist: any[];
 
   constructor() { }
   wasteConvertMetrics = [
@@ -47,14 +52,12 @@ export class BathroomsComponent implements OnInit {
     {headerName: 'Sector', field: 'sector'},
     {headerName: 'Cantidad', field: 'quantity'},
     {headerName: 'Hora', field: 'hour'},
-    {headerName: 'Estado', field: 'Status'}
+    {headerName: 'Estado', field: 'status'}
 	];
 
-  serviceRowData = [{ service:"Baños Quimicos",equipment:"Varios",client:"Aguas y Rieles S.A.",sector:"Varios",quantity:"18",hour:"Varios",status:"Sin Aprobar" }]
+  serviceRowData = []
 
-  userRowData = [
-		{service:"Baños Quimicos",service_id:"5341",location:"Cruzado Sur",hour:"09:59:21",status:"Mant. Ok",cause:"",description:"",cont_status:"Sin Aprobar"}
-	];
+  userRowData = [];
 
   ngOnInit(): void {
 
@@ -80,5 +83,54 @@ export class BathroomsComponent implements OnInit {
     };
     this.gridApi.refreshCells(params);
   }
+
+  addfile(event)    {    
+    this.file= event.target.files[0];     
+    let fileReader = new FileReader();    
+    fileReader.readAsArrayBuffer(this.file);     
+    fileReader.onload = (e) => {    
+        this.arrayBuffer = fileReader.result;    
+        var data = new Uint8Array(this.arrayBuffer);    
+        var arr = new Array();    
+        for(var i = 0; i != data.length; ++i) arr[i] = String.fromCharCode(data[i]);    
+        var bstr = arr.join("");    
+        var workbook = XLSX.read(bstr, {type:"binary"});    
+        var first_sheet_name = workbook.SheetNames[0];    
+        
+        var worksheet = workbook.Sheets[first_sheet_name];    
+        
+        let arrayList = XLSX.utils.sheet_to_json(worksheet,{raw:true})
+        let secondArrayList
+        if(workbook.SheetNames[1]){
+          var second_sheet_name = workbook.SheetNames[1];  
+        
+          var worksheet2 = workbook.Sheets[second_sheet_name];
+          
+          secondArrayList = XLSX.utils.sheet_to_json(worksheet2,{raw:true})
+        }
+        
+        
+        
+        console.log(arrayList);
+        console.log(secondArrayList);
+        this.serviceRowData = []
+        this.userRowData = []
+        for(let array of arrayList){
+          let append = { service:array["SERVICIO"],equipment:array["EQUIPO"],client:array["CLIENTE"],sector:array["SECTOR"],quantity:array["M3/CANT."],hour:array["HORA"],status:array["ESTADO"] }
+          this.serviceRowData = this.serviceRowData.concat(append)
+          console.log(array)
+        }
+        if(secondArrayList){
+          for(let secondArray of secondArrayList){
+            let append = {service:secondArray["SERVICIO"],service_id:secondArray["BAÑO"],location:secondArray["UBICACION"],hour:secondArray["HORA"],status:secondArray["MANTENCION"],cause:secondArray["CAUSA"],description:secondArray["OBS"],cont_status:secondArray["ESTADO CLIENTE"]}
+            this.userRowData = this.userRowData.concat(append)
+          }
+        }
+        var params = {
+          force: true
+        };
+        this.gridApi.refreshCells(params)
+  }    
+}    
 
 }
