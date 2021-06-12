@@ -39,7 +39,7 @@
             <div *ngIf ="selectedModule=='comercial'" class="divisor-selected center"></div>
         </div>
 
-        <div fxLayout="row" (click)="changeModule('users')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
+        <div fxLayout="row" *ngIf="checkPerm('users-module')" (click)="changeModule('users')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
             <div class="center" style="text-align: center;">Usuarios</div>
             <div class="divisor-white center"></div>
             <div *ngIf ="selectedModule=='users'" class="divisor-selected center"></div>
