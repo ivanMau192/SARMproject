@@ -6,6 +6,21 @@ import { Users } from '../entity/Users';
 
 
 export class LoginController {
+ 
+    isLogged = async (req: Request, res: Response): Promise<Response> => {
+
+        console.log(req.session)
+        let out = {status:true}
+        if(req.session.user){
+            return res.send(out)
+        }else{
+            out.status = false
+            return res.send(out)
+        }
+        
+
+    }
+
     getLogin = async (req: Request, res: Response): Promise<Response> => {
         console.log("login data")
         console.log(req.body)

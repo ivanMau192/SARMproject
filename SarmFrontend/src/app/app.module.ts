@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -28,7 +28,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { BathroomsComponent } from './components/bathrooms/bathrooms.component';
 import { FileUploadComponent } from './botoom-sheet/file-upload/file-upload.component';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -64,6 +64,8 @@ import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
     MatDatepickerModule,
     MatNativeDateModule,
     MatBottomSheetModule,
+    HttpClientModule,
+    MatSnackBarModule,
     AgGridModule.withComponents([])
   ],
   providers: [

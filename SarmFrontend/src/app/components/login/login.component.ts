@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { LoginService } from 'src/app/services/login.service';
 
 export class EmailErrorStateMatcher implements ErrorStateMatcher {
@@ -38,7 +39,8 @@ export class LoginComponent implements OnInit {
   emailMatcher = new EmailErrorStateMatcher();
   passwordMatcher = new PasswordErrorStateMatcher();
   constructor(
-    private loginService: LoginService
+    private loginService: LoginService,
+    private _snackBar: MatSnackBar
   ) { }
 
   ngOnInit(): void {
@@ -47,9 +49,18 @@ export class LoginComponent implements OnInit {
   login(){
     console.log(this.emailFormControl)
     console.log(this.passwordFormControl)
-    
-
-    this.loginChanged.emit({status:true});
+    if(this.emailFormControl.status == "VALID" && this.passwordFormControl.status == "VALID"){
+      this.loginService.loginUser(this.emailFormControl.value,this.passwordFormControl.value).subscribe( data =>{
+        console.log(data)
+        if(data["status"]){
+          localStorage.setItem('user',JSON.stringify(data['data']));
+          this.loginChanged.emit({status:true});
+        }else{
+          this._snackBar.open("Creedenciales Incorrectas, Por favor corregir", "Ok");
+        }
+      })
+    }
+    //
   }
 
 }
