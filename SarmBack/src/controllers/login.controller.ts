@@ -14,7 +14,7 @@ export class LoginController {
  
     isLogged = async (req: Request, res: Response): Promise<Response> => {
 
-        console.log(req.session)
+        
         let out = {status:true}
         if(req.session.user){
             return res.send(out)
@@ -28,7 +28,7 @@ export class LoginController {
 
     getLogin = async (req: Request, res: Response): Promise<Response> => {
         console.log("login data")
-        console.log(req.body)
+        
         let user = req.body.user;
         let password = req.body.password;
         let out = {status:false,data:{}}

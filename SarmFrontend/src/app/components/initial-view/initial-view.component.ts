@@ -29,7 +29,7 @@ export class InitialViewComponent implements OnInit {
   }
 
   logout(){
-    console.log("IN")
+    
     this.loginService.logOut().subscribe(data =>{
       this.loginChanged.emit({status:false});
     })

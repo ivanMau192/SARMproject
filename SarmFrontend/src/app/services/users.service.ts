@@ -6,20 +6,16 @@ import { from, Observable } from "rxjs";
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
-  baseUrl;
+export class UsersService {
+  baseUrl: string;
+
   constructor(private http:HttpClient) {
 
     this.baseUrl = environment.baseUrl
   }
 
-  loginUser(user,password): Observable <any[]>
+  getAllUsers(): Observable <any[]>
 	{
-		return this.http.post<any[]>(this.baseUrl+'login',{user:user,password:password}, { withCredentials: true });
-	}
-  logOut(): Observable <any[]>
-	{
-		return this.http.post<any[]>(this.baseUrl+'logout',{ withCredentials: true });
+		return this.http.get<any[]>(this.baseUrl+'getAllUsers');
 	}
 }
-

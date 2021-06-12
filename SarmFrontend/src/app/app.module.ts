@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -29,6 +29,7 @@ import { BathroomsComponent } from './components/bathrooms/bathrooms.component';
 import { FileUploadComponent } from './botoom-sheet/file-upload/file-upload.component';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { AuthInterceptor } from './services/auth-interceptor';
 
 
 @NgModule({
@@ -69,7 +70,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     AgGridModule.withComponents([])
   ],
   providers: [
-    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
+    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher},
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true,},
   ],
   bootstrap: [AppComponent],
   entryComponents: [

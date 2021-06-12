@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService } from 'src/app/services/users.service';
 import { MatProfilesPickerRenderComponent } from '../utils/mat-profiles-picker-render/mat-profiles-picker-render.component';
 
 @Component({
@@ -19,12 +20,11 @@ export class UsersComponent implements OnInit {
 
   frameworkComponents;
   userColumnsDefs = [
-		{headerName: 'Usuario', field: 'user_name',
+		{headerName: 'Usuario', field: 'userUsername',
         editable: true,
         width: 300, },
-		{headerName: 'Rut', field: 'user_code' },
-		{headerName: 'Estado', field: 'user_status'},
-    {headerName: 'Ultima conexion', field: 'user_last_connection'},
+		{headerName: 'Email', field: 'userName' },
+		{headerName: 'Estado', field: 'userActive',valueGetter:this.statusGetter.bind(this)},
     {headerName: 'Perfiles', field: 'prof_name',cellEditor: 'profilePicker'}
 	];
 
@@ -57,17 +57,32 @@ export class UsersComponent implements OnInit {
 		{ prof_name: 'Colaborador', perm_name: 'Unico', prof_active: "ACTIVO"}
 	];
   
-  userRowData = [
-		{ user_name: 'Usuario1', user_code: '123-3', user_status: "ACTIVO", user_last_connection:"29-05-2021", prof_name: "PERFIL"},
-		{ user_name: 'Usuario2', user_code: '123-3', user_status: "ACTIVO", user_last_connection:"29-05-2021", prof_name: "PERFIL"},
-		{ user_name: 'Usuario3', user_code: '123-3', user_status: "ACTIVO", user_last_connection:"29-05-2021", prof_name: "PERFIL"}
-	];
+  userRowData = [];
+	user: any;
+	permissions: any;
+	usersData;
 
-
-  constructor() { }
+  constructor(private userService:UsersService) { }
 
   ngOnInit(): void {
+	this.user = JSON.parse(localStorage.getItem('user'))
+	this.permissions = this.user.permissions
+	console.log(this.user)
     this.frameworkComponents = { profilePicker: MatProfilesPickerRenderComponent  };
+	this.userService.getAllUsers().subscribe((data)=>{
+		this.usersData = data["data"]
+		console.log(this.usersData)
+		this.userRowData = this.usersData
+	})
+  }
+
+  statusGetter(params){
+	  if(params.data.userActive){
+		return "ACTIVO";
+	  }else{
+		return "INACTIVO";
+	  }
+	  
   }
 
 }

@@ -63,4 +63,24 @@ export class UsersController {
         return res.send(out);
         
     }
+
+    getAllUsers = async (req: Request, res: Response): Promise<Response> => {
+        let out = {status:false,data:{}}
+        
+        if(req.session.user){
+            
+            let permissions = req.session.permissions
+            
+            if(permissions.includes('users-module')){
+                let resp = await getRepository(Users).find();
+                out.data = resp
+            }
+            
+            return res.send(out)
+        }else{
+            
+            out.status = false
+            return res.send(out)
+        }
+    }
 }

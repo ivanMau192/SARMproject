@@ -37,9 +37,13 @@ const sessionConfig = {
   resave: false,
   saveUninitialized: true,
   cookie: {
-      maxAge: 1000 * 60 * 60 * 24 * 7,
-      secure: false // ENABLE ONLY ON HTTPS
-  }}
+    httpOnly: false,
+    maxAge: null,
+    // allow the cookie to be sent via HTTP ("true" means "HTTPS only)
+    secure: false, 
+    sameSite: 'none'
+  }
+}
 
 
 app.use(express.json());

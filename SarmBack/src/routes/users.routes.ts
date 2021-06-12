@@ -4,5 +4,6 @@ const router = Router();
 
 const dc = new UsersController()
 router.post('/users', dc.getUsers)
+router.get('/getAllUsers', dc.getAllUsers)
 
 export default router;
