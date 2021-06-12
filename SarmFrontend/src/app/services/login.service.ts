@@ -17,4 +17,9 @@ export class LoginService {
 	{
 		return this.http.post<any[]>(this.baseUrl+'login',{user:user,password:password});
 	}
+  logOut(): Observable <any[]>
+	{
+		return this.http.post<any[]>(this.baseUrl+'login',{});
+	}
 }
+

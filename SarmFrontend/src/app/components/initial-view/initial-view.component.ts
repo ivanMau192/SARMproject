@@ -1,5 +1,6 @@
 import { EventEmitter, Output } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-initial-view',
@@ -11,11 +12,16 @@ export class InitialViewComponent implements OnInit {
   selectedModule = "initial"
 
   @Output() loginChanged: EventEmitter<Object> = new EventEmitter()
+  user: string;
+  renderUserName;
 
 
-  constructor() { }
+  constructor(private loginService:LoginService) { }
 
   ngOnInit(): void {
+    this.user = JSON.parse(localStorage.getItem('user'))
+    this.renderUserName = this.user["user"].user_username;
+    console.log(this.user)
   }
 
   changeModule(selection:string){
@@ -24,7 +30,10 @@ export class InitialViewComponent implements OnInit {
 
   logout(){
     console.log("IN")
-    this.loginChanged.emit({status:false});
+    this.loginService.logOut().subscribe(data =>{
+      this.loginChanged.emit({status:false});
+    })
+    
   }
 
 }

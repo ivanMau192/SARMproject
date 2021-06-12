@@ -6,6 +6,11 @@ import { Users } from '../entity/Users';
 
 
 export class LoginController {
+    logOut  = async (req: Request, res: Response): Promise<Response> => {
+        req.session = {}
+        let out = {status:true}
+        return res.send(out)
+    }
  
     isLogged = async (req: Request, res: Response): Promise<Response> => {
 
@@ -56,6 +61,7 @@ export class LoginController {
             req.session.user = resp[0];
             permissions = permissions.map(permission =>{return permission.perm_tag});
             req.session.permissions = permissions;
+            out.data['user']={user:resp[0].user_name,user_username:resp[0].user_username}
             out.data["permissions"] = permissions;
             out.data["contract"] = contract;
             out.status = true;
