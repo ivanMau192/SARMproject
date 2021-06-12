@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
+import { LoginService } from 'src/app/services/login.service';
 
 export class EmailErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -36,7 +37,9 @@ export class LoginComponent implements OnInit {
 
   emailMatcher = new EmailErrorStateMatcher();
   passwordMatcher = new PasswordErrorStateMatcher();
-  constructor() { }
+  constructor(
+    private loginService: LoginService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -44,6 +47,8 @@ export class LoginComponent implements OnInit {
   login(){
     console.log(this.emailFormControl)
     console.log(this.passwordFormControl)
+    
+
     this.loginChanged.emit({status:true});
   }
 
