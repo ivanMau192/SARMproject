@@ -7,7 +7,7 @@ import { Users } from '../entity/Users';
 
 export class LoginController {
     logOut  = async (req: Request, res: Response): Promise<Response> => {
-        req.session = {}
+        req.session.destroy();
         let out = {status:true}
         return res.send(out)
     }
@@ -28,7 +28,7 @@ export class LoginController {
 
     getLogin = async (req: Request, res: Response): Promise<Response> => {
         console.log("login data")
-        
+        console.log(req.body)
         let user = req.body.user;
         let password = req.body.password;
         let out = {status:false,data:{}}
@@ -40,6 +40,7 @@ export class LoginController {
                         .where(`u.user_name = '${user}' AND u.user_password = '${password}'`)
                         .select(['u.*','p2.*'])
                         .getRawMany();
+        
         let permissions = []
         if(resp.length > 0){
             let profilesId = resp.map(v => {return v.prof_id})

@@ -10,7 +10,7 @@ import { MatProfilesPickerRenderComponent } from '../utils/mat-profiles-picker-r
 export class UsersComponent implements OnInit {
 
   title = 'app';
-
+  allProfiles: any;
   defaultColDef = {
 		// make every column editable
 		editable: true,
@@ -25,14 +25,21 @@ export class UsersComponent implements OnInit {
         width: 300, },
 		{headerName: 'Email', field: 'userName' },
 		{headerName: 'Estado', field: 'userActive',valueGetter:this.statusGetter.bind(this)},
-    {headerName: 'Perfiles', field: 'prof_name',cellEditor: 'profilePicker'}
+    	{headerName: 'Perfiles', field: 'prof_name',valueGetter:this.profileGetter.bind(this),cellEditor: 'profilePicker',cellEditorParams:{profiles: this.profilesGetter.bind(this)}},
+		{
+			headerName: "status",
+			field: "change_status",
+			width: 100,
+			hide: true,
+			suppressToolPanel: true
+		 }
 	];
 
   profilesColumnsDefs = [
 		{headerName: 'Perfil', field: 'prof_name',
         editable: true,
         width: 300, },
-		{headerName: 'Permisos', field: 'perm_name',cellEditor: 'profilePicker' },
+		{headerName: 'Permisos', field: 'perm_name',cellEditor: 'profilePicker'},
 		{headerName: 'Estado', field: 'prof_active'}
 	];
 
@@ -61,20 +68,45 @@ export class UsersComponent implements OnInit {
 	user: any;
 	permissions: any;
 	usersData;
+	gridApi: any;
+	gridColumnApi: any;
+	userGridColumnApi: any;
+	userGridApi: any;
+	saveButtonActive = false;
+	
 
   constructor(private userService:UsersService) { }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
 	this.user = JSON.parse(localStorage.getItem('user'))
 	this.permissions = this.user.permissions
-	console.log(this.user)
+	
     this.frameworkComponents = { profilePicker: MatProfilesPickerRenderComponent  };
+	this.allProfiles = await this.getAllprofiles()
+	
 	this.userService.getAllUsers().subscribe((data)=>{
-		this.usersData = data["data"]
-		console.log(this.usersData)
+		console.log(data)
+		this.usersData = data["data"].map((user)=>{
+			user.change_status = false;
+			return user
+		})
+		
 		this.userRowData = this.usersData
+
+
 	})
   }
+
+  onGridReady(params) {
+    this.gridApi = params.api;
+    this.gridColumnApi = params.columnApi;
+  }
+
+  onUserGridReady(params) {
+    this.userGridApi = params.api;
+    this.userGridColumnApi = params.columnApi;
+  }
+
 
   statusGetter(params){
 	  if(params.data.userActive){
@@ -83,6 +115,54 @@ export class UsersComponent implements OnInit {
 		return "INACTIVO";
 	  }
 	  
+  }
+
+  profileGetter(params){
+	
+	let out = this.allProfiles.data.filter(profile => {return profile.p_prof_id == params.data.prof_name});  
+	out = out.map(v=>{return v.p_prof_name})
+	return out[0]
+	
+  }
+  
+
+  changeEvent(event){
+	
+	let rowNode = this.userGridApi.getRowNode(event.rowIndex);
+	rowNode.setDataValue('change_status', true);
+	this.saveButtonActive=true; 
+	
+  }
+  
+  saveUsers(){
+	let rowData = [];
+	this.userGridApi.forEachNode(node => rowData.push(node.data));
+	let dataToUpload = rowData.filter(rowNode =>{return rowNode.change_status})
+	this.userService.modifyUsers(dataToUpload).subscribe(data=>{
+		this.userService.getAllUsers().subscribe((data)=>{
+			console.log(data)
+			this.usersData = data["data"].map((user)=>{
+				user.change_status = false;
+				return user
+			})
+			
+			this.userRowData = this.usersData
+	
+	
+		})
+		console.log("OK")
+	})
+	
+  }
+
+  getAllprofiles(){
+	  return new Promise((resolve, reject) =>{
+		  this.userService.getAllProfiles().subscribe(data =>{resolve(data);},err =>{reject(err);})
+	  })
+  }
+  
+  profilesGetter(){
+	  return this.allProfiles
   }
 
 }

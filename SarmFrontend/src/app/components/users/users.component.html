@@ -1,6 +1,7 @@
 <div style="width:100%">
     <mat-tab-group mat-stretch-tabs style="width:100%">
         <mat-tab label="Usuarios"> 
+            <button style="margin-left:1vw;margin-top: 1vw;" *ngIf="saveButtonActive" (click)="saveUsers()" mat-button>Guardar</button>
             <ag-grid-angular 
                 style="height: 70vh; margin:3%" 
                 class="ag-theme-balham"
@@ -8,6 +9,9 @@
                 [defaultColDef]="defaultColDef"
                 [columnDefs]="userColumnsDefs"
                 [frameworkComponents]="frameworkComponents"
+                (cellValueChanged)="changeEvent($event)"
+                
+                (gridReady)="onUserGridReady($event)"
                 >
             </ag-grid-angular>
         </mat-tab>
@@ -19,7 +23,10 @@
                 [rowData]="profilesRowData"
                 [defaultColDef]="defaultColDef"
                 [columnDefs]="profilesColumnsDefs"
-                [frameworkComponents]="frameworkComponents">
+                [frameworkComponents]="frameworkComponents"
+                (cellValueChanged)="changeEvent($event)"
+                
+                (gridReady)="onGridReady($event)">
             </ag-grid-angular>
 
         </mat-tab>

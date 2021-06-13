@@ -19,7 +19,7 @@ export class LoginService {
 	}
   logOut(): Observable <any[]>
 	{
-		return this.http.post<any[]>(this.baseUrl+'logout',{ withCredentials: true });
+		return this.http.get<any[]>(this.baseUrl+'logout',{ withCredentials: true });
 	}
 }
 

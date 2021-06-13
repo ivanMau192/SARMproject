@@ -5,12 +5,14 @@ import { Profiles } from '../entity/Profiles';
 export class ProfileslistController {
     
     getlistProfiles = async (req: Request, res: Response): Promise<Response> => {
+        let out = {status:false, data:[]}
         try{
                 const listprof = await getRepository(Profiles)
-                .createQueryBuilder("profiles")
+                .createQueryBuilder("p")
+                .where(`p.prof_active = 'ACTIVO'`)
                 .getRawMany();
                 console.log("lista de perfiles", listprof )
-                let out = {status:"Ok si fue satisfactorio, Error si ocurrio un error", listprof}
+                out = {status:true, data:listprof}
                 return res.send(out);                
             }
         catch(err) {

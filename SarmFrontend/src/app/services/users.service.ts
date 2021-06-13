@@ -18,4 +18,14 @@ export class UsersService {
 	{
 		return this.http.get<any[]>(this.baseUrl+'getAllUsers');
 	}
+
+  getAllProfiles(): Observable <any[]>
+	{
+		return this.http.post<any[]>(this.baseUrl+'profileslist',{});
+	}
+
+  modifyUsers(users):Observable <any[]>
+	{
+		return this.http.post<any[]>(this.baseUrl+'addUser',{data:users});
+	}
 }

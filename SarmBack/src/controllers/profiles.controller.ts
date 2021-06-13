@@ -4,6 +4,8 @@ import { Profiles } from '../entity/Profiles';
 import { ProfilesPermissions } from '../entity/ProfilesPermissions';
 
 export class ProfilesController {
+
+    
     
     getProfiles = async (req: Request, res: Response): Promise<Response> => {
         let prof = new Profiles()

@@ -14,8 +14,8 @@ import * as moment from "moment";
     <mat-form-field appearance="fill">
       <input matInput style="display:none">
       <mat-label>Perfiles</mat-label>
-      <mat-select [(ngModel)]="dias" ngDefaultControl multiple>
-        <mat-option *ngFor="let dia of diasList" [value]="dia.key">{{dia.day}}</mat-option>
+      <mat-select [(ngModel)]="dias" ngDefaultControl>
+        <mat-option *ngFor="let profile of profiles" [value]="profile.p_prof_id">{{profile.p_prof_name}}</mat-option>
       </mat-select>
     </mat-form-field>
   `,
@@ -37,24 +37,19 @@ export class MatProfilesPickerRenderComponent implements ICellEditorAngularComp 
   
     private inputDate: any;
     dias;
-    diasList = [{day:'Administrador', key:1}, {day:'Usuario', key:2}, {day:'Colaborador', key:3}, {day:'Interno', key:4}, {day:'PERFIL', key:5}];
-    diasListArray = ['','Lunes','Martes','Miercoles','Jueves','Viernes']
-    @ViewChildren("input", { read: ViewContainerRef })
+    
+    @ViewChildren("input", { read: ViewContainerRef })  public input: ViewContainerRef;
     public inputs: QueryList<any>;
     private focusedInput: number = 0;
+    profiles=[];
   
     agInit(params: any): void {
       console.log("INICIO")
-      this.params = params;
-      let value = this.params.value.split(',')
-      let out=[];
-      console.log(value)
-      value.forEach(element => {
-        let valor = this.diasListArray.indexOf(element)
-        out.push(valor)
-      });
-      this.dias = out
-      console.log(this.dias)
+      this.params = params
+      this.profiles = this.params.profiles().data
+      console.log(this.profiles)
+      console.log(params)
+      console.log(this.input)
     }
   
     // dont use afterGuiAttached for post gui events - hook into ngAfterViewInit instead for this
@@ -71,11 +66,8 @@ export class MatProfilesPickerRenderComponent implements ICellEditorAngularComp 
     getValue() {
       console.log("AQUI")
       console.log(this.dias)
-      let out = [];
-      this.dias.forEach(element => {
-        out.push(element)
-      });
-      return out.toString()
+
+      return this.dias;
      
       
     }
