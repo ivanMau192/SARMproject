@@ -29,12 +29,12 @@ export class Users {
   @Column("character varying", { name: "user_id_created", nullable: true })
   userIdCreated: string | null;
 
-  @Column("boolean", {
+  @Column("character varying", {
     name: "user_active",
     nullable: true,
-    default: () => "true",
+    default: () => "ACTIVO",
   })
-  userActive: boolean | null;
+  userActive: string;
 
   @OneToMany(() => ProfilesUsers, (profilesUsers) => profilesUsers.user)
   profilesUsers: ProfilesUsers[];

@@ -23,9 +23,17 @@ export class UsersService {
 	{
 		return this.http.post<any[]>(this.baseUrl+'profileslist',{});
 	}
+  getAllPermissions(): Observable <any[]>
+	{
+		return this.http.post<any[]>(this.baseUrl+'permissionsList',{});
+	}
 
   modifyUsers(users):Observable <any[]>
 	{
 		return this.http.post<any[]>(this.baseUrl+'addUser',{data:users});
+	}
+  modifyProfiles(profiles):Observable <any[]>
+	{
+		return this.http.post<any[]>(this.baseUrl+'profiles/modify',{data:profiles});
 	}
 }

@@ -11,7 +11,7 @@ export class AppComponent {
   countChangedHandler(status: Object) {
     
     
-    console.log(status)
+    
     this.loginStatus.status = status["status"]
   }
 }

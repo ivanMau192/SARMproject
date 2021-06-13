@@ -30,6 +30,8 @@ import { FileUploadComponent } from './botoom-sheet/file-upload/file-upload.comp
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { AuthInterceptor } from './services/auth-interceptor';
+import { MatPermissionsPickerRenderComponent } from './components/utils/mat-permissions-picker-render/mat-permissions-picker-render.component';
+import { MatStatusPickerRenderComponent } from './components/utils/mat-status-picker-render/mat-status-picker-render.component';
 
 
 @NgModule({
@@ -41,7 +43,9 @@ import { AuthInterceptor } from './services/auth-interceptor';
     MatProfilesPickerRenderComponent,
     WastesComponent,
     BathroomsComponent,
-    FileUploadComponent
+    FileUploadComponent,
+    MatPermissionsPickerRenderComponent,
+    MatStatusPickerRenderComponent
   ],
   imports: [
     BrowserModule,
@@ -76,7 +80,10 @@ import { AuthInterceptor } from './services/auth-interceptor';
   bootstrap: [AppComponent],
   entryComponents: [
     MatProfilesPickerRenderComponent,
-    FileUploadComponent
+    FileUploadComponent,
+    MatPermissionsPickerRenderComponent,
+    MatStatusPickerRenderComponent
+
   ]
 })
 export class AppModule { }

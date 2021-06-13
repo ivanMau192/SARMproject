@@ -4,4 +4,5 @@ const router = Router();
 
 const dc = new ProfileslistController()
 router.post('/profileslist', dc.getlistProfiles)
+router.post('/permissionsList', dc.getPermissionsList)
 export default router;

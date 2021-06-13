@@ -14,8 +14,8 @@ import * as moment from "moment";
     <mat-form-field appearance="fill">
       <input matInput style="display:none">
       <mat-label>Perfiles</mat-label>
-      <mat-select [(ngModel)]="dias" ngDefaultControl>
-        <mat-option *ngFor="let profile of profiles" [value]="profile.p_prof_id">{{profile.p_prof_name}}</mat-option>
+      <mat-select [(ngModel)]="dias" ngDefaultControl multiple>
+        <mat-option *ngFor="let permission of permissions" [value]="permission.p_perm_id">{{permission.p_perm_name}}</mat-option>
       </mat-select>
     </mat-form-field>
   `,
@@ -32,7 +32,7 @@ import * as moment from "moment";
 
 
 
-export class MatProfilesPickerRenderComponent implements ICellEditorAngularComp {
+export class MatPermissionsPickerRenderComponent implements ICellEditorAngularComp {
   private params: any;
   
     private inputDate: any;
@@ -41,16 +41,14 @@ export class MatProfilesPickerRenderComponent implements ICellEditorAngularComp 
     @ViewChildren("input", { read: ViewContainerRef })  public input: ViewContainerRef;
     public inputs: QueryList<any>;
     private focusedInput: number = 0;
-    profiles=[];
+    permissions=[];
   
     agInit(params: any): void {
-      console.log("INICIO")
-      this.dias = params.data.prof_name
+      
+      this.dias = params.data.permissions
       this.params = params
-      this.profiles = this.params.profiles().data
-      console.log(this.profiles)
-      console.log(params)
-      console.log(this.input)
+      this.permissions = this.params.permissions().data
+      
     }
   
     // dont use afterGuiAttached for post gui events - hook into ngAfterViewInit instead for this
@@ -65,8 +63,7 @@ export class MatProfilesPickerRenderComponent implements ICellEditorAngularComp 
     }
   
     getValue() {
-      console.log("AQUI")
-      console.log(this.dias)
+      
 
       return this.dias;
      

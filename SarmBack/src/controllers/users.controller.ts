@@ -47,9 +47,10 @@ export class UsersController {
                 user.userName=u.userName
                 user.userPassword=u.password
                 user.userUsername=u.userUsername
+                user.userActive = u.userActive
                 userprof.prof=u.prof_name
                 let update = {
-                    userName: user.userName, userPassword: user.userPassword, userUsername: user.userUsername
+                    userName: user.userName, userPassword: user.userPassword, userUsername: user.userUsername,userActive: user.userActive
                 }
                 if(!u.password){
                     delete update.userPassword
@@ -91,6 +92,7 @@ export class UsersController {
                 let resp = await getRepository(Users).createQueryBuilder('u')
                                 .innerJoinAndSelect('profiles_users','pu','pu.user_id = u.user_id')
                                 .innerJoinAndSelect('profiles','p','pu.prof_id = p.prof_id')
+                                .innerJoinAndSelect('user_contract','uc','uc.user_id=u.user_id')
                                 .select(['u.*','p.*'])
                                 .getRawMany();
                 resp = resp.map(v =>{

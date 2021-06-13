@@ -33,7 +33,7 @@ export class InitialViewComponent implements OnInit {
     this.user = JSON.parse(localStorage.getItem('user'))
     this.permissions = this.user["permissions"]
     this.renderUserName = this.user["user"].user_username;
-    console.log(this.user)
+    
   }
 
   changeModule(selection:string){

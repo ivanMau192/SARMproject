@@ -15,7 +15,7 @@ import * as moment from "moment";
       <input matInput style="display:none">
       <mat-label>Perfiles</mat-label>
       <mat-select [(ngModel)]="dias" ngDefaultControl>
-        <mat-option *ngFor="let profile of profiles" [value]="profile.p_prof_id">{{profile.p_prof_name}}</mat-option>
+        <mat-option *ngFor="let status of statuses" [value]="status">{{status}}</mat-option>
       </mat-select>
     </mat-form-field>
   `,
@@ -32,25 +32,30 @@ import * as moment from "moment";
 
 
 
-export class MatProfilesPickerRenderComponent implements ICellEditorAngularComp {
+export class MatStatusPickerRenderComponent implements ICellEditorAngularComp {
   private params: any;
-  
+   
+
+    statuses = ["ACTIVO","INACTIVO"]
     private inputDate: any;
     dias;
     
     @ViewChildren("input", { read: ViewContainerRef })  public input: ViewContainerRef;
     public inputs: QueryList<any>;
     private focusedInput: number = 0;
-    profiles=[];
+    permissions=[];
   
     agInit(params: any): void {
-      console.log("INICIO")
-      this.dias = params.data.prof_name
-      this.params = params
-      this.profiles = this.params.profiles().data
-      console.log(this.profiles)
       console.log(params)
-      console.log(this.input)
+      if(params.data.p_prof_active){
+        this.dias = params.data.p_prof_active
+      }else if(params.data.userActive){
+        this.dias = params.data.userActive
+      }
+      
+      this.params = params
+      
+      
     }
   
     // dont use afterGuiAttached for post gui events - hook into ngAfterViewInit instead for this
@@ -65,8 +70,7 @@ export class MatProfilesPickerRenderComponent implements ICellEditorAngularComp 
     }
   
     getValue() {
-      console.log("AQUI")
-      console.log(this.dias)
+      
 
       return this.dias;
      

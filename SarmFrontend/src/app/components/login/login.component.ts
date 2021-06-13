@@ -47,11 +47,10 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    console.log(this.emailFormControl)
-    console.log(this.passwordFormControl)
+    
     if(this.emailFormControl.status == "VALID" && this.passwordFormControl.status == "VALID"){
       this.loginService.loginUser(this.emailFormControl.value,this.passwordFormControl.value).subscribe( data =>{
-        console.log(data)
+        
         if(data["status"]){
           localStorage.setItem('user',JSON.stringify(data['data']));
           this.loginChanged.emit({status:true});
