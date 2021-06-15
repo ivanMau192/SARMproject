@@ -33,6 +33,7 @@ import { AuthInterceptor } from './services/auth-interceptor';
 import { MatPermissionsPickerRenderComponent } from './components/utils/mat-permissions-picker-render/mat-permissions-picker-render.component';
 import { MatStatusPickerRenderComponent } from './components/utils/mat-status-picker-render/mat-status-picker-render.component';
 import { AddUserModalComponent } from './botoom-sheet/add-user-modal/add-user-modal.component';
+import { AddProfilesModalComponent } from './botoom-sheet/add-profiles-modal/add-profiles-modal.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { AddUserModalComponent } from './botoom-sheet/add-user-modal/add-user-mo
     FileUploadComponent,
     MatPermissionsPickerRenderComponent,
     MatStatusPickerRenderComponent,
-    AddUserModalComponent
+    AddUserModalComponent,
+    AddProfilesModalComponent
   ],
   imports: [
     BrowserModule,
@@ -85,7 +87,8 @@ import { AddUserModalComponent } from './botoom-sheet/add-user-modal/add-user-mo
     FileUploadComponent,
     MatPermissionsPickerRenderComponent,
     MatStatusPickerRenderComponent,
-    AddUserModalComponent
+    AddUserModalComponent,
+    AddProfilesModalComponent
 
   ]
 })

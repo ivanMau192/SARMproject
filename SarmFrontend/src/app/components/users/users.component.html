@@ -17,6 +17,7 @@
             </ag-grid-angular>
         </mat-tab>
         <mat-tab label="Perfiles"> 
+            <button style="margin-left:1vw;margin-top: 1vw;" (click)="createProfiles()" mat-button>Crear Perfil</button>
             <button style="margin-left:1vw;margin-top: 1vw;" *ngIf="saveProfileButtonActive" (click)="saveProfiles()" mat-button>Guardar</button>
             <ag-grid-angular 
                 style="height: 70vh; margin:3%" 

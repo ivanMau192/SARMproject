@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { AddProfilesModalComponent } from 'src/app/botoom-sheet/add-profiles-modal/add-profiles-modal.component';
 import { AddUserModalComponent } from 'src/app/botoom-sheet/add-user-modal/add-user-modal.component';
 import { UsersService } from 'src/app/services/users.service';
 import { MatPermissionsPickerRenderComponent } from '../utils/mat-permissions-picker-render/mat-permissions-picker-render.component';
@@ -241,6 +242,19 @@ export class UsersComponent implements OnInit {
 		
 		console.log("OK")
 		console.log("dismissed")
+	})
+  }
+  createProfiles(){
+	let ref = this._bottomSheet.open(AddProfilesModalComponent, {data:{permissions:this.allPermissions}});
+	ref.afterDismissed().subscribe(async data1 =>{
+		if(data1.reload){
+			this.allProfiles = await this.getAllprofiles()
+			this.allProfiles.data.forEach((v,k) => {
+				this.allProfiles.data[k].change_status = false;
+			});
+			this.profilesRowData = this.allProfiles.data
+		}
+		
 	})
   }
 

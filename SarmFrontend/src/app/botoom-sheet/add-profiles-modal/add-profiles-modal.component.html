@@ -1,0 +1,53 @@
+<div fxFlexFill fxLayoutAlign="center center">
+    
+    
+        
+    <mat-grid-list cols="1" style="width:100%" rowHeight="50vh">
+        <mat-grid-tile>
+            <mat-card style='width: 300px'>
+                <div class="center" style="text-align: center;">
+                    <h2>Creacion de Perfil</h2>
+                    <mat-divider></mat-divider>
+                </div>
+                <div>
+                    <form class="Login-form">
+                        <mat-form-field style="width: 100%;" name="other" class="example-full-width">
+                            <mat-label>Nombre</mat-label>
+                            <input  matInput [formControl]="nameFormControl" [errorStateMatcher]="nameMatcher">
+                            
+                            <mat-error *ngIf="passwordFormControl.hasError('required')">
+                                La contraseña es <strong>requireda</strong>
+                            </mat-error>
+                        </mat-form-field>
+                        
+                        <mat-form-field style="width: 100%;">
+                            <input matInput style="display:none">
+                            <mat-label *ngIf="permSelected==null">Perfil</mat-label>
+                            <mat-select [(ngModel)]="permSelected"  name="something" ngDefaultControl multiple >
+                              <mat-option *ngFor="let permission of permissions" [value]="permission.p_perm_id">{{permission.p_perm_name}}</mat-option>
+                            </mat-select>
+                            <mat-error *ngIf="!permSelected">
+                                Los permisos son <strong>requerido</strong>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field style="width: 100%;">
+                            <input matInput style="display:none">
+                            <mat-select [(ngModel)]="statusSelected"  name="something2" ngDefaultControl >
+                              <mat-option *ngFor="let state of status" [value]="state">{{state}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+                        <mat-form-field  appearance="none" style="text-align: center; width: 100%;" class="center example-full-width">
+                            <input type="password" style="display:none" matInput>
+                            <button mat-raised-button color="primary" (click)="createUser()">Crear Perfil</button>
+                        </mat-form-field>   
+                    </form>
+                </div>
+                
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+
+</div>
