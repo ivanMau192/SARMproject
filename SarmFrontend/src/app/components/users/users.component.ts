@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { AddUserModalComponent } from 'src/app/botoom-sheet/add-user-modal/add-user-modal.component';
 import { UsersService } from 'src/app/services/users.service';
 import { MatPermissionsPickerRenderComponent } from '../utils/mat-permissions-picker-render/mat-permissions-picker-render.component';
 import { MatProfilesPickerRenderComponent } from '../utils/mat-profiles-picker-render/mat-profiles-picker-render.component';
@@ -82,7 +84,8 @@ export class UsersComponent implements OnInit {
 	allPermissions;
 	
 
-  constructor(private userService:UsersService) { }
+  constructor(private userService:UsersService,
+	private _bottomSheet: MatBottomSheet) { }
 
   async ngOnInit(): Promise<void> {
 	this.user = JSON.parse(localStorage.getItem('user'))
@@ -216,6 +219,29 @@ export class UsersComponent implements OnInit {
 
   permissionsGetter(){
 	  return this.allPermissions
+  }
+
+
+  createUser(){
+	let ref = this._bottomSheet.open(AddUserModalComponent, {data:{profiles:this.allProfiles}});
+	ref.afterDismissed().subscribe(data1 =>{
+		if(data1.reload){
+			this.userService.getAllUsers().subscribe((data)=>{
+				console.log(data)
+				this.usersData = data["data"].map((user)=>{
+					user.change_status = false;
+					return user
+				})
+				
+				this.userRowData = this.usersData
+		
+		
+			})
+		}
+		
+		console.log("OK")
+		console.log("dismissed")
+	})
   }
 
 }

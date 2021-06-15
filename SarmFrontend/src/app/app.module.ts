@@ -32,6 +32,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { AuthInterceptor } from './services/auth-interceptor';
 import { MatPermissionsPickerRenderComponent } from './components/utils/mat-permissions-picker-render/mat-permissions-picker-render.component';
 import { MatStatusPickerRenderComponent } from './components/utils/mat-status-picker-render/mat-status-picker-render.component';
+import { AddUserModalComponent } from './botoom-sheet/add-user-modal/add-user-modal.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { MatStatusPickerRenderComponent } from './components/utils/mat-status-pi
     BathroomsComponent,
     FileUploadComponent,
     MatPermissionsPickerRenderComponent,
-    MatStatusPickerRenderComponent
+    MatStatusPickerRenderComponent,
+    AddUserModalComponent
   ],
   imports: [
     BrowserModule,
@@ -82,7 +84,8 @@ import { MatStatusPickerRenderComponent } from './components/utils/mat-status-pi
     MatProfilesPickerRenderComponent,
     FileUploadComponent,
     MatPermissionsPickerRenderComponent,
-    MatStatusPickerRenderComponent
+    MatStatusPickerRenderComponent,
+    AddUserModalComponent
 
   ]
 })

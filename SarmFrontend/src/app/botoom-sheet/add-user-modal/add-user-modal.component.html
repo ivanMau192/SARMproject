@@ -1,0 +1,71 @@
+<div fxFlexFill fxLayoutAlign="center center">
+    
+    
+        
+            <mat-grid-list cols="1" style="width:100%" rowHeight="50vh">
+                <mat-grid-tile>
+                    <mat-card style='width: 300px'>
+                        <div class="center" style="text-align: center;">
+                            <h2>Creacion de usuario</h2>
+                            <mat-divider></mat-divider>
+                        </div>
+                        <div>
+                            <form class="Login-form">
+                                <mat-form-field style="width: 100%;" name="other" class="example-full-width">
+                                    <mat-label>Nombre</mat-label>
+                                    <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="emailMatcher" placeholder="mail@codelco.cl" >
+                                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                                        Email es <strong>requerido</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                                <mat-form-field style="width: 100%;" name="other" class="example-full-width">
+                                    <mat-label>Nombre</mat-label>
+                                    <input  matInput [formControl]="nameFormControl" [errorStateMatcher]="nameMatcher">
+                                    
+                                    <mat-error *ngIf="passwordFormControl.hasError('required')">
+                                        La contraseña es <strong>requireda</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                                
+                                <mat-form-field style="width: 100%;" name="other" class="example-full-width">
+                                    <mat-label>Contraseña</mat-label>
+                                    <input type="password" matInput [formControl]="passwordFormControl" [errorStateMatcher]="passwordMatcher">
+                                    
+                                    <mat-error *ngIf="passwordFormControl.hasError('required')">
+                                        La contraseña es <strong>requireda</strong>
+                                    </mat-error>
+                                </mat-form-field>
+
+                               
+                                  
+                                <mat-form-field style="width: 100%;">
+                                    <input matInput style="display:none">
+                                    <mat-label *ngIf="perfilSelected==null">Perfil</mat-label>
+                                    <mat-select [(ngModel)]="perfilSelected"  name="something" ngDefaultControl >
+                                      <mat-option *ngFor="let profile of profiles" [value]="profile.p_prof_id">{{profile.p_prof_name}}</mat-option>
+                                    </mat-select>
+                                    <mat-error *ngIf="!perfilSelected">
+                                        El perfil es <strong>requerido</strong>
+                                    </mat-error>
+                                </mat-form-field>
+
+                                <mat-form-field style="width: 100%;">
+                                    <input matInput style="display:none">
+                                    <mat-select [(ngModel)]="statusSelected"  name="something2" ngDefaultControl >
+                                      <mat-option *ngFor="let state of status" [value]="state">{{state}}</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                                <mat-form-field  appearance="none" style="text-align: center; width: 100%;" class="center example-full-width">
+                                    <input type="password" style="display:none" matInput>
+                                    <button mat-raised-button color="primary" (click)="createUser()">Crear Usuario</button>
+                                </mat-form-field>   
+                            </form>
+                        </div>
+                        
+                    </mat-card>
+                </mat-grid-tile>
+            </mat-grid-list>
+        
+      
+</div>

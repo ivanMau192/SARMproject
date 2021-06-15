@@ -7,7 +7,7 @@ import { ProfilesUsers } from '../entity/ProfilesUsers';
 export class UsersController {
     addUsers = async (req: Request, res: Response): Promise<Response> => {
         
-
+        console.log(req.body)
         for(let u of req.body.data){
             console.log(u)
             let user = new Users()
@@ -92,7 +92,6 @@ export class UsersController {
                 let resp = await getRepository(Users).createQueryBuilder('u')
                                 .innerJoinAndSelect('profiles_users','pu','pu.user_id = u.user_id')
                                 .innerJoinAndSelect('profiles','p','pu.prof_id = p.prof_id')
-                                .innerJoinAndSelect('user_contract','uc','uc.user_id=u.user_id')
                                 .select(['u.*','p.*'])
                                 .getRawMany();
                 resp = resp.map(v =>{
