@@ -39,6 +39,12 @@
             <div *ngIf ="selectedModule=='comercial'" class="divisor-selected center"></div>
         </div>
 
+        <div fxLayout="row" (click)="changeModule('services')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
+            <div class="center" style="text-align: center;">Servicios</div>
+            <div class="divisor-white center"></div>
+            <div *ngIf ="selectedModule=='services'" class="divisor-selected center"></div>
+        </div>
+
         <div fxLayout="row" *ngIf="checkPerm('users-module')" (click)="changeModule('users')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
             <div class="center" style="text-align: center;">Usuarios</div>
             <div class="divisor-white center"></div>
@@ -60,6 +66,7 @@
             <app-users style="width:100%" *ngIf ="selectedModule=='users'"></app-users> 
             <app-wastes style="width:100%" *ngIf ="selectedModule=='waste'"></app-wastes>
             <app-bathrooms style="width:100%" *ngIf ="selectedModule=='bathrooms'"></app-bathrooms>
+            <app-services style="width: 100%;" *ngIf ="selectedModule=='services'"></app-services>
             
         </div>
     </div>

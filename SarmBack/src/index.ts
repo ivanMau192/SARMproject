@@ -7,6 +7,7 @@ import loginRoutes from './routes/login.routes';
 import lista_profRoutes from './routes/lista_profiles.routes';
 import lista_usrRoutes from './routes/lista_users.routes';
 import lista_permRoutes from './routes/lista_permissions.routes';
+import servicesRoutes from './routes/services.routes';
 import { createConnection } from "typeorm";
 
 import "reflect-metadata";
@@ -91,4 +92,5 @@ createConnection().then(async connection => {
   app.use(lista_profRoutes)
   app.use(lista_usrRoutes)
   app.use(lista_permRoutes)
+  app.use(servicesRoutes)
 })

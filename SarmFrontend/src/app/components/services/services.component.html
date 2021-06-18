@@ -1,0 +1,11 @@
+
+<div style="width:100%">
+
+    <ag-grid-angular 
+                style="height: 70vh; margin:3%" 
+                class="ag-theme-balham"
+                [rowData]="serviceRowData"
+                [columnDefs]="servicesColumnsDefs"
+                (gridReady)="onGridReady($event)">
+            </ag-grid-angular>
+</div>

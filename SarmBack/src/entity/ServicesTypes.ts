@@ -19,6 +19,13 @@ export class ServicesTypes {
   @Column("character varying", { name: "serv_name", nullable: true })
   servName: string | null;
 
+  @Column("character varying", { name: "serv_price", nullable: true })
+  servPrice: string | null;
+
+
+  @Column("character varying", { name: "cont_id", nullable: true })
+  contId: string | null;
+
   @OneToMany(() => Services, (services) => services.servType)
   services: Services[];
 
