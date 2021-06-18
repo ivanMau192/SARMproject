@@ -24,6 +24,8 @@
     "@angular/router": "~11.0.4",
     "ag-grid-angular": "^25.3.0",
     "ag-grid-community": "^25.3.0",
+    "bootstrap": "^5.0.1",
+    "chart.js": "^3.3.2",
     "moment": "^2.29.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",

@@ -34,6 +34,7 @@ import { MatPermissionsPickerRenderComponent } from './components/utils/mat-perm
 import { MatStatusPickerRenderComponent } from './components/utils/mat-status-picker-render/mat-status-picker-render.component';
 import { AddUserModalComponent } from './botoom-sheet/add-user-modal/add-user-modal.component';
 import { AddProfilesModalComponent } from './botoom-sheet/add-profiles-modal/add-profiles-modal.component';
+import { CommercialComponent } from './components/commercial/commercial.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { AddProfilesModalComponent } from './botoom-sheet/add-profiles-modal/add
     MatPermissionsPickerRenderComponent,
     MatStatusPickerRenderComponent,
     AddUserModalComponent,
-    AddProfilesModalComponent
+    AddProfilesModalComponent,
+    CommercialComponent
   ],
   imports: [
     BrowserModule,
