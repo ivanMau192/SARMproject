@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatProfilesPickerRenderComponent } from '../utils/mat-profiles-picker-render/mat-profiles-picker-render.component';
-
+import {Chart} from 'node_modules/chart.js';
 @Component({
   selector: 'app-wastes',
   templateUrl: './wastes.component.html',

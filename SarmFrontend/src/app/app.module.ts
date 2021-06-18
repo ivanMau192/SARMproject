@@ -36,7 +36,8 @@ import { AddUserModalComponent } from './botoom-sheet/add-user-modal/add-user-mo
 import { AddProfilesModalComponent } from './botoom-sheet/add-profiles-modal/add-profiles-modal.component';
 import { ServicesComponent } from './components/services/services.component';
 import { CommercialComponent } from './components/commercial/commercial.component';
-
+import { AddServiceModalComponent } from './botoom-sheet/add-service-modal/add-service-modal.component';
+import { MatContractPickerRenderComponent } from './components/utils/mat-contract-picker-render/mat-contract-picker-render.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,9 @@ import { CommercialComponent } from './components/commercial/commercial.componen
     AddUserModalComponent,
     AddProfilesModalComponent,
     ServicesComponent,
-    CommercialComponent
+    CommercialComponent,
+    AddServiceModalComponent,
+    MatContractPickerRenderComponent
   ],
   imports: [
     BrowserModule,
@@ -92,7 +95,9 @@ import { CommercialComponent } from './components/commercial/commercial.componen
     MatPermissionsPickerRenderComponent,
     MatStatusPickerRenderComponent,
     AddUserModalComponent,
-    AddProfilesModalComponent
+    AddProfilesModalComponent,
+    AddServiceModalComponent,
+    MatContractPickerRenderComponent
 
   ]
 })

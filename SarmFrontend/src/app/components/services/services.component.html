@@ -1,11 +1,14 @@
 
 <div style="width:100%">
-
+    <button style="margin-left:1vw;margin-top: 1vw;" *ngIf="saveServiceButtonActive" (click)="saveServices()" mat-button>Guardar</button>
+    <button style="margin-left:1vw;margin-top: 1vw;" (click)="createService()" mat-button>Crear Servicio</button>
     <ag-grid-angular 
                 style="height: 70vh; margin:3%" 
                 class="ag-theme-balham"
                 [rowData]="serviceRowData"
                 [columnDefs]="servicesColumnsDefs"
+                (cellValueChanged)="changeServiceGridEvent($event)"
+                [frameworkComponents]="frameworkComponents"
                 (gridReady)="onGridReady($event)">
             </ag-grid-angular>
 </div>

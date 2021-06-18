@@ -11,30 +11,33 @@ export class ServicesController {
         
         console.log(req.body);
 
-        let service = new ServicesTypes;
+        for(let s of req.body.data){
 
-        service.servName=req.body.serv_name;
-        service.contId = req.body.cont_id;
-        service.servPrice = req.body.serv_price
+            let service = new ServicesTypes;
+            service.servName=s.servName;
+            service.contId = s.contId;
+            service.servPrice = s.servPrice
 
-        if(req.body.serv_type_id){
-            let id = parseInt(req.body.serv_type_id)
-            service.servTypeId = id
-            await getRepository(ServicesTypes).save(service)
-        }
-        else{
-            try{
-                let resp = await getRepository(ServicesTypes).insert(service)
-            }catch(e){
-                return res.send("ERROR")
+            if(s.servTypeId){
+                let id = parseInt(s.servTypeId)
+                service.servTypeId = id
+                await getRepository(ServicesTypes).save(service)
             }
-            
+            else{
+                try{
+                    let resp = await getRepository(ServicesTypes).insert(service)
+                }catch(e){
+                    return res.send("ERROR")
+                }
+                
 
+            }
         }
-
-        return res.send("OK");
+        return res.send({status:"OK"});
         
     }
+
+   
 
     getAllServices = async (req: Request, res: Response): Promise<Response> => {
         let resp = await getRepository(ServicesTypes).find()
@@ -47,4 +50,8 @@ export class ServicesController {
         return res.send(resp);
     }
     
+}
+
+function AddServicesModalComponent(AddServicesModalComponent: any, arg1: { data: { profiles: any; }; }) {
+    throw new Error('Function not implemented.');
 }

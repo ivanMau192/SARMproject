@@ -20,5 +20,15 @@ export class ServicesService {
 		return this.http.post<any[]>(this.baseUrl+'getAllServices',{});
 	}
 
+  saveServices(data): Observable <any[]>
+	{
+		return this.http.post<any[]>(this.baseUrl+'addService',{data:data});
+	}
+
+  getAllContracts():Observable <any[]>
+	{
+    return this.http.post<any[]>(this.baseUrl+'getAllContracts',{});
+  }
+
 
 }
