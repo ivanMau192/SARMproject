@@ -9,6 +9,17 @@ import { MatProfilesPickerRenderComponent } from '../utils/mat-profiles-picker-r
 export class WastesComponent implements OnInit {
   gridApi: any;
   gridColumnApi: any;
+  public barChartOptions = {
+    scaleShowVerticalLines : false,
+    responsive: true
+  }
+  public barChartLabels = ['2006','2007','2008','2009','2010','2011'];
+  public barChartType = 'bar';
+  public barChartLegend = true;
+  public barChartData = [
+    {data: [65,85,45,74,83,71],label: 'Serie A' },
+    {data: [23,54,34,33,25,19],label: 'Serie B' },
+  ] ;
 
   constructor() { }
   wasteConvertMetrics = [

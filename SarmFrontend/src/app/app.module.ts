@@ -35,6 +35,7 @@ import { MatStatusPickerRenderComponent } from './components/utils/mat-status-pi
 import { AddUserModalComponent } from './botoom-sheet/add-user-modal/add-user-modal.component';
 import { AddProfilesModalComponent } from './botoom-sheet/add-profiles-modal/add-profiles-modal.component';
 import { ServicesComponent } from './components/services/services.component';
+import { CommercialComponent } from './components/commercial/commercial.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { ServicesComponent } from './components/services/services.component';
     MatStatusPickerRenderComponent,
     AddUserModalComponent,
     AddProfilesModalComponent,
-    ServicesComponent
+    ServicesComponent,
+    CommercialComponent
   ],
   imports: [
     BrowserModule,

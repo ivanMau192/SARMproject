@@ -51,5 +51,45 @@
                 >
             </ag-grid-angular>
         </mat-tab>
+
+        <mat-tab label="Métricas">
+            <button style="margin-left:1vw;margin-top: 1vw;" mat-button [matMenuTriggerFor]="menu">Filtros</button>
+            <mat-menu #menu="matMenu" class="filter-wrapper" [hasBackdrop]="false">
+                <div style="margin: 2vh;" (click)="$event.stopPropagation()" (keydown)="$event.stopPropagation()">
+                    <form >
+                        <mat-form-field style="width: 100%;" class="example-full-width">
+                            <mat-label>Fecha</mat-label>
+                            <input matInput [matDatepicker]="picker">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                        <mat-form-field style="width: 100%;" class="example-full-width">
+                            <mat-label>Servicio</mat-label>
+                            <input matInput placeholder="Id Servicio">
+                        </mat-form-field>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Favorite food</mat-label>
+                            <mat-select [(value)]="selectedWasteMetric">
+                              <mat-option *ngFor="let wasteM of wasteConvertMetrics" [value]="wasteM.value">
+                                {{wasteM.viewValue}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </form>
+                </div>
+                <div (click) = "filtrar()" style="margin: 2vh;"><button (click) = "filtrar()" mat-raised-button color="primary">Filtrar</button></div>
+            </mat-menu>
+            <div class="divisor"></div>
+            <div style="margin-left:2vw;margin-top: 1vw;"><h3>Métricas de los Residuos</h3>
+                <canvas id="myChart"
+                [datasets]="barChartData"
+                [label]="barChartLabels"
+                [options]="barChartOptions"
+                [legend]="barChartLegend"
+                [chartType]="barChartType"
+                ></canvas>
+            </div>
+        </mat-tab>
+
     </mat-tab-group>
 </div>

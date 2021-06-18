@@ -33,10 +33,10 @@
             <div *ngIf ="selectedModule=='bathrooms'" class="divisor-selected center"></div>
         </div> 
 
-        <div fxLayout="row" (click)="changeModule('comercial')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
+        <div fxLayout="row" (click)="changeModule('commercial')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
             <div class="center" style="text-align: center;">Comercial</div>
             <div class="divisor-white center"></div>
-            <div *ngIf ="selectedModule=='comercial'" class="divisor-selected center"></div>
+            <div *ngIf ="selectedModule=='commercial'" class="divisor-selected center"></div>
         </div>
 
         <div fxLayout="row" (click)="changeModule('services')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
@@ -62,12 +62,15 @@
             <div class="divisor-header center" style="bottom: 0; position:absolute; "></div>
             
         </div>
+
         <div fxLayout="row" style="margin-top:3%">
+
             <app-users style="width:100%" *ngIf ="selectedModule=='users'"></app-users> 
             <app-wastes style="width:100%" *ngIf ="selectedModule=='waste'"></app-wastes>
             <app-bathrooms style="width:100%" *ngIf ="selectedModule=='bathrooms'"></app-bathrooms>
             <app-services style="width: 100%;" *ngIf ="selectedModule=='services'"></app-services>
             
+            <app-commercial style="width:100%" *ngIf = "selectedModule=='commercial'"></app-commercial>            
         </div>
     </div>
 </div>
