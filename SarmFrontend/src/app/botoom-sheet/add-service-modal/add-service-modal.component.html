@@ -1,1 +1,50 @@
-<p>add-service-modal works!</p>
+<div fxFlexFill fxLayoutAlign="center center">
+    
+    
+        
+    <mat-grid-list cols="1" style="width:100%" rowHeight="50vh">
+        <mat-grid-tile>
+            <mat-card style='width: 300px'>
+                <div class="center" style="text-align: center;">
+                    <h2>Creacion de Perfil</h2>
+                    <mat-divider></mat-divider>
+                </div>
+                <div>
+                    <form class="Login-form">
+                        <mat-form-field style="width: 100%;" name="other" class="example-full-width">
+                            <mat-label>Nombre</mat-label>
+                            <input  matInput [formControl]="nameFormControl" [errorStateMatcher]="nameMatcher">
+                            
+                        </mat-form-field>
+
+                        <mat-form-field style="width: 100%;" name="other" class="example-full-width">
+                            <mat-label>Precio</mat-label>
+                            <input  matInput [formControl]="priceFormControl" [errorStateMatcher]="nameMatcher">
+                            
+                        </mat-form-field>
+                        
+                        <mat-form-field style="width: 100%;">
+                            <input matInput style="display:none">
+                            <mat-label *ngIf="contractSelected==null">Contrato</mat-label>
+                            <mat-select [(ngModel)]="contractSelected"  name="something" ngDefaultControl >
+                              <mat-option *ngFor="let contract of contracts" [value]="contract.contId">{{contract.contName}}</mat-option>
+                            </mat-select>
+                            <mat-error *ngIf="!contractSelected">
+                                El contrato son <strong>requerido</strong>
+                            </mat-error>
+                        </mat-form-field>
+
+                        
+                        <mat-form-field  appearance="none" style="text-align: center; width: 100%;" class="center example-full-width">
+                            <input type="password" style="display:none" matInput>
+                            <button mat-raised-button color="primary" (click)="createUser()">Crear Perfil</button>
+                        </mat-form-field>   
+                    </form>
+                </div>
+                
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+
+</div>

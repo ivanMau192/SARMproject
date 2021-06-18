@@ -80,8 +80,15 @@ export class ServicesComponent implements OnInit {
   }
 
   createService(){
-    let ref = this._bottomSheet.open(AddServiceModalComponent, {data:{}});
-    ref.afterDismissed().subscribe(data1 =>{})
+    let ref = this._bottomSheet.open(AddServiceModalComponent, {data:{contracts:this.contracts}});
+    ref.afterDismissed().subscribe(data1 =>{
+      if(data1.reload){
+        this.servicesService.getAllServices().subscribe(data => {
+          this.serviceRowData = data
+          
+        })
+      }
+    })
   }
 
   onGridReady(params) {
