@@ -7,4 +7,7 @@ const dc = new ServicesController()
 router.post('/addService', dc.addService)
 router.post('/getAllServices', dc.getAllServices)
 router.post('/getAllContracts', dc.getAllContracts)
+router.post('/services/addDataServices',dc.addDataServices)
+router.post('/getServicesData',dc.getServicesData)
+router.post('/getServicesFiltered',dc.getServicesFiltered)
 export default router;

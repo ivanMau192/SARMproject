@@ -1,0 +1,13 @@
+<div>
+    <h2>Resultados para filtros Seleccionados</h2>
+    
+        <mat-list>
+            <ng-container *ngFor="let service of renderData">
+                <div>
+                    <button mat-list-item (click)="selector(service.id)"> Estado: {{service.status}} - Cantidad: {{service.cantidad}} </button>
+                    <mat-divider></mat-divider>
+                </div>
+            </ng-container>
+        </mat-list>
+    
+</div>

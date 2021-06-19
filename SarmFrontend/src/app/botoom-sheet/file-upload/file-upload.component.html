@@ -1,5 +1,5 @@
 <input style="margin-left:1vw;margin-top: 1vw;" type="file" class="form-control" (change)="addfile($event)" placeholder="Upload file" accept=".csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
-<button style="margin-left:1vw;margin-top: 1vw;" *ngIf="userRowData.length>0" mat-button (click)="dismissModal()">Cargar</button>
+<button style="margin-left:1vw;margin-top: 1vw;" *ngIf="userRowData.length>0 && serviceSelected"  mat-button (click)="uploadAndDismiss()">Cargar</button>
 <div style="margin-left:2vw;margin-top: 1vw;"><h3>Servicio</h3></div>
             <ag-grid-angular 
                 style="height: 9vh; margin:1%" 
@@ -7,6 +7,7 @@
                 [rowData]="serviceRowData"
                 [defaultColDef]="defaultColDef"
                 [columnDefs]="servColumnsDefs"
+                (cellValueChanged)="changeServiceGridEvent($event)"
                 [frameworkComponents]="frameworkComponents"
                 
                 >

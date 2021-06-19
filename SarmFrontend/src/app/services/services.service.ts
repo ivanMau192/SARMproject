@@ -30,5 +30,16 @@ export class ServicesService {
     return this.http.post<any[]>(this.baseUrl+'getAllContracts',{});
   }
 
+  uploadServiceData(service,data):Observable <any[]>{
+    return this.http.post<any[]>(this.baseUrl+'services/addDataServices',{service:service,data:data});
+  }
+
+  getServicesData(id):Observable <any[]>{
+    return this.http.post<any[]>(this.baseUrl+'getServicesData',{servId:id});
+  }
+
+  getServicesFiltered(fecha,contId):Observable <any[]>{
+    return this.http.post<any[]>(this.baseUrl+'getServicesFiltered',{fecha:fecha,contId:contId});
+  }
 
 }

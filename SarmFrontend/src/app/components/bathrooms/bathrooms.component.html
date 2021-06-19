@@ -11,15 +11,17 @@
                     <form >
                         <mat-form-field style="width: 100%;" class="example-full-width">
                             <mat-label>Fecha</mat-label>
-                            <input matInput [matDatepicker]="picker">
+                            <input matInput [(ngModel)]="selectedDate" name="first" [matDatepicker]="picker">
                             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                             <mat-datepicker #picker></mat-datepicker>
                         </mat-form-field>
                         <mat-form-field style="width: 100%;" class="example-full-width">
-                            <mat-label>Servicio</mat-label>
-                            <input matInput placeholder="Id Servicio">
+                            <input matInput style="display:none">
+                            <mat-label *ngIf="contractSelected==null">Contrato</mat-label>
+                            <mat-select [(ngModel)]="contractSelected"  name="something" ngDefaultControl >
+                              <mat-option *ngFor="let contract of contracts" [value]="contract.contId">{{contract.contName}}</mat-option>
+                            </mat-select>
                         </mat-form-field>
-                        
                     </form>
                 </div>
                 <div (click) = "filtrar()" style="margin: 2vh;"><button (click) = "filtrar()" mat-raised-button color="primary">Filtrar</button></div>
@@ -31,7 +33,9 @@
                 [rowData]="serviceRowData"
                 [defaultColDef]="defaultColDef"
                 [columnDefs]="servColumnsDefs"
+                (cellValueChanged)="changeServiceGridEvent($event)"
                 [frameworkComponents]="frameworkComponents"
+                (gridReady)="onSecondGridReady($event)"
                 
                 >
             </ag-grid-angular>
@@ -43,6 +47,7 @@
                 [rowData]="userRowData"
                 [defaultColDef]="defaultColDef"
                 [columnDefs]="userColumnsDefs"
+                (cellValueChanged)="changeUserGridEvent($event)"
                 [frameworkComponents]="frameworkComponents"
                 (gridReady)="onGridReady($event)"
                 >

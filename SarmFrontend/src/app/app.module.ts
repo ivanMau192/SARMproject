@@ -38,6 +38,10 @@ import { ServicesComponent } from './components/services/services.component';
 import { CommercialComponent } from './components/commercial/commercial.component';
 import { AddServiceModalComponent } from './botoom-sheet/add-service-modal/add-service-modal.component';
 import { MatContractPickerRenderComponent } from './components/utils/mat-contract-picker-render/mat-contract-picker-render.component';
+import { MatServicesPickerRenderComponent } from './components/utils/mat-service-picker-render/mat-service-picker-render.component';
+import { MatApprovedPickerRenderComponent } from './components/utils/mat-approved-picker-render/mat-approved-picker-render.component';
+import { GetServiceModalComponent } from './botoom-sheet/get-service-modal/get-service-modal.component';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -56,7 +60,10 @@ import { MatContractPickerRenderComponent } from './components/utils/mat-contrac
     ServicesComponent,
     CommercialComponent,
     AddServiceModalComponent,
-    MatContractPickerRenderComponent
+    MatContractPickerRenderComponent,
+    MatServicesPickerRenderComponent,
+    MatApprovedPickerRenderComponent,
+    GetServiceModalComponent
   ],
   imports: [
     BrowserModule,
@@ -82,6 +89,8 @@ import { MatContractPickerRenderComponent } from './components/utils/mat-contrac
     MatBottomSheetModule,
     HttpClientModule,
     MatSnackBarModule,
+    MatListModule,
+    
     AgGridModule.withComponents([])
   ],
   providers: [
@@ -97,7 +106,9 @@ import { MatContractPickerRenderComponent } from './components/utils/mat-contrac
     AddUserModalComponent,
     AddProfilesModalComponent,
     AddServiceModalComponent,
-    MatContractPickerRenderComponent
+    MatContractPickerRenderComponent,
+    MatServicesPickerRenderComponent,
+    MatApprovedPickerRenderComponent
 
   ]
 })

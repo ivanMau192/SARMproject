@@ -1,5 +1,9 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA } from '@angular/material/bottom-sheet';
+import { MatApprovedPickerRenderComponent } from 'src/app/components/utils/mat-approved-picker-render/mat-approved-picker-render.component';
+import { MatContractPickerRenderComponent } from 'src/app/components/utils/mat-contract-picker-render/mat-contract-picker-render.component';
+import { MatServicesPickerRenderComponent } from 'src/app/components/utils/mat-service-picker-render/mat-service-picker-render.component';
+import { ServicesService } from 'src/app/services/services.service';
 
 import * as XLSX from 'xlsx'
 @Component({
@@ -8,10 +12,14 @@ import * as XLSX from 'xlsx'
   styleUrls: ['./file-upload.component.scss']
 })
 export class FileUploadComponent implements OnInit {
+  services: any[];
+  contracts;
+  serviceSelected: any;
 
   
   constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public data: any,
-  public _bottomSheetRef: MatBottomSheetRef<FileUploadComponent>) {
+  public _bottomSheetRef: MatBottomSheetRef<FileUploadComponent>,
+  private servicesService:ServicesService) {
 
   }
 
@@ -33,35 +41,59 @@ export class FileUploadComponent implements OnInit {
 
   frameworkComponents;
   userColumnsDefs = [
-		{headerName: 'Servicio', field: 'service',
-        editable: true,
-        width: 300, },
+		{headerName: 'Servicio', field: 'servTypeId',
+        editable: false,
+        width: 150,valueGetter:this.servicesGetterFormatGeneral.bind(this)},
 		{headerName: 'Baño', field: 'service_id' },
 		{headerName: 'Ubicacion', field: 'location'},
     {headerName: 'Hora', field: 'hour'},
     {headerName: 'Mantencion', field: 'status'},
     {headerName: 'Causa', field: 'cause'},
     {headerName: 'Obs', field: 'description'},
-    {headerName: 'Estado', field: 'cont_status'}
+    {headerName: 'Estado', field: 'cont_status',cellEditor: 'statusPicker'},
+
+    {
+			headerName: "status",
+			field: "change_status",
+			width: 100,
+			hide: true,
+			suppressToolPanel: true
+		 }
 	];
 
   servColumnsDefs = [
-		{headerName: 'Servicio', field: 'service',
+		{headerName: 'Servicio', field: 'servTypeId',
         editable: true,
-        width: 300, },
+        width: 150,
+        valueGetter:this.servicesGetterFormat.bind(this),cellEditorParams:{services: this.servicesGetter.bind(this)}, cellEditor: 'servicePicker' },
 		{headerName: 'Equipo', field: 'equipment' },
-		{headerName: 'Cliente', field: 'client'},
+		{headerName: 'Cliente',editable: false, field: 'client',valueGetter:this.contractGetterFormat.bind(this)},
     {headerName: 'Sector', field: 'sector'},
     {headerName: 'Cantidad', field: 'quantity'},
     {headerName: 'Hora', field: 'hour'},
-    {headerName: 'Estado', field: 'status'}
+    {headerName: 'Estado', field: 'status',cellEditor: 'statusPicker'},
+    {headerName: 'Estado', field: 'fecha',editable: false},
+    {
+			headerName: "status",
+			field: "change_status",
+			width: 100,
+			hide: true,
+			suppressToolPanel: true
+		 }
 	];
 
   serviceRowData = []
 
   userRowData = [];
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+    this.frameworkComponents = { servicePicker: MatServicesPickerRenderComponent,statusPicker:MatApprovedPickerRenderComponent};
+    this.servicesService.getAllServices().subscribe(data=>{
+      this.services = data
+    })
+    this.contracts = await this.contractGetterService()
+    console.log(this.contracts)
+    
   }
 
   abValueGetter(params) {
@@ -87,6 +119,19 @@ export class FileUploadComponent implements OnInit {
     this._bottomSheetRef.dismiss({serviceRow:this.serviceRowData,userRow:this.userRowData})
   }
   
+
+
+  uploadAndDismiss(){
+    this.servicesService.uploadServiceData(this.serviceRowData,this.userRowData).subscribe(data =>{
+      this.servicesService.getServicesData(data["id"]).subscribe(data2=>{
+        this._bottomSheetRef.dismiss({serviceRow:data2["serv"],userRow:data2["data"]})
+        
+      })
+    })
+    console.log(this.serviceRowData)
+    console.log(this.userRowData)
+  }
+
 
   addfile(event)    {    
     this.file= event.target.files[0];     
@@ -120,13 +165,15 @@ export class FileUploadComponent implements OnInit {
         this.serviceRowData = []
         this.userRowData = []
         for(let array of arrayList){
-          let append = { service:array["SERVICIO"],equipment:array["EQUIPO"],client:array["CLIENTE"],sector:array["SECTOR"],quantity:array["M3/CANT."],hour:array["HORA"],status:array["ESTADO"] }
+          
+          let append = { servTypeId:array["SERVICIO"],equipment:array["EQUIPO"],client:array["CLIENTE"],sector:array["SECTOR"],quantity:array["M3/CANT."],hour:array["HORA"],status:array["ESTADO"] }
           this.serviceRowData = this.serviceRowData.concat(append)
           console.log(array)
         }
         if(secondArrayList){
           for(let secondArray of secondArrayList){
-            let append = {service:secondArray["SERVICIO"],service_id:secondArray["BAÑO"],location:secondArray["UBICACION"],hour:secondArray["HORA"],status:secondArray["MANTENCION"],cause:secondArray["CAUSA"],description:secondArray["OBS"],cont_status:secondArray["ESTADO CLIENTE"]}
+            console.log(secondArray["HORA"])
+            let append = {servTypeId:secondArray["SERVICIO"],service_id:secondArray["BAÑO"],location:secondArray["UBICACION"],hour:secondArray["HORA"],status:secondArray["MANTENCION"],cause:secondArray["CAUSA"],description:secondArray["OBS"],cont_status:secondArray["ESTADO CLIENTE"]}
             this.userRowData = this.userRowData.concat(append)
           }
         }
@@ -137,7 +184,58 @@ export class FileUploadComponent implements OnInit {
     }    
   }    
 
+  servicesGetter(){
+    return this.services
+  }
 
+  servicesGetterFormat(event){
+    
+    let id = event.data.servTypeId
+    let showService = this.services.filter(service => {return service.servTypeId == id})
+    if(showService[0]){
+      console.log(showService[0])
+      this.serviceSelected = showService[0].servName
+      return showService[0].servName
+    }else{
+      this.serviceSelected = null
+      return null
+    }
+    
+  }
+
+  servicesGetterFormatGeneral(event){
+    
+    return this.serviceSelected
+    
+  }
+
+  contractGetterFormat(event){
+    let servId = event.data.servTypeId
+    let service = this.services.filter(service => {return service.servTypeId == servId})
+    if(!service[0]){
+      return null
+    }
+    let contId = service[0].contId
+    let contract = this.contracts.filter(contract =>{return contract.contId == contId})
+    if(!contract[0]){
+      return null
+    }
+    return contract[0].contName
+  }
+
+  contractGetterService(){
+    return new Promise((resolve, reject) =>{
+			this.servicesService.getAllContracts().subscribe(data =>{resolve(data);},err =>{reject(err);})
+		})
+  }
+
+  changeServiceGridEvent(event){
+    var params = {
+      force: true
+    };
+    this.gridApi.refreshCells(params)
+    
+  }
   
 
 }
