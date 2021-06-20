@@ -122,14 +122,17 @@ export class ServicesController {
         let id = req.body.servId
         
         let respServ = await getRepository(Services).createQueryBuilder('s')
-                    .where(`s.serv_id = ${id}`)
+                    .where(`s.serv_id IN (${id.toString()})`)
                     .select(['s.*'])
                     .getRawMany()
 
         let respData = await getRepository(ServicesData).createQueryBuilder('sd')
-                        .where(`sd.serv_id = ${id}`)
+                        .where(`sd.serv_id IN (${id.toString()})`)
                         .select(['sd.*'])
                         .getRawMany()
+
+
+        
         respServ = respServ.map(v=>{
             let out = {
                 service_id:v.serv_id,
@@ -155,7 +158,8 @@ export class ServicesController {
                 status:v.status,
                 cause:v.cause,
                 description:v.observation,
-                cont_status:v.maintance_status
+                cont_status:v.maintance_status,
+                serv_id:v.serv_id
             }
             return out
         })
@@ -176,7 +180,7 @@ export class ServicesController {
         let resp = await getRepository(Services).createQueryBuilder('s')
                             .innerJoinAndSelect('services_types','st','s.serv_type_id=st.serv_type_id')
                             .where(`s.timestamp::date = '${fecha}'`)
-                            .select(['s.*','st.cont_id'])
+                            .select(['s.*','st.cont_id','st.serv_name'])
                             .getRawMany()
         if(contId){
             resp = resp.filter(v =>{return v.cont_id==contId})
@@ -187,7 +191,7 @@ export class ServicesController {
                             .where(`sd.serv_id = ${v.serv_id}`)
                             .select(['s.*'])
                             .getCount()
-            let out2={status:v.status,cantidad:dataResp,id:v.serv_id}
+            let out2={status:v.status,cantidad:dataResp,id:v.serv_id,name:v.serv_name}
             out.push(out2)
 
         }

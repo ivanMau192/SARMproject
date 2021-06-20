@@ -1,5 +1,48 @@
-<p>Gráfico de Métricas</p>
-<div>
-    <canvas id="myChart" width="400" height="400"></canvas>  
+<div style="width:100%">
+    <mat-tab-group mat-stretch-tabs style="width:100%">
+        <mat-tab label="Servicios"> 
+            <button style="margin-left:1vw;margin-top: 1vw;" mat-button [matMenuTriggerFor]="menu">Filtros</button>
+            <mat-menu #menu="matMenu" class="filter-wrapper" [hasBackdrop]="false">
+                <div style="margin: 2vh;" (click)="$event.stopPropagation()" (keydown)="$event.stopPropagation()">
+                    <form >
+                        <mat-form-field style="width: 100%;" class="example-full-width">
+                            <mat-label>Fecha</mat-label>
+                            <input matInput [(ngModel)]="selectedDate" name="first" [matDatepicker]="picker">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                        <mat-form-field style="width: 100%;" class="example-full-width">
+                            <input matInput style="display:none">
+                            <mat-label *ngIf="contractSelected==null">Contrato</mat-label>
+                            <mat-select [(ngModel)]="contractSelected"  name="something" ngDefaultControl >
+                              <mat-option *ngFor="let contract of contracts" [value]="contract.contId">{{contract.contName}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </form>
+                </div>
+                <div (click) = "filtrar()" style="margin: 2vh;"><button (click) = "filtrar()" mat-raised-button color="primary">Filtrar</button></div>
+            </mat-menu>
+            <ag-grid-angular 
+                style="height: 12vh; margin:1%" 
+                class="ag-theme-balham"
+                [rowData]="serviceRowData"
+                [defaultColDef]="defaultColDef"
+                [columnDefs]="servColumnsDefs"
+                
+                (gridReady)="onSecondGridReady($event)">
+            </ag-grid-angular>
+            <div class="divisor"></div>
+            <div style="margin-left:2vw;margin-top: 1vw;"><h3>Servicios</h3></div>
+            <ag-grid-angular 
+                style="height: 54vh; margin:1%" 
+                class="ag-theme-balham"
+                [rowData]="userRowData"
+                [defaultColDef]="defaultColDef"
+                [columnDefs]="userColumnsDefs"
+                (cellValueChanged)="changeUserGridEvent($event)"
+                (gridReady)="onGridReady($event)"
+                >
+            </ag-grid-angular>
+        </mat-tab>
+    </mat-tab-group>
 </div>
-  

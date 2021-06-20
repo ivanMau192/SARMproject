@@ -1,10 +1,10 @@
 <div>
     <h2>Resultados para filtros Seleccionados</h2>
-    
+    <button style="margin-left:1vw;margin-top: 1vw;" (click)="loadAll()" mat-button *ngIf = "flag">Cargar Todo</button>
         <mat-list>
             <ng-container *ngFor="let service of renderData">
                 <div>
-                    <button mat-list-item (click)="selector(service.id)"> Estado: {{service.status}} - Cantidad: {{service.cantidad}} </button>
+                    <button mat-list-item (click)="selector(service.id)"> Servicio:{{service.name}} - Estado: {{service.status}} - Cantidad: {{service.cantidad}} </button>
                     <mat-divider></mat-divider>
                 </div>
             </ng-container>

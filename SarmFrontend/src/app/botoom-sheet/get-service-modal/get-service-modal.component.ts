@@ -10,13 +10,14 @@ import { ServicesService } from 'src/app/services/services.service';
 export class GetServiceModalComponent implements OnInit {
 
   renderData;
+  flag: any;
 
   constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public data: any,
   public _bottomSheetRef: MatBottomSheetRef<GetServiceModalComponent>,
   private servicesService:ServicesService) { }
 
   ngOnInit(): void {
-    
+    this.flag = this.data
     this.renderData = this.data
     console.log(this.renderData)
   }
@@ -27,6 +28,13 @@ export class GetServiceModalComponent implements OnInit {
 
       this._bottomSheetRef.dismiss({serviceRow:data["serv"],userRow:data["data"]})
     })
+  }
+
+
+
+  loadAll(){
+    let id = this.renderData.map(v=>{return v.id})
+    this.selector(id)
   }
 
 }

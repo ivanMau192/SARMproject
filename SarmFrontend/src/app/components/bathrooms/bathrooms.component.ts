@@ -213,6 +213,7 @@ export class BathroomsComponent implements OnInit {
 
   changeUserGridEvent(event){
 
+    
     let rowNode = this.gridApi.getRowNode(event.rowIndex);
 	  rowNode.setDataValue('change_status', true);
     var params = {
