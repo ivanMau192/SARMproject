@@ -128,8 +128,7 @@ export class FileUploadComponent implements OnInit {
         
       })
     })
-    console.log(this.serviceRowData)
-    console.log(this.userRowData)
+    
   }
 
 

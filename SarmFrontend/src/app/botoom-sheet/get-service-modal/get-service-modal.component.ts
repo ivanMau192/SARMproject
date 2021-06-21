@@ -17,7 +17,7 @@ export class GetServiceModalComponent implements OnInit {
   private servicesService:ServicesService) { }
 
   ngOnInit(): void {
-    this.flag = this.data
+    this.flag = this.data.flag
     this.renderData = this.data
     console.log(this.renderData)
   }

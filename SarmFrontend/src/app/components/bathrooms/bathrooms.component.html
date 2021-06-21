@@ -6,6 +6,7 @@
             </div>
             <button style="margin-left:1vw;margin-top: 1vw;" mat-button [matMenuTriggerFor]="menu">Filtros</button>
             <button style="margin-left:1vw;margin-top: 1vw;" mat-button (click)="openFileUpload()">Subir Archivo</button>
+            <button style="margin-left:1vw;margin-top: 1vw;" *ngIf="saveButtonActive" (click)="saveData()" mat-button>Guardar</button>
             <mat-menu #menu="matMenu" class="filter-wrapper" [hasBackdrop]="false">
                 <div style="margin: 2vh;" (click)="$event.stopPropagation()" (keydown)="$event.stopPropagation()">
                     <form >

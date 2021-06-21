@@ -25,6 +25,7 @@ export class BathroomsComponent implements OnInit {
   contracts: any;
   contractSelected;
   selectedDate;
+  saveButtonActive = false;
   constructor(private _bottomSheet: MatBottomSheet,private servicesService:ServicesService) { }
   wasteConvertMetrics = [
     {value: 1, viewValue: 'kilogramos'},
@@ -206,6 +207,7 @@ export class BathroomsComponent implements OnInit {
       force: true
     };
     this.gridApi.refreshCells(params)
+    this.saveButtonActive = true
 
     
   }
@@ -214,17 +216,38 @@ export class BathroomsComponent implements OnInit {
   changeUserGridEvent(event){
 
     
+    let rowNodeSev = this.gridColumnApi.getRowNode(0);
+	  rowNodeSev.setDataValue('change_status', true);
+    
+
     let rowNode = this.gridApi.getRowNode(event.rowIndex);
 	  rowNode.setDataValue('change_status', true);
     var params = {
       force: true
     };
     this.gridApi.refreshCells(params)
+    this.saveButtonActive = true
 
     
   }
   
 
+
+  saveData(){
+    let rowData = [];
+    let rowServData = [];
+    this.gridApi.forEachNode(node => rowData.push(node.data));
+    this.gridColumnApi.forEachNode(node => rowServData.push(node.data));
+    let dataToUpload = rowData.filter(rowNode =>{return rowNode.change_status})
+    let servToUpload = rowServData.filter(rowNode =>{return rowNode.change_status})
+    
+    this.servicesService.uploadServiceData(servToUpload,dataToUpload).subscribe(data =>{
+      this.servicesService.getServicesData(data["id"]).subscribe(data2=>{
+        this.serviceRowData=data2["serv"]
+        this.userRowData=data2["data"]
+      })
+    })
+  }
  
 
 }

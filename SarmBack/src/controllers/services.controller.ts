@@ -68,10 +68,11 @@ export class ServicesController {
             insertService.status = service.status;
             insertService.quantity = service.quantity;
             insertService.equipment = service.equipment;
-            if(service.servId){
+            if(service.service_id){
                 console.log("ENTER")
-                id = parseInt(service.servId)
+                id = parseInt(service.service_id)
                 insertService.servId = id
+                console.log(insertService)
                 await getRepository(Services).save(insertService)
             }else{
                 try{
@@ -94,9 +95,10 @@ export class ServicesController {
                 insertData.observation = data.description
                 insertData.time = data.hour
 
-                if(data.servDataId){
-                    id = parseInt(data.servDataId)
-                    insertData.servDataId = id
+                if(service.service_id){
+                    console.log("ENTER")
+                    insertData.servDataId = parseInt(data.service_id)
+                    console.log(insertData)
                     await getRepository(ServicesData).save(insertData)
                 }else{
                     try{
