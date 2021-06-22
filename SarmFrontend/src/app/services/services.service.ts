@@ -42,4 +42,8 @@ export class ServicesService {
     return this.http.post<any[]>(this.baseUrl+'getServicesFiltered',{fecha:fecha,contId:contId});
   }
 
+  getAllModules():Observable <any[]>{
+    return this.http.post<any[]>(this.baseUrl+'getAllModules',{});
+  }
+
 }

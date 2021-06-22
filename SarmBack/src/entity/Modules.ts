@@ -18,6 +18,9 @@ export class Modules {
 
   @Column("character varying", { name: "modu_url" })
   moduUrl: string;
+ 
+  @Column("character varying", { name: "modu_tag" })
+  moduTag: string;
 
   @OneToMany(() => Permissions, (permissions) => permissions.modu)
   permissions: Permissions[];

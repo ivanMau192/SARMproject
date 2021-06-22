@@ -6,6 +6,7 @@ import { ServicesTypes } from '../entity/ServicesTypes';
 import { Contracts } from '../entity/Contracts';
 import { Services } from '../entity/Services';
 import { ServicesData } from '../entity/ServicesData';
+import { Modules } from '../entity/Modules';
 
 
 export class ServicesController {
@@ -19,7 +20,7 @@ export class ServicesController {
             service.servName=s.servName;
             service.contId = s.contId;
             service.servPrice = s.servPrice
-
+            service.moduId = s.moduId;
             if(s.servTypeId){
                 let id = parseInt(s.servTypeId)
                 service.servTypeId = id
@@ -43,9 +44,27 @@ export class ServicesController {
 
     getAllServices = async (req: Request, res: Response): Promise<Response> => {
         let resp = await getRepository(ServicesTypes).find()
+        let modules = await getRepository(Modules).find()
+        console.log(resp)
+        console.log(modules)
+
+        resp = resp.map(v=>{
+            let out = v
+            let module = modules.filter(module=>{return module.moduId == v.moduId})
+            out["moduTag"] = module[0].moduTag
+            out["moduId"]= module[0].moduId
+            return out
+        })
+
         return res.send(resp);
     }
 
+
+    getAllModules = async (req: Request, res: Response): Promise<Response> => {
+        let modules = await getRepository(Modules).find()
+        console.log(modules)
+        return res.send(modules)
+    }
 
     getAllContracts = async (req: Request, res: Response): Promise<Response> => {
         let resp = await getRepository(Contracts).find()

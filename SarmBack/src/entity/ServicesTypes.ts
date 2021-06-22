@@ -29,6 +29,10 @@ export class ServicesTypes {
   @OneToMany(() => Services, (services) => services.servType)
   services: Services[];
 
+
+  @Column("character varying", { name: "modu_id", nullable: true })
+  moduId: number | null;
+
   @ManyToOne(() => Contracts, (contracts) => contracts.servicesTypes)
   @JoinColumn([{ name: "cont_id", referencedColumnName: "contId" }])
   cont: Contracts;

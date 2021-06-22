@@ -15,7 +15,7 @@ import * as moment from "moment";
       <input matInput style="display:none">
       <mat-label *ngIf="dias">Perfiles</mat-label>
       <mat-select [(ngModel)]="dias" ngDefaultControl>
-        <mat-option *ngFor="let service of services" [value]="service.servTypeId">{{service.servName}}</mat-option>
+        <mat-option *ngFor="let module of modules" [value]="module.moduId">{{module.moduName}}</mat-option>
       </mat-select>
     </mat-form-field>
   `,
@@ -32,7 +32,7 @@ import * as moment from "moment";
 
 
 
-export class MatServicesPickerRenderComponent implements ICellEditorAngularComp {
+export class MatModulesPickerRenderComponent implements ICellEditorAngularComp {
   private params: any;
    
 
@@ -46,11 +46,12 @@ export class MatServicesPickerRenderComponent implements ICellEditorAngularComp 
     private focusedInput: number = 0;
     permissions=[];
   services: any;
+  modules: any;
   
     agInit(params: any): void {
       
-      this.services = params.services()
-      console.log(this.services)
+      this.modules = params.modules()
+      console.log(this.modules)
       
       
     }

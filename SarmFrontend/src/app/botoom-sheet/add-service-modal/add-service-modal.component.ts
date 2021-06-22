@@ -36,6 +36,7 @@ export class AddServiceModalComponent implements OnInit {
 
   profiles: any;
   contractSelected;
+  moduleSelected;
   statusSelected = "ACTIVO";
   status = ["ACTIVO", "INACTIVO"]
   emailFormControl = new FormControl('', [
@@ -48,18 +49,23 @@ export class AddServiceModalComponent implements OnInit {
   priceFormControl = new FormControl('', [
     Validators.required
   ]);
-
+  moduleFormControl = new FormControl('', [
+    Validators.required
+  ]);
   emailMatcher = new EmailErrorStateMatcher();
   passwordMatcher = new PasswordErrorStateMatcher();
   nameMatcher = new NameErrorStateMatcher();
   contracts: any;
+  modules: any;
   constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public data: any,
               public serviceService:ServicesService,
               public _bottomSheetRef: MatBottomSheetRef<AddServiceModalComponent>) { }
 
   ngOnInit(): void {
     this.contracts = this.data.contracts
-    console.log(this.contracts)
+    this.modules = this.data.modules
+    this.contractSelected = this.contracts[0].contId
+    this.moduleSelected = this.modules[0].moduId
   }
 
   createUser(){
@@ -69,10 +75,12 @@ export class AddServiceModalComponent implements OnInit {
     let cont = this.contractSelected
     let servName = this.nameFormControl.value
     let price = this.priceFormControl.value
+    let moduleId = this.moduleSelected
     let dataToUpload = [{
       servName:servName,
       servPrice:price,
-      contId:cont
+      contId:cont,
+      moduId:moduleId
     }];
     
     this.serviceService.saveServices(dataToUpload).subscribe(data=>{

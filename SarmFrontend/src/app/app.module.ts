@@ -42,6 +42,7 @@ import { MatServicesPickerRenderComponent } from './components/utils/mat-service
 import { MatApprovedPickerRenderComponent } from './components/utils/mat-approved-picker-render/mat-approved-picker-render.component';
 import { GetServiceModalComponent } from './botoom-sheet/get-service-modal/get-service-modal.component';
 import {MatListModule} from '@angular/material/list';
+import { MatModulesPickerRenderComponent } from './components/utils/mat-modules-picker-render/mat-service-modules-render.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import {MatListModule} from '@angular/material/list';
     MatContractPickerRenderComponent,
     MatServicesPickerRenderComponent,
     MatApprovedPickerRenderComponent,
+    MatModulesPickerRenderComponent,
     GetServiceModalComponent
   ],
   imports: [
@@ -108,6 +110,7 @@ import {MatListModule} from '@angular/material/list';
     AddServiceModalComponent,
     MatContractPickerRenderComponent,
     MatServicesPickerRenderComponent,
+    MatModulesPickerRenderComponent,
     MatApprovedPickerRenderComponent
 
   ]

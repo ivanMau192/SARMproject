@@ -10,4 +10,5 @@ router.post('/getAllContracts', dc.getAllContracts)
 router.post('/services/addDataServices',dc.addDataServices)
 router.post('/getServicesData',dc.getServicesData)
 router.post('/getServicesFiltered',dc.getServicesFiltered)
+router.post('/getAllModules',dc.getAllModules)
 export default router;

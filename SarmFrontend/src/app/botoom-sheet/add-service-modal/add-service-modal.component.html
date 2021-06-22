@@ -6,7 +6,7 @@
         <mat-grid-tile>
             <mat-card style='width: 300px'>
                 <div class="center" style="text-align: center;">
-                    <h2>Creacion de Perfil</h2>
+                    <h2>Creacion de Servicio</h2>
                     <mat-divider></mat-divider>
                 </div>
                 <div>
@@ -34,10 +34,19 @@
                             </mat-error>
                         </mat-form-field>
 
+                        <mat-form-field style="width: 100%;">
+                            <input matInput style="display:none">
+                            <mat-label *ngIf="moduleSelected==null">Modulo</mat-label>
+                            <mat-select [(ngModel)]="moduleSelected"  name="something" ngDefaultControl >
+                              <mat-option *ngFor="let module of modules" [value]="module.moduId">{{module.moduName}}</mat-option>
+                            </mat-select>
+                            
+                        </mat-form-field>
+
                         
                         <mat-form-field  appearance="none" style="text-align: center; width: 100%;" class="center example-full-width">
                             <input type="password" style="display:none" matInput>
-                            <button mat-raised-button color="primary" (click)="createUser()">Crear Perfil</button>
+                            <button mat-raised-button color="primary" (click)="createUser()">Crear Servicio</button>
                         </mat-form-field>   
                     </form>
                 </div>
