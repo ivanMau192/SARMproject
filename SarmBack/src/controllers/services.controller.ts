@@ -107,10 +107,10 @@ export class ServicesController {
             for(let data of addingDataServices){
                 let insertData = new ServicesData
                 insertData.location = data.location
-                insertData.maintanceStatus = data.status
+                insertData.maintanceStatus = data.cont_status
                 insertData.serv = id
                 insertData.cause = data.cause
-                insertData.status = data.cont_status
+                insertData.status = data.status
                 insertData.observation = data.description
                 insertData.time = data.hour
 

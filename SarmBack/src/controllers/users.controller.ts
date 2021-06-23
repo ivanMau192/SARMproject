@@ -19,6 +19,7 @@ export class UsersController {
                 user.userPassword=u.password
                 user.userUsername=u.userUsername
                 user.timeCreated = new Date()
+                user.userActive = u.userActive
                 try{
                     await getRepository(Users).insert(user)
                     

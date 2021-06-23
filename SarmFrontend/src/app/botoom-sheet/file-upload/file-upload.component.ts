@@ -89,7 +89,9 @@ export class FileUploadComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     this.frameworkComponents = { servicePicker: MatServicesPickerRenderComponent,statusPicker:MatApprovedPickerRenderComponent};
     this.servicesService.getAllServices().subscribe(data=>{
-      this.services = data
+      console.log(data)
+      this.services = data.filter(v=>{return v.modutag=="bathroom-module"})
+      
     })
     this.contracts = await this.contractGetterService()
     console.log(this.contracts)

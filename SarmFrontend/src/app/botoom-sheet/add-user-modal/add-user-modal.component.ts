@@ -68,10 +68,10 @@ export class AddUserModalComponent implements OnInit {
     let dataToUpload = [{
 
       prof_name:profile,
-      userUserName:userName,
-      username:userUsername,
+      userUsername:userName,
+      userName:userUsername,
       password:password,
-      usertActive:status
+      userActive:status
 
     }];
     
@@ -79,7 +79,7 @@ export class AddUserModalComponent implements OnInit {
     this.userService.modifyUsers(dataToUpload).subscribe(data=>{
       
       console.log("OK")
-      //this._bottomSheetRef.dismiss({reload:true});
+      this._bottomSheetRef.dismiss({reload:true});
     })
     
   }
