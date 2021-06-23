@@ -21,25 +21,25 @@
             <div *ngIf ="selectedModule=='initial'" class="divisor-selected center"></div>
         </div>
         
-        <div fxLayout="row" (click)="changeModule('waste')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
+        <div fxLayout="row" *ngIf="checkPerm('waste-module')" (click)="changeModule('waste')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
             <div class="center" style="text-align: center;">Residuos</div>
             <div class="divisor-white center"></div>
             <div *ngIf ="selectedModule=='waste'" class="divisor-selected center"></div>
         </div> 
 
-        <div fxLayout="row" (click)="changeModule('bathrooms')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
+        <div fxLayout="row" *ngIf="checkPerm('bathroom-module')" (click)="changeModule('bathrooms')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
             <div class="center" style="text-align: center;">Baños</div>
             <div class="divisor-white center"></div>
             <div *ngIf ="selectedModule=='bathrooms'" class="divisor-selected center"></div>
         </div> 
 
-        <div fxLayout="row" (click)="changeModule('commercial')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
+        <div fxLayout="row" *ngIf="checkPerm('comertial-module')" (click)="changeModule('commercial')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
             <div class="center" style="text-align: center;">Comercial</div>
             <div class="divisor-white center"></div>
             <div *ngIf ="selectedModule=='commercial'" class="divisor-selected center"></div>
         </div>
 
-        <div fxLayout="row" (click)="changeModule('services')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
+        <div fxLayout="row" *ngIf="checkPerm('service-module')" (click)="changeModule('services')" style="margin-top: 5%;" class="module-disp" fxLayoutGap="20">
             <div class="center" style="text-align: center;">Servicios</div>
             <div class="divisor-white center"></div>
             <div *ngIf ="selectedModule=='services'" class="divisor-selected center"></div>
