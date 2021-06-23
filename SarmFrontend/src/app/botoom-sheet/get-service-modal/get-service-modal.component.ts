@@ -18,14 +18,14 @@ export class GetServiceModalComponent implements OnInit {
 
   ngOnInit(): void {
     this.flag = this.data.flag
-    this.renderData = this.data
+    this.renderData = this.data.filter(data =>{return data.moduTag == 'bathroom-module'})
     console.log(this.renderData)
   }
 
 
   selector(id){
     this.servicesService.getServicesData(id).subscribe(data=>{
-
+      //console.log(data)
       this._bottomSheetRef.dismiss({serviceRow:data["serv"],userRow:data["data"]})
     })
   }

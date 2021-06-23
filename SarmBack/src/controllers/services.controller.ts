@@ -200,8 +200,9 @@ export class ServicesController {
 
         let resp = await getRepository(Services).createQueryBuilder('s')
                             .innerJoinAndSelect('services_types','st','s.serv_type_id=st.serv_type_id')
+                            .innerJoinAndSelect('modules','md','st.modu_id = md.modu_id')
                             .where(`s.timestamp::date = '${fecha}'`)
-                            .select(['s.*','st.cont_id','st.serv_name'])
+                            .select(['s.*','st.cont_id','st.serv_name','md.modu_tag'])
                             .getRawMany()
         if(contId){
             resp = resp.filter(v =>{return v.cont_id==contId})
@@ -212,7 +213,7 @@ export class ServicesController {
                             .where(`sd.serv_id = ${v.serv_id}`)
                             .select(['s.*'])
                             .getCount()
-            let out2={status:v.status,cantidad:dataResp,id:v.serv_id,name:v.serv_name}
+            let out2={status:v.status,cantidad:dataResp,id:v.serv_id,name:v.serv_name,moduTag:v.modu_tag}
             out.push(out2)
 
         }
