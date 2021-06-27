@@ -1,0 +1,24 @@
+<input style="margin-left:1vw;margin-top: 1vw;" type="file" class="form-control" (change)="addFile($event)" placeholder="Upload file" accept=".csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+<div style="margin-left:2vw;margin-top: 1vw;"><h3>Servicio</h3></div>
+            <ag-grid-angular 
+                style="height: 25vh; margin:1%" 
+                class="ag-theme-balham"
+                [rowData]="serviceRowData"
+                [columnDefs]="servColumnsDefs"
+                [frameworkComponents]="frameworkComponents"
+                (cellValueChanged)="changeServiceGridEvent($event)"
+                (gridReady)="onServiceGridReady($event)"
+                >
+            </ag-grid-angular>
+            <div class="divisor"></div>
+            <div style="margin-left:2vw;margin-top: 1vw;"><h3>Servicios</h3></div>
+<ag-grid-angular 
+                style="height: 44vh; margin:1%" 
+                class="ag-theme-balham"
+                [rowData]="userRowData"
+                [columnDefs]="userColumnsDefs"
+                (cellValueChanged)="changeUserGridEvent($event)"
+                
+                (gridReady)="onUserGridReady($event)"
+                >
+            </ag-grid-angular>

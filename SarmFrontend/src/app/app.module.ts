@@ -43,6 +43,7 @@ import { MatApprovedPickerRenderComponent } from './components/utils/mat-approve
 import { GetServiceModalComponent } from './botoom-sheet/get-service-modal/get-service-modal.component';
 import {MatListModule} from '@angular/material/list';
 import { MatModulesPickerRenderComponent } from './components/utils/mat-modules-picker-render/mat-service-modules-render.component';
+import { WasteUploadComponent } from './botoom-sheet/waste-upload/waste-upload.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { MatModulesPickerRenderComponent } from './components/utils/mat-modules-
     MatServicesPickerRenderComponent,
     MatApprovedPickerRenderComponent,
     MatModulesPickerRenderComponent,
-    GetServiceModalComponent
+    GetServiceModalComponent,
+    WasteUploadComponent
   ],
   imports: [
     BrowserModule,
@@ -111,7 +113,8 @@ import { MatModulesPickerRenderComponent } from './components/utils/mat-modules-
     MatContractPickerRenderComponent,
     MatServicesPickerRenderComponent,
     MatModulesPickerRenderComponent,
-    MatApprovedPickerRenderComponent
+    MatApprovedPickerRenderComponent,
+    WasteUploadComponent
 
   ]
 })

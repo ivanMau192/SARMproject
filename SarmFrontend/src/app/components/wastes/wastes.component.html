@@ -1,6 +1,7 @@
 <div style="width:100%">
     <mat-tab-group mat-stretch-tabs style="width:100%">
         <mat-tab label="Residuos">
+            <button style="margin-left:1vw;margin-top: 1vw;" mat-button (click)="openFileUpload()">Subir Archivo</button>
             <button style="margin-left:1vw;margin-top: 1vw;" mat-button [matMenuTriggerFor]="menu">Filtros</button>
             <mat-menu #menu="matMenu" class="filter-wrapper" [hasBackdrop]="false">
                 <div style="margin: 2vh;" (click)="$event.stopPropagation()" (keydown)="$event.stopPropagation()">
@@ -26,6 +27,7 @@
                     </form>
                 </div>
                 <div (click) = "filtrar()" style="margin: 2vh;"><button (click) = "filtrar()" mat-raised-button color="primary">Filtrar</button></div>
+                
             </mat-menu>
             <div style="margin-left:2vw;margin-top: 1vw;"><h3>Servicio</h3></div>
             <ag-grid-angular 

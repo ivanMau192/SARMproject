@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatProfilesPickerRenderComponent } from '../utils/mat-profiles-picker-render/mat-profiles-picker-render.component';
 import {Chart} from 'node_modules/chart.js';
+import { WasteUploadComponent } from 'src/app/botoom-sheet/waste-upload/waste-upload.component';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
 @Component({
   selector: 'app-wastes',
   templateUrl: './wastes.component.html',
@@ -21,7 +23,8 @@ export class WastesComponent implements OnInit {
     {data: [23,54,34,33,25,19],label: 'Serie B' },
   ] ;
 
-  constructor() { }
+
+  constructor(private _bottomSheet: MatBottomSheet) { }
   wasteConvertMetrics = [
     {value: 1, viewValue: 'kilogramos'},
     {value: 1000, viewValue: 'Toneladas'}
@@ -77,6 +80,19 @@ export class WastesComponent implements OnInit {
     this.gridColumnApi = params.columnApi;
 
     
+  }
+
+  openFileUpload(){
+    let ref = this._bottomSheet.open(WasteUploadComponent,{disableClose:true, data: {}, panelClass: 'custom-width' });
+    ref.afterDismissed().subscribe( async (dataFromChild) => {
+      console.log(dataFromChild)
+      this.serviceRowData = dataFromChild.serviceRow;
+      this.userRowData = dataFromChild.userRow;
+      var params = {
+        force: true
+      };
+      this.gridApi.refreshCells(params)
+    })
   }
 
   filtrar(){
