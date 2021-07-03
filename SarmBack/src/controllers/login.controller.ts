@@ -5,12 +5,33 @@ import { ProfilesPermissions } from '../entity/ProfilesPermissions';
 import { Users } from '../entity/Users';
 
 
+/** Controlador de Login y autenticacion
+ * @module controllers/LoginController
+ */
+
 export class LoginController {
+
+
+     /**
+    * Funcion que obtiene lista de permisos
+    * @function logOut
+    * @returns {Object} Objeto con estado de peticion
+    *
+    */
+
     logOut  = async (req: Request, res: Response): Promise<Response> => {
         req.session.destroy();
         let out = {status:true}
         return res.send(out)
     }
+
+
+    /**
+    * Funcion que obtiene el estado de sesion del usuario
+    * @function isLogged
+    * @returns {Object} Objeto con Estado de peticion
+    *
+    */
  
     isLogged = async (req: Request, res: Response): Promise<Response> => {
 
@@ -25,6 +46,15 @@ export class LoginController {
         
 
     }
+
+    /**
+    * Funcion que inicia sesion en el sistema
+    * @function getLogin
+    * @param {string} user Usuario a autenticar
+    * @param {string} password Password de usuario
+    * @returns {Object} Objeto con Estado de peticion
+    *
+    */
 
     getLogin = async (req: Request, res: Response): Promise<Response> => {
         console.log("login data")

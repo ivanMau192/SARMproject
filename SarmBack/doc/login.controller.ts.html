@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: login.controller.ts</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: login.controller.ts</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import {request, Request, Response} from 'express';
+import { getRepository } from 'typeorm';
+import { Contracts } from '../entity/Contracts';
+import { ProfilesPermissions } from '../entity/ProfilesPermissions';
+import { Users } from '../entity/Users';
+
+
+export class LoginController {
+
+
+     /**
+    * Funcion que obtiene lista de permisos
+    * @function logOut
+    * @returns {Object} Objeto con estado de peticion
+    *
+    */
+
+    logOut  = async (req: Request, res: Response): Promise&lt;Response> => {
+        req.session.destroy();
+        let out = {status:true}
+        return res.send(out)
+    }
+
+
+    /**
+    * Funcion que obtiene el estado de sesion del usuario
+    * @function isLogged
+    * @returns {Object} Objeto con Estado de peticion
+    *
+    */
+ 
+    isLogged = async (req: Request, res: Response): Promise&lt;Response> => {
+
+        
+        let out = {status:true}
+        if(req.session.user){
+            return res.send(out)
+        }else{
+            out.status = false
+            return res.send(out)
+        }
+        
+
+    }
+
+    /**
+    * Funcion que inicia sesion en el sistema
+    * @function getLogin
+    * @param {string} user Usuario a autenticar
+    * @param {string} password Password de usuario
+    * @returns {Object} Objeto con Estado de peticion
+    *
+    */
+
+    getLogin = async (req: Request, res: Response): Promise&lt;Response> => {
+        console.log("login data")
+        console.log(req.body)
+        let user = req.body.user;
+        let password = req.body.password;
+        let out = {status:false,data:{}}
+        
+        let resp = await getRepository(Users)
+                        .createQueryBuilder('u')
+                        .innerJoinAndSelect('profiles_users','pu','pu.user_id = u.user_id')
+                        .innerJoinAndSelect('profiles','p2','p2.prof_id = pu.prof_id')
+                        .where(`u.user_name = '${user}' AND u.user_password = '${password}'`)
+                        .select(['u.*','p2.*'])
+                        .getRawMany();
+        
+        let permissions = []
+        if(resp.length > 0){
+            let profilesId = resp.map(v => {return v.prof_id})
+            permissions = await getRepository(ProfilesPermissions)
+                                    .createQueryBuilder('pf')
+                                    .innerJoinAndSelect('permissions','p','pf.perm_id = p.perm_id')
+                                    .select(['p.*'])
+                                    .where(`pf.prof_id IN (${profilesId.toString()})`)
+                                    .getRawMany();
+            let contract = await getRepository(Contracts)
+                            .createQueryBuilder('c')
+                            .innerJoinAndSelect('user_contracts','uc','uc.cont_id = c.cont_id')
+                            .where(`uc.user_id = ${resp[0].user_id}`)
+                            .select(['c.*'])
+                            .getRawMany()
+            contract = contract[0]
+            resp[0].contract = contract
+            console.log(resp)
+            req.session.user = resp[0];
+            permissions = permissions.map(permission =>{return permission.perm_tag});
+            req.session.permissions = permissions;
+            out.data['user']={user:resp[0].user_name,user_username:resp[0].user_username}
+            out.data["permissions"] = permissions;
+            out.data["contract"] = contract;
+            out.status = true;
+        }
+        
+        return res.send(out);
+    }
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#addDataServices">addDataServices</a></li><li><a href="global.html#addService">addService</a></li><li><a href="global.html#getAllContracts">getAllContracts</a></li><li><a href="global.html#getAllModules">getAllModules</a></li><li><a href="global.html#getAllServices">getAllServices</a></li><li><a href="global.html#getlistPerms">getlistPerms</a></li><li><a href="global.html#getlistUsers">getlistUsers</a></li><li><a href="global.html#getLogin">getLogin</a></li><li><a href="global.html#getPermissionsList">getPermissionsList</a></li><li><a href="global.html#getProfiles">getProfiles</a></li><li><a href="global.html#getServicesDatas">getServicesDatas</a></li><li><a href="global.html#isLogged">isLogged</a></li><li><a href="global.html#logOut">logOut</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Fri Jul 02 2021 10:04:49 GMT-0400 (GMT-04:00)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

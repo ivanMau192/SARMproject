@@ -1,0 +1,848 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>sarm-frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">sarm-frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Componentes</li>
+  <li>LoginComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>Fichero</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/login/login.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Descripción</h3>
+    </p>
+    <p class="comment">
+        <p>Componente de login
+Este componente es el encargado de mostrar y ejecutar todo lo relacionado al modulo de login</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implementa</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Meta datos</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-login</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./login.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./login.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Índice</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Propiedades</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#emailFormControl">emailFormControl</a>
+                            </li>
+                            <li>
+                                <a href="#emailMatcher">emailMatcher</a>
+                            </li>
+                            <li>
+                                <a href="#passwordFormControl">passwordFormControl</a>
+                            </li>
+                            <li>
+                                <a href="#passwordMatcher">passwordMatcher</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Métodos</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#login">login</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Salidas</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#loginChanged">loginChanged</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(loginService: <a href="../injectables/LoginService.html">LoginService</a>, _snackBar: MatSnackBar)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="93" class="link-to-prism">src/app/components/login/login.component.ts:93</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor    </p>
+</div>
+                            <div>
+                                    <b>Parámetros :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Nombre</td>
+                                                    <td>Tipo</td>
+                                                <td>Opcional</td>
+                                                    <td>Descripción</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>loginService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LoginService.html" target="_self" >LoginService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Servicio de servicios</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>_snackBar</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatSnackBar</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Referencia a popUp de alertas</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    <h3 id="outputs">Salidas</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loginChanged"></a>
+                        <b>loginChanged</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>EventEmitter&lt;Object&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Definido en <a href="" data-line="65" class="link-to-prism">src/app/components/login/login.component.ts:65</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para realizar emision de evento</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Métodos
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="login"></a>
+                    <span class="name">
+                        <b>
+                            login
+                        </b>
+                        <a href="#login"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>login()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="117"
+                            class="link-to-prism">src/app/components/login/login.component.ts:117</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo se utiliza para realizar login en el sistema</p>
+</div>
+
+                    <div>
+                        <b>Ejemplo :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">login()</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Vacio</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="109"
+                            class="link-to-prism">src/app/components/login/login.component.ts:109</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Metodo inicial</p>
+</div>
+
+                    <div>
+                        <b>Ejemplo :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">ngOnInit()</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Sin retorno</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Propiedades
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="emailFormControl"></a>
+                        <span class="name">
+                            <b>
+                            emailFormControl</b>
+                            <a href="#emailFormControl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>new FormControl(&#x27;&#x27;, [
+    Validators.required,
+    Validators.email,
+  ])</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="70" class="link-to-prism">src/app/components/login/login.component.ts:70</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable relacionada a formulario de email para control</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="emailMatcher"></a>
+                        <span class="name">
+                            <b>
+                            emailMatcher</b>
+                            <a href="#emailMatcher"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>new EmailErrorStateMatcher()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="88" class="link-to-prism">src/app/components/login/login.component.ts:88</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable que implementa clase capturadora de errores</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="passwordFormControl"></a>
+                        <span class="name">
+                            <b>
+                            passwordFormControl</b>
+                            <a href="#passwordFormControl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>new FormControl(&#x27;&#x27;, [
+    Validators.required
+  ])</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="79" class="link-to-prism">src/app/components/login/login.component.ts:79</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable relacionada a formulario de password para control</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="passwordMatcher"></a>
+                        <span class="name">
+                            <b>
+                            passwordMatcher</b>
+                            <a href="#passwordMatcher"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>new PasswordErrorStateMatcher()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="93" class="link-to-prism">src/app/components/login/login.component.ts:93</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable que implementa clase capturadora de errores</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, EventEmitter, OnInit, Output } from &#x27;@angular/core&#x27;;
+import {FormControl, FormGroupDirective, NgForm, Validators} from &#x27;@angular/forms&#x27;;
+import {ErrorStateMatcher} from &#x27;@angular/material/core&#x27;;
+import { MatSnackBar } from &#x27;@angular/material/snack-bar&#x27;;
+import { LoginService } from &#x27;src/app/services/login.service&#x27;;
+
+
+/**
+ * Clase errores campo email
+ * Esta clase permite la captura de errores al ingresar los campos de email
+ */
+
+export class EmailErrorStateMatcher implements ErrorStateMatcher {
+  /**
+  * Este metodo captura errores en el formulario
+  * @example
+  * isErrorState(control, form )
+  * @param {FormControl | null} control
+  * Objeto relacionado al control del formulario
+  * @param {FormGroupDirective | NgForm | null} form
+  * Objeto relacionado al formulario
+  * @returns {Bool} Valor indicando si es valido o no
+  */
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted &#x3D; form &amp;&amp; form.submitted;
+    return !!(control &amp;&amp; control.invalid &amp;&amp; (control.dirty || control.touched || isSubmitted));
+  }
+}
+
+/**
+ * Clase errores campo Password
+ * Esta clase permite la captura de errores al ingresar los campos de Password
+ */
+export class PasswordErrorStateMatcher implements ErrorStateMatcher {
+  /**
+  * Este metodo captura errores en el formulario
+  * @example
+  * isErrorState(control, form )
+  * @param {FormControl | null} control
+  * Objeto relacionado al control del formulario
+  * @param {FormGroupDirective | NgForm | null} form
+  * Objeto relacionado al formulario
+  * @returns {Bool} Valor indicando si es valido o no
+  */
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted &#x3D; form &amp;&amp; form.submitted;
+    return !!(control &amp;&amp; control.invalid &amp;&amp; (control.dirty || control.touched || isSubmitted));
+  }
+}
+
+/**
+ * Componente de login
+ * Este componente es el encargado de mostrar y ejecutar todo lo relacionado al modulo de login
+ */
+@Component({
+  selector: &#x27;app-login&#x27;,
+  templateUrl: &#x27;./login.component.html&#x27;,
+  styleUrls: [&#x27;./login.component.scss&#x27;]
+})
+export class LoginComponent implements OnInit {
+  /**
+     * Variable para realizar emision de evento
+     * @type EventEmitter
+     */
+  @Output() loginChanged: EventEmitter&lt;Object&gt; &#x3D; new EventEmitter()
+  /**
+     * Variable relacionada a formulario de email para control
+     * @type FormControl
+     */
+  emailFormControl &#x3D; new FormControl(&#x27;&#x27;, [
+    Validators.required,
+    Validators.email,
+  ]);
+
+  /**
+     * Variable relacionada a formulario de password para control
+     * @type FormControl
+     */
+  passwordFormControl &#x3D; new FormControl(&#x27;&#x27;, [
+    Validators.required
+  ]);
+
+
+  /**
+     * Variable que implementa clase capturadora de errores
+     * @type EmailErrorStateMatcher
+     */
+  emailMatcher &#x3D; new EmailErrorStateMatcher();
+  /**
+     * Variable que implementa clase capturadora de errores
+     * @type PasswordErrorStateMatcher
+     */
+  passwordMatcher &#x3D; new PasswordErrorStateMatcher();
+  /**
+  * Constructor	
+  * @param {LoginService}	loginService Servicio de servicios
+  * @param {MatSnackBar} _snackBar Referencia a popUp de alertas
+  */
+  constructor(
+    private loginService: LoginService,
+    private _snackBar: MatSnackBar
+  ) { }
+     /**
+  * Metodo inicial
+  * @example
+  * ngOnInit()
+  * @returns  {void} Sin retorno
+  */
+  ngOnInit(): void {
+  }
+  /**
+  * Este metodo se utiliza para realizar login en el sistema
+  * @example
+  * login()
+  * @returns {Void} Vacio
+  */
+  login(){
+    
+    if(this.emailFormControl.status &#x3D;&#x3D; &quot;VALID&quot; &amp;&amp; this.passwordFormControl.status &#x3D;&#x3D; &quot;VALID&quot;){
+      this.loginService.loginUser(this.emailFormControl.value,this.passwordFormControl.value).subscribe( data &#x3D;&gt;{
+        
+        if(data[&quot;status&quot;]){
+          localStorage.setItem(&#x27;user&#x27;,JSON.stringify(data[&#x27;data&#x27;]));
+          this.loginChanged.emit({status:true});
+        }else{
+          this._snackBar.open(&quot;Creedenciales Incorrectas, Por favor corregir&quot;, &quot;Ok&quot;);
+        }
+      })
+    }
+    //
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">
+&lt;div fxFlexFill fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+    
+    &lt;div&gt;
+        &lt;div &gt;
+            &lt;mat-grid-list cols&#x3D;&quot;1&quot; style&#x3D;&quot;margin-top:10%; &quot; rowHeight&#x3D;&quot;40%&quot;&gt;
+                &lt;div class&#x3D;&quot;center&quot; style&#x3D;&quot;text-align: center;&quot;&gt;
+                    &lt;img style&#x3D;&quot;width:40%&quot; src&#x3D;&quot;assets/logo.png&quot;&gt;
+                &lt;/div&gt;
+            &lt;/mat-grid-list&gt;
+        &lt;/div&gt; 
+        &lt;div&gt;
+            &lt;mat-grid-list cols&#x3D;&quot;1&quot; rowHeight&#x3D;&quot;50vh&quot;&gt;
+                &lt;mat-grid-tile&gt;
+                    &lt;mat-card style&#x3D;&#x27;width: 300px&#x27;&gt;
+                        &lt;div class&#x3D;&quot;center&quot; style&#x3D;&quot;text-align: center;&quot;&gt;
+                            &lt;h2&gt;Inicio de sesion&lt;/h2&gt;
+                            &lt;mat-divider&gt;&lt;/mat-divider&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;form class&#x3D;&quot;Login-form&quot;&gt;
+                                &lt;mat-form-field style&#x3D;&quot;width: 100%;&quot; class&#x3D;&quot;example-full-width&quot;&gt;
+                                    &lt;mat-label&gt;Email&lt;/mat-label&gt;
+                                    &lt;input type&#x3D;&quot;email&quot; matInput [formControl]&#x3D;&quot;emailFormControl&quot; [errorStateMatcher]&#x3D;&quot;emailMatcher&quot; placeholder&#x3D;&quot;mail@codelco.cl&quot; &gt;
+                                    
+                                    &lt;mat-error *ngIf&#x3D;&quot;emailFormControl.hasError(&#x27;required&#x27;)&quot;&gt;
+                                        Email es &lt;strong&gt;requerido&lt;/strong&gt;
+                                    &lt;/mat-error&gt;
+                                &lt;/mat-form-field&gt;
+                                
+                                
+                                &lt;mat-form-field style&#x3D;&quot;width: 100%;&quot; class&#x3D;&quot;example-full-width&quot;&gt;
+                                    &lt;mat-label&gt;Contraseña&lt;/mat-label&gt;
+                                    &lt;input type&#x3D;&quot;password&quot; matInput [formControl]&#x3D;&quot;passwordFormControl&quot; [errorStateMatcher]&#x3D;&quot;passwordMatcher&quot;&gt;
+                                    
+                                    &lt;mat-error *ngIf&#x3D;&quot;passwordFormControl.hasError(&#x27;required&#x27;)&quot;&gt;
+                                        La contraseña es &lt;strong&gt;requireda&lt;/strong&gt;
+                                    &lt;/mat-error&gt;
+                                &lt;/mat-form-field&gt;
+                                &lt;mat-form-field  appearance&#x3D;&quot;none&quot; style&#x3D;&quot;text-align: center; width: 100%;&quot; class&#x3D;&quot;center example-full-width&quot;&gt;
+                                    &lt;input type&#x3D;&quot;password&quot; style&#x3D;&quot;display:none&quot; matInput&gt;
+                                    &lt;button mat-raised-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;login()&quot;&gt;Iniciar Sesion&lt;/button&gt;
+                                &lt;/mat-form-field&gt;   
+                            &lt;/form&gt;
+                        &lt;/div&gt;
+                        
+                    &lt;/mat-card&gt;
+                &lt;/mat-grid-tile&gt;
+            &lt;/mat-grid-list&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;    
+&lt;/div&gt;
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./login.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Leyenda</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Elemento Html</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Componente</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Elemento Html con directiva</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div fxFlexFill fxLayoutAlign="center center">        <div>        <div >            <mat-grid-list cols="1" style="margin-top:10%; " rowHeight="40%">                <div class="center" style="text-align: center;">                    <img style="width:40%" src="assets/logo.png">                </div>            </mat-grid-list>        </div>         <div>            <mat-grid-list cols="1" rowHeight="50vh">                <mat-grid-tile>                    <mat-card style=\'width: 300px\'>                        <div class="center" style="text-align: center;">                            <h2>Inicio de sesion</h2>                            <mat-divider></mat-divider>                        </div>                        <div>                            <form class="Login-form">                                <mat-form-field style="width: 100%;" class="example-full-width">                                    <mat-label>Email</mat-label>                                    <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="emailMatcher" placeholder="mail@codelco.cl" >                                                                        <mat-error *ngIf="emailFormControl.hasError(\'required\')">                                        Email es <strong>requerido</strong>                                    </mat-error>                                </mat-form-field>                                                                                                <mat-form-field style="width: 100%;" class="example-full-width">                                    <mat-label>Contraseña</mat-label>                                    <input type="password" matInput [formControl]="passwordFormControl" [errorStateMatcher]="passwordMatcher">                                                                        <mat-error *ngIf="passwordFormControl.hasError(\'required\')">                                        La contraseña es <strong>requireda</strong>                                    </mat-error>                                </mat-form-field>                                <mat-form-field  appearance="none" style="text-align: center; width: 100%;" class="center example-full-width">                                    <input type="password" style="display:none" matInput>                                    <button mat-raised-button color="primary" (click)="login()">Iniciar Sesion</button>                                </mat-form-field>                               </form>                        </div>                                            </mat-card>                </mat-grid-tile>            </mat-grid-list>        </div>    </div>    </div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BathroomsComponent', 'selector': 'app-bathrooms'},{'name': 'CommercialComponent', 'selector': 'app-commercial'},{'name': 'InitialViewComponent', 'selector': 'app-initial-view'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MatApprovedPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatContractPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatModulesPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatPermissionsPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatProfilesPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatServicesPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatStatusPickerRenderComponent', 'selector': 'input-cell'},{'name': 'ServicesComponent', 'selector': 'app-services'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'WastesComponent', 'selector': 'app-wastes'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'LoginComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'LoginComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

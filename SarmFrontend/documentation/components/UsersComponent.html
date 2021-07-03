@@ -1,0 +1,2693 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>sarm-frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">sarm-frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Componentes</li>
+  <li>UsersComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>Fichero</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/users/users.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Descripción</h3>
+    </p>
+    <p class="comment">
+        <p>Componente de Usuarios
+Este componente es el encargado de mostrar y ejecutar todo lo relacionado al modulo de usuarios</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implementa</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Meta datos</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-users</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./users.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./users.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Índice</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Propiedades</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#allPermissions">allPermissions</a>
+                            </li>
+                            <li>
+                                <a href="#allProfiles">allProfiles</a>
+                            </li>
+                            <li>
+                                <a href="#columnDefs">columnDefs</a>
+                            </li>
+                            <li>
+                                <a href="#defaultColDef">defaultColDef</a>
+                            </li>
+                            <li>
+                                <a href="#frameworkComponents">frameworkComponents</a>
+                            </li>
+                            <li>
+                                <a href="#gridApi">gridApi</a>
+                            </li>
+                            <li>
+                                <a href="#gridColumnApi">gridColumnApi</a>
+                            </li>
+                            <li>
+                                <a href="#permissions">permissions</a>
+                            </li>
+                            <li>
+                                <a href="#profilesColumnsDefs">profilesColumnsDefs</a>
+                            </li>
+                            <li>
+                                <a href="#profilesRowData">profilesRowData</a>
+                            </li>
+                            <li>
+                                <a href="#rowData">rowData</a>
+                            </li>
+                            <li>
+                                <a href="#saveButtonActive">saveButtonActive</a>
+                            </li>
+                            <li>
+                                <a href="#saveProfileButtonActive">saveProfileButtonActive</a>
+                            </li>
+                            <li>
+                                <a href="#title">title</a>
+                            </li>
+                            <li>
+                                <a href="#user">user</a>
+                            </li>
+                            <li>
+                                <a href="#userColumnsDefs">userColumnsDefs</a>
+                            </li>
+                            <li>
+                                <a href="#userGridApi">userGridApi</a>
+                            </li>
+                            <li>
+                                <a href="#userGridColumnApi">userGridColumnApi</a>
+                            </li>
+                            <li>
+                                <a href="#userRowData">userRowData</a>
+                            </li>
+                            <li>
+                                <a href="#usersData">usersData</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Métodos</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#changeEvent">changeEvent</a>
+                            </li>
+                            <li>
+                                <a href="#changeProfileGridEvent">changeProfileGridEvent</a>
+                            </li>
+                            <li>
+                                <a href="#createProfiles">createProfiles</a>
+                            </li>
+                            <li>
+                                <a href="#createUser">createUser</a>
+                            </li>
+                            <li>
+                                <a href="#getAllPermissions">getAllPermissions</a>
+                            </li>
+                            <li>
+                                <a href="#getAllprofiles">getAllprofiles</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onGridReady">onGridReady</a>
+                            </li>
+                            <li>
+                                <a href="#onUserGridReady">onUserGridReady</a>
+                            </li>
+                            <li>
+                                <a href="#permissionGetter">permissionGetter</a>
+                            </li>
+                            <li>
+                                <a href="#permissionsGetter">permissionsGetter</a>
+                            </li>
+                            <li>
+                                <a href="#profileGetter">profileGetter</a>
+                            </li>
+                            <li>
+                                <a href="#profilesGetter">profilesGetter</a>
+                            </li>
+                            <li>
+                                <a href="#saveProfiles">saveProfiles</a>
+                            </li>
+                            <li>
+                                <a href="#saveUsers">saveUsers</a>
+                            </li>
+                            <li>
+                                <a href="#statusGetter">statusGetter</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(userService: <a href="../injectables/UsersService.html">UsersService</a>, _bottomSheet: MatBottomSheet)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="164" class="link-to-prism">src/app/components/users/users.component.ts:164</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor    </p>
+</div>
+                            <div>
+                                    <b>Parámetros :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Nombre</td>
+                                                    <td>Tipo</td>
+                                                <td>Opcional</td>
+                                                    <td>Descripción</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>userService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UsersService.html" target="_self" >UsersService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Servicio de usuarios</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>_bottomSheet</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatBottomSheet</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Referencia de modal</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Métodos
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeEvent"></a>
+                    <span class="name">
+                        <b>
+                            changeEvent
+                        </b>
+                        <a href="#changeEvent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeEvent(event)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="289"
+                            class="link-to-prism">src/app/components/users/users.component.ts:289</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo se utiliza para obtener un evento de cambio</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                    <td>Descripción</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Objeto de tipo evento</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <b>Ejemplo :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">changeEvent(event)</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Vacio</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeProfileGridEvent"></a>
+                    <span class="name">
+                        <b>
+                            changeProfileGridEvent
+                        </b>
+                        <a href="#changeProfileGridEvent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeProfileGridEvent(event)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="305"
+                            class="link-to-prism">src/app/components/users/users.component.ts:305</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo se utiliza para capturar cambios en la tabla de perfiles</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                    <td>Descripción</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Objeto de tipo evento</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <b>Ejemplo :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">changeProfileGridEvent(event)</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Vacio</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createProfiles"></a>
+                    <span class="name">
+                        <b>
+                            createProfiles
+                        </b>
+                        <a href="#createProfiles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createProfiles()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="435"
+                            class="link-to-prism">src/app/components/users/users.component.ts:435</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo se utiliza para crear perfiles</p>
+</div>
+
+                    <div>
+                        <b>Ejemplo :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">createProfiles()</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Perfil</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createUser"></a>
+                    <span class="name">
+                        <b>
+                            createUser
+                        </b>
+                        <a href="#createUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createUser()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="408"
+                            class="link-to-prism">src/app/components/users/users.component.ts:408</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo se utiliza para crear usuarios</p>
+</div>
+
+                    <div>
+                        <b>Ejemplo :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">createUser()</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Usuario</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllPermissions"></a>
+                    <span class="name">
+                        <b>
+                            getAllPermissions
+                        </b>
+                        <a href="#getAllPermissions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAllPermissions()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="378"
+                            class="link-to-prism">src/app/components/users/users.component.ts:378</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo se utiliza para obtener los permisos</p>
+</div>
+
+                    <div>
+                        <b>Ejemplo :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">getAllPermissions()</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Permisos</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllprofiles"></a>
+                    <span class="name">
+                        <b>
+                            getAllprofiles
+                        </b>
+                        <a href="#getAllprofiles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAllprofiles()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="367"
+                            class="link-to-prism">src/app/components/users/users.component.ts:367</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo se utiliza para obtener los perfiles</p>
+</div>
+
+                    <div>
+                        <b>Ejemplo :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">getAllprofiles()</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Perfiles</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="180"
+                            class="link-to-prism">src/app/components/users/users.component.ts:180</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Metodo inicial</p>
+</div>
+
+                    <div>
+                        <b>Ejemplo :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">ngOnInit()</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>Promise&lt;void&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Sin retorno</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onGridReady"></a>
+                    <span class="name">
+                        <b>
+                            onGridReady
+                        </b>
+                        <a href="#onGridReady"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onGridReady(params)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="209"
+                            class="link-to-prism">src/app/components/users/users.component.ts:209</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo se utiliza para registrar referencias de las tablas</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                    <td>Descripción</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>params</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Objeto de tipo params obtenido desde el evento realizado por la accion sobre una tabla</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <b>Ejemplo :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">onGridReady(params)</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Vacio</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onUserGridReady"></a>
+                    <span class="name">
+                        <b>
+                            onUserGridReady
+                        </b>
+                        <a href="#onUserGridReady"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onUserGridReady(params)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="224"
+                            class="link-to-prism">src/app/components/users/users.component.ts:224</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo se utiliza para registrar referencias de las tablas de usuarios</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                    <td>Descripción</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>params</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Objeto de tipo params obtenido desde el evento realizado por la accion sobre una tabla</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <b>Ejemplo :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">onUserGridReady(params)</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Vacio</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="permissionGetter"></a>
+                    <span class="name">
+                        <b>
+                            permissionGetter
+                        </b>
+                        <a href="#permissionGetter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>permissionGetter(params)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="271"
+                            class="link-to-prism">src/app/components/users/users.component.ts:271</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo se utiliza para obtener los permisos</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                    <td>Descripción</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>params</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Objeto de tipo params obtenido desde el evento realizado por la accion sobre una tabla</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <b>Ejemplo :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">permissionGetter(params)</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Permiso</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="permissionsGetter"></a>
+                    <span class="name">
+                        <b>
+                            permissionsGetter
+                        </b>
+                        <a href="#permissionsGetter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>permissionsGetter()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="398"
+                            class="link-to-prism">src/app/components/users/users.component.ts:398</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo se utiliza para obtener los permisos desde variable</p>
+</div>
+
+                    <div>
+                        <b>Ejemplo :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">permissionsGetter()</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Permisos</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="profileGetter"></a>
+                    <span class="name">
+                        <b>
+                            profileGetter
+                        </b>
+                        <a href="#profileGetter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>profileGetter(params)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="255"
+                            class="link-to-prism">src/app/components/users/users.component.ts:255</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo se utiliza para obtener el perfil del usuario</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                    <td>Descripción</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>params</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Objeto de tipo params obtenido desde el evento realizado por la accion sobre una tabla</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <b>Ejemplo :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">profileGetter(params)</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Perfil</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="profilesGetter"></a>
+                    <span class="name">
+                        <b>
+                            profilesGetter
+                        </b>
+                        <a href="#profilesGetter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>profilesGetter()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="389"
+                            class="link-to-prism">src/app/components/users/users.component.ts:389</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo se utiliza para obtener los Perfil desde variable</p>
+</div>
+
+                    <div>
+                        <b>Ejemplo :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">profilesGetter()</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Perfil</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveProfiles"></a>
+                    <span class="name">
+                        <b>
+                            saveProfiles
+                        </b>
+                        <a href="#saveProfiles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveProfiles()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="346"
+                            class="link-to-prism">src/app/components/users/users.component.ts:346</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo se utiliza para Guardar perfiles</p>
+</div>
+
+                    <div>
+                        <b>Ejemplo :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">saveProfiles()</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Vacio</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveUsers"></a>
+                    <span class="name">
+                        <b>
+                            saveUsers
+                        </b>
+                        <a href="#saveUsers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveUsers()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="320"
+                            class="link-to-prism">src/app/components/users/users.component.ts:320</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo se utiliza para Guardar usuarios</p>
+</div>
+
+                    <div>
+                        <b>Ejemplo :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">saveUsers()</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Usuario</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="statusGetter"></a>
+                    <span class="name">
+                        <b>
+                            statusGetter
+                        </b>
+                        <a href="#statusGetter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>statusGetter(params)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="237"
+                            class="link-to-prism">src/app/components/users/users.component.ts:237</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo se utiliza para obtener el estado</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                    <td>Descripción</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>params</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Objeto de tipo params obtenido desde el evento realizado por la accion sobre una tabla</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <b>Ejemplo :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">statusGetter(params)</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>&quot;ACTIVO&quot; | &quot;INACTIVO&quot;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Vacio</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Propiedades
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="allPermissions"></a>
+                        <span class="name">
+                            <b>
+                            allPermissions</b>
+                            <a href="#allPermissions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="164" class="link-to-prism">src/app/components/users/users.component.ts:164</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para guardar permisos</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="allProfiles"></a>
+                        <span class="name">
+                            <b>
+                            allProfiles</b>
+                            <a href="#allProfiles"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="30" class="link-to-prism">src/app/components/users/users.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para guardar perfiles</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="columnDefs"></a>
+                        <span class="name">
+                            <b>
+                            columnDefs</b>
+                            <a href="#columnDefs"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>[
+		{headerName: &#x27;Make&#x27;, field: &#x27;make&#x27;,
+        editable: true,
+        width: 300, },
+		{headerName: &#x27;Model&#x27;, field: &#x27;model&#x27; },
+		{headerName: &#x27;Price&#x27;, field: &#x27;price&#x27;}
+	]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="88" class="link-to-prism">src/app/components/users/users.component.ts:88</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para definir las columnas por defecto</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="defaultColDef"></a>
+                        <span class="name">
+                            <b>
+                            defaultColDef</b>
+                            <a href="#defaultColDef"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>{
+		// make every column editable
+		editable: true,
+		// make every column use &#x27;text&#x27; filter by default
+		filter: &#x27;agTextColumnFilter&#x27;,
+	}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="35" class="link-to-prism">src/app/components/users/users.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para definir opciones por defecto de tablas</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="frameworkComponents"></a>
+                        <span class="name">
+                            <b>
+                            frameworkComponents</b>
+                            <a href="#frameworkComponents"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="45" class="link-to-prism">src/app/components/users/users.component.ts:45</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para guardar los entry-points que se usaran en tablas</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gridApi"></a>
+                        <span class="name">
+                            <b>
+                            gridApi</b>
+                            <a href="#gridApi"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="134" class="link-to-prism">src/app/components/users/users.component.ts:134</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para guardar referencia de columna de perfiles</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gridColumnApi"></a>
+                        <span class="name">
+                            <b>
+                            gridColumnApi</b>
+                            <a href="#gridColumnApi"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="139" class="link-to-prism">src/app/components/users/users.component.ts:139</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para guardar referencia de columna de perfiles</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="permissions"></a>
+                        <span class="name">
+                            <b>
+                            permissions</b>
+                            <a href="#permissions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="124" class="link-to-prism">src/app/components/users/users.component.ts:124</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para guardar permisos</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="profilesColumnsDefs"></a>
+                        <span class="name">
+                            <b>
+                            profilesColumnsDefs</b>
+                            <a href="#profilesColumnsDefs"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>[
+		{headerName: &#x27;Perfil&#x27;, field: &#x27;p_prof_name&#x27;,
+        editable: true,
+        width: 300, },
+		{headerName: &#x27;Permisos&#x27;, field: &#x27;permissions&#x27;,cellEditorParams:{permissions: this.permissionsGetter.bind(this)},valueGetter:this.permissionGetter.bind(this), cellEditor: &#x27;permissionsPicker&#x27;},
+		{headerName: &#x27;Estado&#x27;, field: &#x27;p_prof_active&#x27;, cellEditor: &#x27;statusPicker&#x27;},
+		{
+			headerName: &quot;status&quot;,
+			field: &quot;change_status&quot;,
+			width: 100,
+			hide: true,
+			suppressToolPanel: true
+		 }
+	]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="69" class="link-to-prism">src/app/components/users/users.component.ts:69</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para definir las columnas de los perfiles</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="profilesRowData"></a>
+                        <span class="name">
+                            <b>
+                            profilesRowData</b>
+                            <a href="#profilesRowData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="109" class="link-to-prism">src/app/components/users/users.component.ts:109</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para definir los datos de la tabla de perfiles</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="rowData"></a>
+                        <span class="name">
+                            <b>
+                            rowData</b>
+                            <a href="#rowData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>[
+		{ make: &#x27;Toyota&#x27;, model: &#x27;Celica&#x27;, price: 35000 },
+		{ make: &#x27;Ford&#x27;, model: &#x27;Mondeo&#x27;, price: 32000 },
+		{ make: &#x27;Porsche&#x27;, model: &#x27;Boxter&#x27;, price: 72000 }
+	]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="99" class="link-to-prism">src/app/components/users/users.component.ts:99</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para definir los datos de las columnas</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="saveButtonActive"></a>
+                        <span class="name">
+                            <b>
+                            saveButtonActive</b>
+                            <a href="#saveButtonActive"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="154" class="link-to-prism">src/app/components/users/users.component.ts:154</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para guardar referencia de estado de boton para guardar</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="saveProfileButtonActive"></a>
+                        <span class="name">
+                            <b>
+                            saveProfileButtonActive</b>
+                            <a href="#saveProfileButtonActive"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="159" class="link-to-prism">src/app/components/users/users.component.ts:159</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para guardar referencia de estado de boton para guardar</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="title"></a>
+                        <span class="name">
+                            <b>
+                            title</b>
+                            <a href="#title"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>&#x27;app&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="25" class="link-to-prism">src/app/components/users/users.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para guardar titulo</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="user"></a>
+                        <span class="name">
+                            <b>
+                            user</b>
+                            <a href="#user"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="119" class="link-to-prism">src/app/components/users/users.component.ts:119</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para guardar usuario</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="userColumnsDefs"></a>
+                        <span class="name">
+                            <b>
+                            userColumnsDefs</b>
+                            <a href="#userColumnsDefs"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>[
+		{headerName: &#x27;Usuario&#x27;, field: &#x27;userUsername&#x27;,
+        editable: true,
+        width: 300, },
+		{headerName: &#x27;Email&#x27;, field: &#x27;userName&#x27; },
+		{headerName: &#x27;Estado&#x27;, field: &#x27;userActive&#x27;,cellEditor: &#x27;statusPicker&#x27;},
+    	{headerName: &#x27;Perfiles&#x27;, field: &#x27;prof_name&#x27;,valueGetter:this.profileGetter.bind(this),cellEditor: &#x27;profilePicker&#x27;,cellEditorParams:{profiles: this.profilesGetter.bind(this)}},
+		{
+			headerName: &quot;status&quot;,
+			field: &quot;change_status&quot;,
+			width: 100,
+			hide: true,
+			suppressToolPanel: true
+		 }
+	]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="50" class="link-to-prism">src/app/components/users/users.component.ts:50</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para definir las columnas de los usuarios</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="userGridApi"></a>
+                        <span class="name">
+                            <b>
+                            userGridApi</b>
+                            <a href="#userGridApi"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="149" class="link-to-prism">src/app/components/users/users.component.ts:149</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para guardar referencia de columna de usuarios</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="userGridColumnApi"></a>
+                        <span class="name">
+                            <b>
+                            userGridColumnApi</b>
+                            <a href="#userGridColumnApi"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="144" class="link-to-prism">src/app/components/users/users.component.ts:144</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para guardar referencia de columna de usuarios</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="userRowData"></a>
+                        <span class="name">
+                            <b>
+                            userRowData</b>
+                            <a href="#userRowData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="114" class="link-to-prism">src/app/components/users/users.component.ts:114</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para definir las columnas de los usuarios</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="usersData"></a>
+                        <span class="name">
+                            <b>
+                            usersData</b>
+                            <a href="#usersData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="129" class="link-to-prism">src/app/components/users/users.component.ts:129</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para guardas datos de los usuarios</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { MatBottomSheet } from &#x27;@angular/material/bottom-sheet&#x27;;
+import { AddProfilesModalComponent } from &#x27;src/app/botoom-sheet/add-profiles-modal/add-profiles-modal.component&#x27;;
+import { AddUserModalComponent } from &#x27;src/app/botoom-sheet/add-user-modal/add-user-modal.component&#x27;;
+import { UsersService } from &#x27;src/app/services/users.service&#x27;;
+import { MatPermissionsPickerRenderComponent } from &#x27;../utils/mat-permissions-picker-render/mat-permissions-picker-render.component&#x27;;
+import { MatProfilesPickerRenderComponent } from &#x27;../utils/mat-profiles-picker-render/mat-profiles-picker-render.component&#x27;;
+import { MatStatusPickerRenderComponent } from &#x27;../utils/mat-status-picker-render/mat-status-picker-render.component&#x27;;
+
+
+/**
+ * Componente de Usuarios
+ * Este componente es el encargado de mostrar y ejecutar todo lo relacionado al modulo de usuarios
+ */
+@Component({
+  selector: &#x27;app-users&#x27;,
+  templateUrl: &#x27;./users.component.html&#x27;,
+  styleUrls: [&#x27;./users.component.scss&#x27;]
+})
+export class UsersComponent implements OnInit {
+	/**
+     * Variable para guardar titulo
+     * @type String
+     */
+  title &#x3D; &#x27;app&#x27;;
+  /**
+     * Variable para guardar perfiles
+     * @type String
+     */
+  allProfiles: any;
+  /**
+     * Variable para definir opciones por defecto de tablas
+     * @type Objeto
+     */
+  defaultColDef &#x3D; {
+		// make every column editable
+		editable: true,
+		// make every column use &#x27;text&#x27; filter by default
+		filter: &#x27;agTextColumnFilter&#x27;,
+	};
+  /**
+     * Variable para guardar los entry-points que se usaran en tablas
+     * @type Objeto
+     */
+  frameworkComponents;
+  /**
+     * Variable para definir las columnas de los usuarios
+     * @type Objeto
+     */
+  userColumnsDefs &#x3D; [
+		{headerName: &#x27;Usuario&#x27;, field: &#x27;userUsername&#x27;,
+        editable: true,
+        width: 300, },
+		{headerName: &#x27;Email&#x27;, field: &#x27;userName&#x27; },
+		{headerName: &#x27;Estado&#x27;, field: &#x27;userActive&#x27;,cellEditor: &#x27;statusPicker&#x27;},
+    	{headerName: &#x27;Perfiles&#x27;, field: &#x27;prof_name&#x27;,valueGetter:this.profileGetter.bind(this),cellEditor: &#x27;profilePicker&#x27;,cellEditorParams:{profiles: this.profilesGetter.bind(this)}},
+		{
+			headerName: &quot;status&quot;,
+			field: &quot;change_status&quot;,
+			width: 100,
+			hide: true,
+			suppressToolPanel: true
+		 }
+	];
+	/**
+     * Variable para definir las columnas de los perfiles
+     * @type Objeto
+     */
+  profilesColumnsDefs &#x3D; [
+		{headerName: &#x27;Perfil&#x27;, field: &#x27;p_prof_name&#x27;,
+        editable: true,
+        width: 300, },
+		{headerName: &#x27;Permisos&#x27;, field: &#x27;permissions&#x27;,cellEditorParams:{permissions: this.permissionsGetter.bind(this)},valueGetter:this.permissionGetter.bind(this), cellEditor: &#x27;permissionsPicker&#x27;},
+		{headerName: &#x27;Estado&#x27;, field: &#x27;p_prof_active&#x27;, cellEditor: &#x27;statusPicker&#x27;},
+		{
+			headerName: &quot;status&quot;,
+			field: &quot;change_status&quot;,
+			width: 100,
+			hide: true,
+			suppressToolPanel: true
+		 }
+	];
+	/**
+     * Variable para definir las columnas por defecto
+     * @type Objeto
+     */
+
+	columnDefs &#x3D; [
+		{headerName: &#x27;Make&#x27;, field: &#x27;make&#x27;,
+        editable: true,
+        width: 300, },
+		{headerName: &#x27;Model&#x27;, field: &#x27;model&#x27; },
+		{headerName: &#x27;Price&#x27;, field: &#x27;price&#x27;}
+	];
+	/**
+     * Variable para definir los datos de las columnas
+     * @type Objeto
+     */
+	rowData &#x3D; [
+		{ make: &#x27;Toyota&#x27;, model: &#x27;Celica&#x27;, price: 35000 },
+		{ make: &#x27;Ford&#x27;, model: &#x27;Mondeo&#x27;, price: 32000 },
+		{ make: &#x27;Porsche&#x27;, model: &#x27;Boxter&#x27;, price: 72000 }
+	];
+
+	/**
+     * Variable para definir los datos de la tabla de perfiles
+     * @type Objeto
+     */
+  profilesRowData &#x3D; [];
+	/**
+     * Variable para definir las columnas de los usuarios
+     * @type Objeto
+     */
+  userRowData &#x3D; [];
+  	/**
+     * Variable para guardar usuario
+     * @type Any
+     */
+	user: any;
+	/**
+     * Variable para guardar permisos
+     * @type Any
+     */
+	permissions: any;
+	/**
+     * Variable para guardas datos de los usuarios
+     * @type Objeto
+     */
+	usersData;
+	/**
+     * Variable para guardar referencia de columna de perfiles
+     * @type Object
+     */
+	gridApi: any;
+	/**
+     * Variable para guardar referencia de columna de perfiles
+     * @type Object
+     */
+	gridColumnApi: any;
+	/**
+     * Variable para guardar referencia de columna de usuarios
+     * @type Object
+     */
+	userGridColumnApi: any;
+	/**
+     * Variable para guardar referencia de columna de usuarios
+     * @type Object
+     */
+	userGridApi: any;
+	/**
+     * Variable para guardar referencia de estado de boton para guardar
+     * @type Bool
+     */
+	saveButtonActive &#x3D; false;
+	/**
+     * Variable para guardar referencia de estado de boton para guardar
+     * @type Bool
+     */
+	saveProfileButtonActive &#x3D; false;
+	/**
+     * Variable para guardar permisos
+     * @type Array
+     */
+	allPermissions;
+	
+	 /**
+  * Constructor	
+  * @param {UsersService}	userService Servicio de usuarios
+  * @param {MatBottomSheet} _bottomSheet Referencia de modal
+  */
+  constructor(private userService:UsersService,
+	private _bottomSheet: MatBottomSheet) { }
+	/**
+  * Metodo inicial
+  * @example
+  * ngOnInit()
+  * @returns  {void} Sin retorno
+  */
+
+  async ngOnInit(): Promise&lt;void&gt; {
+	this.user &#x3D; JSON.parse(localStorage.getItem(&#x27;user&#x27;))
+	this.permissions &#x3D; this.user.permissions
+	
+    this.frameworkComponents &#x3D; { profilePicker: MatProfilesPickerRenderComponent, permissionsPicker: MatPermissionsPickerRenderComponent, statusPicker: MatStatusPickerRenderComponent  };
+	this.allProfiles &#x3D; await this.getAllprofiles()
+	this.allPermissions &#x3D; await this.getAllPermissions()
+	
+	this.userService.getAllUsers().subscribe((data)&#x3D;&gt;{
+		this.usersData &#x3D; data[&quot;data&quot;].map((user)&#x3D;&gt;{
+			user.change_status &#x3D; false;
+			return user
+		})
+		this.allProfiles.data.forEach((v,k) &#x3D;&gt; {
+			this.allProfiles.data[k].change_status &#x3D; false;
+		});
+		this.userRowData &#x3D; this.usersData
+		this.profilesRowData &#x3D; this.allProfiles.data
+
+	})
+  }
+  /**
+  * Este metodo se utiliza para registrar referencias de las tablas
+  * @example
+  * onGridReady(params)
+  * @param {Object} params
+  * Objeto de tipo params obtenido desde el evento realizado por la accion sobre una tabla
+  * @returns  {void} Vacio
+  */
+  onGridReady(params) {
+    this.gridApi &#x3D; params.api;
+    this.gridColumnApi &#x3D; params.columnApi;
+  }
+
+  
+  /**
+  * Este metodo se utiliza para registrar referencias de las tablas de usuarios
+  * @example
+  * onUserGridReady(params)
+  * @param {Object} params
+  * Objeto de tipo params obtenido desde el evento realizado por la accion sobre una tabla
+  * @returns  {void} Vacio
+  */
+
+  onUserGridReady(params) {
+    this.userGridApi &#x3D; params.api;
+    this.userGridColumnApi &#x3D; params.columnApi;
+  }
+
+  /**
+  * Este metodo se utiliza para obtener el estado
+  * @example
+  * statusGetter(params)
+  * @param {Object} params
+  * Objeto de tipo params obtenido desde el evento realizado por la accion sobre una tabla
+  * @returns  {void} Vacio
+  */
+  statusGetter(params){
+	  if(params.data.userActive){
+		return &quot;ACTIVO&quot;;
+	  }else{
+		return &quot;INACTIVO&quot;;
+	  }
+	  
+  }
+
+  /**
+  * Este metodo se utiliza para obtener el perfil del usuario
+  * @example
+  * profileGetter(params)
+  * @param {Object} params
+  * Objeto de tipo params obtenido desde el evento realizado por la accion sobre una tabla
+  * @returns {string} Perfil
+  */
+
+  profileGetter(params){
+	
+	let out &#x3D; this.allProfiles.data.filter(profile &#x3D;&gt; {return profile.p_prof_id &#x3D;&#x3D; params.data.prof_name});  
+	out &#x3D; out.map(v&#x3D;&gt;{return v.p_prof_name})
+	return out[0]
+	
+  }
+  
+  /**
+  * Este metodo se utiliza para obtener los permisos
+  * @example
+  * permissionGetter(params)
+  * @param {Object} params
+  * Objeto de tipo params obtenido desde el evento realizado por la accion sobre una tabla
+  * @returns {string} Permiso
+  */
+  permissionGetter(params){
+	let permissions &#x3D; params.data.permissions
+	let out &#x3D; []
+	permissions.forEach((v,k) &#x3D;&gt; {
+		let insert &#x3D; this.allPermissions.data.filter(profile &#x3D;&gt; {return profile.p_perm_id &#x3D;&#x3D; v});
+		out.push(insert[0].p_perm_name)
+	});
+	return out
+	
+  }
+   /**
+  * Este metodo se utiliza para obtener un evento de cambio
+  * @example
+  * changeEvent(event)
+  * @param {Object} event
+  * Objeto de tipo evento
+  * @returns {Void} Vacio
+  */
+  changeEvent(event){
+	
+	let rowNode &#x3D; this.userGridApi.getRowNode(event.rowIndex);
+	rowNode.setDataValue(&#x27;change_status&#x27;, true);
+	this.saveButtonActive&#x3D;true; 
+	
+  }
+
+  /**
+  * Este metodo se utiliza para capturar cambios en la tabla de perfiles
+  * @example
+  * changeProfileGridEvent(event)
+  * @param {Object} event
+  * Objeto de tipo evento
+  * @returns {Void} Vacio
+  */
+  changeProfileGridEvent(event){
+	
+	let rowNode &#x3D; this.gridApi.getRowNode(event.rowIndex);
+	rowNode.setDataValue(&#x27;change_status&#x27;, true);
+	this.saveProfileButtonActive&#x3D;true; 
+	
+  }
+  
+  /**
+  * Este metodo se utiliza para Guardar usuarios
+  * @example
+  * saveUsers()
+
+  * @returns {Object} Usuario
+  */
+  saveUsers(){
+	let rowData &#x3D; [];
+	this.userGridApi.forEachNode(node &#x3D;&gt; rowData.push(node.data));
+	let dataToUpload &#x3D; rowData.filter(rowNode &#x3D;&gt;{return rowNode.change_status})
+	this.userService.modifyUsers(dataToUpload).subscribe(data&#x3D;&gt;{
+		this.userService.getAllUsers().subscribe((data)&#x3D;&gt;{
+			console.log(data)
+			this.usersData &#x3D; data[&quot;data&quot;].map((user)&#x3D;&gt;{
+				user.change_status &#x3D; false;
+				return user
+			})
+			
+			this.userRowData &#x3D; this.usersData
+	
+	
+		})
+		console.log(&quot;OK&quot;)
+	})
+	
+  }
+  /**
+  * Este metodo se utiliza para Guardar perfiles
+  * @example
+  * saveProfiles()
+  * @returns {Void} Vacio
+  */
+  saveProfiles(){
+	let rowData &#x3D; [];
+	this.gridApi.forEachNode(node &#x3D;&gt; rowData.push(node.data));
+	let dataToUpload &#x3D; rowData.filter(rowNode &#x3D;&gt;{return rowNode.change_status})
+	console.log(dataToUpload)
+	this.userService.modifyProfiles(dataToUpload).subscribe(async data&#x3D;&gt;{
+		this.allProfiles &#x3D; await this.getAllprofiles()
+		this.allProfiles.data.forEach((v,k) &#x3D;&gt; {
+			this.allProfiles.data[k].change_status &#x3D; false;
+		});
+		this.profilesRowData &#x3D; this.allProfiles.data
+	})
+	console.log(dataToUpload)
+  }
+
+  /**
+  * Este metodo se utiliza para obtener los perfiles
+  * @example
+  * getAllprofiles()
+  * @returns {Promise} Perfiles
+  */
+  getAllprofiles(){
+	  return new Promise((resolve, reject) &#x3D;&gt;{
+		  this.userService.getAllProfiles().subscribe(data &#x3D;&gt;{resolve(data);},err &#x3D;&gt;{reject(err);})
+	  })
+  }
+  /**
+  * Este metodo se utiliza para obtener los permisos
+  * @example
+  * getAllPermissions()
+  * @returns {Promise} Permisos
+  */
+  getAllPermissions(){
+		return new Promise((resolve, reject) &#x3D;&gt;{
+			this.userService.getAllPermissions().subscribe(data &#x3D;&gt;{resolve(data);},err &#x3D;&gt;{reject(err);})
+		})
+  }
+  /**
+  * Este metodo se utiliza para obtener los Perfil desde variable
+  * @example
+  * profilesGetter()
+  * @returns {Object} Perfil
+  */
+  profilesGetter(){
+	  return this.allProfiles
+  }
+   /**
+  * Este metodo se utiliza para obtener los permisos desde variable
+  * @example
+  * permissionsGetter()
+  * @returns {Object} Permisos
+  */
+  permissionsGetter(){
+	  return this.allPermissions
+  }
+  /**
+  * Este metodo se utiliza para crear usuarios
+  * @example
+  * createUser()
+  * @returns {Object} Usuario
+  */
+  
+  createUser(){
+	let ref &#x3D; this._bottomSheet.open(AddUserModalComponent, {data:{profiles:this.allProfiles}});
+	ref.afterDismissed().subscribe(data1 &#x3D;&gt;{
+		if(data1.reload){
+			this.userService.getAllUsers().subscribe((data)&#x3D;&gt;{
+				console.log(data)
+				this.usersData &#x3D; data[&quot;data&quot;].map((user)&#x3D;&gt;{
+					user.change_status &#x3D; false;
+					return user
+				})
+				
+				this.userRowData &#x3D; this.usersData
+		
+		
+			})
+		}
+		
+		console.log(&quot;OK&quot;)
+		console.log(&quot;dismissed&quot;)
+	})
+  }
+  /**
+  * Este metodo se utiliza para crear perfiles
+  * @example
+  * createProfiles()
+  * @returns {Object} Perfil
+  */
+  createProfiles(){
+	let ref &#x3D; this._bottomSheet.open(AddProfilesModalComponent, {data:{permissions:this.allPermissions}});
+	ref.afterDismissed().subscribe(async data1 &#x3D;&gt;{
+		if(data1.reload){
+			this.allProfiles &#x3D; await this.getAllprofiles()
+			this.allProfiles.data.forEach((v,k) &#x3D;&gt; {
+				this.allProfiles.data[k].change_status &#x3D; false;
+			});
+			this.profilesRowData &#x3D; this.allProfiles.data
+		}
+		
+	})
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div style&#x3D;&quot;width:100%&quot;&gt;
+    &lt;mat-tab-group mat-stretch-tabs style&#x3D;&quot;width:100%&quot;&gt;
+        &lt;mat-tab label&#x3D;&quot;Usuarios&quot;&gt; 
+            &lt;button style&#x3D;&quot;margin-left:1vw;margin-top: 1vw;&quot; (click)&#x3D;&quot;createUser()&quot; mat-button&gt;Crear Usuario&lt;/button&gt;
+            &lt;button style&#x3D;&quot;margin-left:1vw;margin-top: 1vw;&quot; *ngIf&#x3D;&quot;saveButtonActive&quot; (click)&#x3D;&quot;saveUsers()&quot; mat-button&gt;Guardar&lt;/button&gt;
+            &lt;ag-grid-angular 
+                style&#x3D;&quot;height: 70vh; margin:3%&quot; 
+                class&#x3D;&quot;ag-theme-balham&quot;
+                [rowData]&#x3D;&quot;userRowData&quot;
+                [defaultColDef]&#x3D;&quot;defaultColDef&quot;
+                [columnDefs]&#x3D;&quot;userColumnsDefs&quot;
+                [frameworkComponents]&#x3D;&quot;frameworkComponents&quot;
+                (cellValueChanged)&#x3D;&quot;changeEvent($event)&quot;
+                
+                (gridReady)&#x3D;&quot;onUserGridReady($event)&quot;
+                &gt;
+            &lt;/ag-grid-angular&gt;
+        &lt;/mat-tab&gt;
+        &lt;mat-tab label&#x3D;&quot;Perfiles&quot;&gt; 
+            &lt;button style&#x3D;&quot;margin-left:1vw;margin-top: 1vw;&quot; (click)&#x3D;&quot;createProfiles()&quot; mat-button&gt;Crear Perfil&lt;/button&gt;
+            &lt;button style&#x3D;&quot;margin-left:1vw;margin-top: 1vw;&quot; *ngIf&#x3D;&quot;saveProfileButtonActive&quot; (click)&#x3D;&quot;saveProfiles()&quot; mat-button&gt;Guardar&lt;/button&gt;
+            &lt;ag-grid-angular 
+                style&#x3D;&quot;height: 70vh; margin:3%&quot; 
+                class&#x3D;&quot;ag-theme-balham&quot;
+                [rowData]&#x3D;&quot;profilesRowData&quot;
+                [defaultColDef]&#x3D;&quot;defaultColDef&quot;
+                [columnDefs]&#x3D;&quot;profilesColumnsDefs&quot;
+                [frameworkComponents]&#x3D;&quot;frameworkComponents&quot;
+                (cellValueChanged)&#x3D;&quot;changeProfileGridEvent($event)&quot;
+                
+                (gridReady)&#x3D;&quot;onGridReady($event)&quot;&gt;
+            &lt;/ag-grid-angular&gt;
+
+        &lt;/mat-tab&gt;
+        
+    &lt;/mat-tab-group&gt;
+&lt;/div&gt;
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./users.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.mat-tab-label {
+    width: 50%;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Leyenda</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Elemento Html</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Componente</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Elemento Html con directiva</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div style="width:100%">    <mat-tab-group mat-stretch-tabs style="width:100%">        <mat-tab label="Usuarios">             <button style="margin-left:1vw;margin-top: 1vw;" (click)="createUser()" mat-button>Crear Usuario</button>            <button style="margin-left:1vw;margin-top: 1vw;" *ngIf="saveButtonActive" (click)="saveUsers()" mat-button>Guardar</button>            <ag-grid-angular                 style="height: 70vh; margin:3%"                 class="ag-theme-balham"                [rowData]="userRowData"                [defaultColDef]="defaultColDef"                [columnDefs]="userColumnsDefs"                [frameworkComponents]="frameworkComponents"                (cellValueChanged)="changeEvent($event)"                                (gridReady)="onUserGridReady($event)"                >            </ag-grid-angular>        </mat-tab>        <mat-tab label="Perfiles">             <button style="margin-left:1vw;margin-top: 1vw;" (click)="createProfiles()" mat-button>Crear Perfil</button>            <button style="margin-left:1vw;margin-top: 1vw;" *ngIf="saveProfileButtonActive" (click)="saveProfiles()" mat-button>Guardar</button>            <ag-grid-angular                 style="height: 70vh; margin:3%"                 class="ag-theme-balham"                [rowData]="profilesRowData"                [defaultColDef]="defaultColDef"                [columnDefs]="profilesColumnsDefs"                [frameworkComponents]="frameworkComponents"                (cellValueChanged)="changeProfileGridEvent($event)"                                (gridReady)="onGridReady($event)">            </ag-grid-angular>        </mat-tab>            </mat-tab-group></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BathroomsComponent', 'selector': 'app-bathrooms'},{'name': 'CommercialComponent', 'selector': 'app-commercial'},{'name': 'InitialViewComponent', 'selector': 'app-initial-view'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MatApprovedPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatContractPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatModulesPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatPermissionsPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatProfilesPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatServicesPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatStatusPickerRenderComponent', 'selector': 'input-cell'},{'name': 'ServicesComponent', 'selector': 'app-services'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'WastesComponent', 'selector': 'app-wastes'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'UsersComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'UsersComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

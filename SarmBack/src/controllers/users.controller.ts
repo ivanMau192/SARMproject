@@ -4,7 +4,25 @@ import { Users } from '../entity/Users';
 import { ProfilesUsers } from '../entity/ProfilesUsers';
 
 
+/** Controlador de usuarios extendido
+ * @module controllers/UsersController
+ */
+
 export class UsersController {
+
+
+    /**
+    * Funcion que agrega y/o modifica usuario
+    * @function getServicesDatas
+    * @param {id} userId id de usuario a modificar (Vacio si se crea uno nuevo)
+    * @param {string} userName nombre de usuario
+    * @param {string} password contraseña de usuario
+    * @param {string} userUsername nombre de inicio de sesion de usuario
+    * @param {string} userActive Estado de usuario
+    * @returns {Object} Objeto con detalle de servicio y estado de peticion
+    *
+    */
+    
     addUsers = async (req: Request, res: Response): Promise<Response> => {
         
         console.log(req.body)
@@ -81,6 +99,14 @@ export class UsersController {
         return res.send(out);
         
     }
+
+
+    /**
+    * Funcion que obtiene datos de usuarios
+    * @function getAllUsers
+    * @returns {Object} Objeto con detalle de usuarios y estado de peticion
+    *
+    */
 
     getAllUsers = async (req: Request, res: Response): Promise<Response> => {
         let out = {status:false,data:{}}

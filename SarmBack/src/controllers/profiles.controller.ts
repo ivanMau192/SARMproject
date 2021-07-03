@@ -3,9 +3,24 @@ import { getRepository } from "typeorm";
 import { Profiles } from '../entity/Profiles';
 import { ProfilesPermissions } from '../entity/ProfilesPermissions';
 
+
+
+/** Controlador de perfiles extendido
+ * @module controllers/ProfilesController
+ */
+
+
 export class ProfilesController {
 
-    
+    /**
+    * Funcion que Inserta y/o modifica perfiles
+    * @function getProfiles
+    * @param {id} p_prof_id Id de perfil a editar (Vacio se si creara uno nuevo)
+    * @param {string} p_prof_name Nombre de perfil
+    * @param {string} p_prof_active Estado actividad de perfil
+    * @returns {Object} Objeto con Estado de peticion
+    *
+    */
     
     getProfiles = async (req: Request, res: Response): Promise<Response> => {
         console.log(req.body.data)
@@ -71,7 +86,7 @@ export class ProfilesController {
             }
         }
             
-        let out = {status:"Ok si fue satisfactorio, Error si ocurrio un error", data:""}
+        let out = {status:true, data:""}
         return res.send(out);
         
     }

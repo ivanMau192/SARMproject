@@ -1,0 +1,1691 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>sarm-frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">sarm-frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>WasteUploadComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/botoom-sheet/waste-upload/waste-upload.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-waste-upload</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./waste-upload.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./waste-upload.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#arrayBuffer">arrayBuffer</a>
+                            </li>
+                            <li>
+                                <a href="#contracts">contracts</a>
+                            </li>
+                            <li>
+                                <a href="#dateSufix">dateSufix</a>
+                            </li>
+                            <li>
+                                <a href="#file">file</a>
+                            </li>
+                            <li>
+                                <a href="#frameworkComponents">frameworkComponents</a>
+                            </li>
+                            <li>
+                                <a href="#gridApi">gridApi</a>
+                            </li>
+                            <li>
+                                <a href="#gridColumnApi">gridColumnApi</a>
+                            </li>
+                            <li>
+                                <a href="#meses">meses</a>
+                            </li>
+                            <li>
+                                <a href="#servColumnsDefs">servColumnsDefs</a>
+                            </li>
+                            <li>
+                                <a href="#serviceRowData">serviceRowData</a>
+                            </li>
+                            <li>
+                                <a href="#services">services</a>
+                            </li>
+                            <li>
+                                <a href="#serviceSelected">serviceSelected</a>
+                            </li>
+                            <li>
+                                <a href="#userColumnsDefs">userColumnsDefs</a>
+                            </li>
+                            <li>
+                                <a href="#userRowData">userRowData</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addFile">addFile</a>
+                            </li>
+                            <li>
+                                <a href="#changeServiceGridEvent">changeServiceGridEvent</a>
+                            </li>
+                            <li>
+                                <a href="#changeUserGridEvent">changeUserGridEvent</a>
+                            </li>
+                            <li>
+                                <a href="#contractGetterFormat">contractGetterFormat</a>
+                            </li>
+                            <li>
+                                <a href="#contractGetterService">contractGetterService</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onServiceGridReady">onServiceGridReady</a>
+                            </li>
+                            <li>
+                                <a href="#onUserGridReady">onUserGridReady</a>
+                            </li>
+                            <li>
+                                <a href="#servicesGetter">servicesGetter</a>
+                            </li>
+                            <li>
+                                <a href="#servicesGetterFormat">servicesGetterFormat</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(servicesService: <a href="../injectables/ServicesService.html">ServicesService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/botoom-sheet/waste-upload/waste-upload.component.ts:54</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>servicesService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ServicesService.html" target="_self" >ServicesService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addFile"></a>
+                    <span class="name">
+                        <b>
+                            addFile
+                        </b>
+                        <a href="#addFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addFile(event)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="153"
+                            class="link-to-prism">src/app/botoom-sheet/waste-upload/waste-upload.component.ts:153</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeServiceGridEvent"></a>
+                    <span class="name">
+                        <b>
+                            changeServiceGridEvent
+                        </b>
+                        <a href="#changeServiceGridEvent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeServiceGridEvent(event)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="107"
+                            class="link-to-prism">src/app/botoom-sheet/waste-upload/waste-upload.component.ts:107</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeUserGridEvent"></a>
+                    <span class="name">
+                        <b>
+                            changeUserGridEvent
+                        </b>
+                        <a href="#changeUserGridEvent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeUserGridEvent(event)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="138"
+                            class="link-to-prism">src/app/botoom-sheet/waste-upload/waste-upload.component.ts:138</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="contractGetterFormat"></a>
+                    <span class="name">
+                        <b>
+                            contractGetterFormat
+                        </b>
+                        <a href="#contractGetterFormat"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>contractGetterFormat(event)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="93"
+                            class="link-to-prism">src/app/botoom-sheet/waste-upload/waste-upload.component.ts:93</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="contractGetterService"></a>
+                    <span class="name">
+                        <b>
+                            contractGetterService
+                        </b>
+                        <a href="#contractGetterService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>contractGetterService()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="147"
+                            class="link-to-prism">src/app/botoom-sheet/waste-upload/waste-upload.component.ts:147</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="57"
+                            class="link-to-prism">src/app/botoom-sheet/waste-upload/waste-upload.component.ts:57</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onServiceGridReady"></a>
+                    <span class="name">
+                        <b>
+                            onServiceGridReady
+                        </b>
+                        <a href="#onServiceGridReady"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onServiceGridReady(params)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">src/app/botoom-sheet/waste-upload/waste-upload.component.ts:70</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>params</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onUserGridReady"></a>
+                    <span class="name">
+                        <b>
+                            onUserGridReady
+                        </b>
+                        <a href="#onUserGridReady"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onUserGridReady(params)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="67"
+                            class="link-to-prism">src/app/botoom-sheet/waste-upload/waste-upload.component.ts:67</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>params</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="servicesGetter"></a>
+                    <span class="name">
+                        <b>
+                            servicesGetter
+                        </b>
+                        <a href="#servicesGetter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>servicesGetter()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="74"
+                            class="link-to-prism">src/app/botoom-sheet/waste-upload/waste-upload.component.ts:74</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="servicesGetterFormat"></a>
+                    <span class="name">
+                        <b>
+                            servicesGetterFormat
+                        </b>
+                        <a href="#servicesGetterFormat"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>servicesGetterFormat(event)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">src/app/botoom-sheet/waste-upload/waste-upload.component.ts:78</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="arrayBuffer"></a>
+                        <span class="name">
+                            <b>
+                            arrayBuffer</b>
+                            <a href="#arrayBuffer"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/botoom-sheet/waste-upload/waste-upload.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="contracts"></a>
+                        <span class="name">
+                            <b>
+                            contracts</b>
+                            <a href="#contracts"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>any[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/botoom-sheet/waste-upload/waste-upload.component.ts:52</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dateSufix"></a>
+                        <span class="name">
+                            <b>
+                            dateSufix</b>
+                            <a href="#dateSufix"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/botoom-sheet/waste-upload/waste-upload.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="file"></a>
+                        <span class="name">
+                            <b>
+                            file</b>
+                            <a href="#file"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/botoom-sheet/waste-upload/waste-upload.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="frameworkComponents"></a>
+                        <span class="name">
+                            <b>
+                            frameworkComponents</b>
+                            <a href="#frameworkComponents"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>literal type</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/botoom-sheet/waste-upload/waste-upload.component.ts:53</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gridApi"></a>
+                        <span class="name">
+                            <b>
+                            gridApi</b>
+                            <a href="#gridApi"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/botoom-sheet/waste-upload/waste-upload.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gridColumnApi"></a>
+                        <span class="name">
+                            <b>
+                            gridColumnApi</b>
+                            <a href="#gridColumnApi"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/botoom-sheet/waste-upload/waste-upload.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="meses"></a>
+                        <span class="name">
+                            <b>
+                            meses</b>
+                            <a href="#meses"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[&quot;ENERO&quot;,&quot;FEBRERO&quot;,&quot;MARZO&quot;,&quot;ABRIL&quot;,&quot;MAYO&quot;,&quot;JUNIO&quot;,&quot;JULIO&quot;,&quot;AGOSTO&quot;,&quot;SEPTIEMBRE&quot;,&quot;OCTUBRE&quot;,&quot;NOVIEMBRE&quot;,&quot;DICIEMBRE&quot;]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/botoom-sheet/waste-upload/waste-upload.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="servColumnsDefs"></a>
+                        <span class="name">
+                            <b>
+                            servColumnsDefs</b>
+                            <a href="#servColumnsDefs"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+    {headerName: &#x27;Fecha&#x27;, field: &#x27;date&#x27;,
+        editable: true,
+        width: 150},
+		{headerName: &#x27;Contrato&#x27;, field: &#x27;contId&#x27;,valueGetter:this.contractGetterFormat.bind(this) },
+    {headerName: &#x27;Servicio&#x27;, field: &#x27;servTypeId&#x27;, editable: true,valueGetter:this.servicesGetterFormat.bind(this), cellEditorParams:{services: this.servicesGetter.bind(this)}, cellEditor: &#x27;servicePicker&#x27;},
+    {headerName: &#x27;Quantity&#x27;, field: &#x27;quantity&#x27; }
+  ]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/botoom-sheet/waste-upload/waste-upload.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="serviceRowData"></a>
+                        <span class="name">
+                            <b>
+                            serviceRowData</b>
+                            <a href="#serviceRowData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>any[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/botoom-sheet/waste-upload/waste-upload.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="services"></a>
+                        <span class="name">
+                            <b>
+                            services</b>
+                            <a href="#services"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>any[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/botoom-sheet/waste-upload/waste-upload.component.ts:51</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="serviceSelected"></a>
+                        <span class="name">
+                            <b>
+                            serviceSelected</b>
+                            <a href="#serviceSelected"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/botoom-sheet/waste-upload/waste-upload.component.ts:54</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="userColumnsDefs"></a>
+                        <span class="name">
+                            <b>
+                            userColumnsDefs</b>
+                            <a href="#userColumnsDefs"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+		{headerName: &#x27;Contrato&#x27;, field: &#x27;Contrato&#x27;,
+        editable: false,
+        width: 150},
+		{headerName: &#x27;Empresa&#x27;,field: &#x27;contId&#x27;,valueGetter:this.contractGetterFormat.bind(this) },
+		{headerName: &#x27;Cantidad de Batea&#x27;, field: &#x27;Cantidad de\nBatea&#x27;},
+    {headerName: &#x27;Tipo Residuo&#x27;, field: &#x27;servTypeId&#x27;, editable: true,valueGetter:this.servicesGetterFormat.bind(this)},
+    {headerName: &#x27;Ubicacion&#x27;, field: &#x27;Ubicación&#x27;},
+    {headerName: &#x27;Detalle&#x27;, field: &#x27;detail&#x27;},
+    {headerName: &#x27;Observaciones&#x27;, field: &#x27;Observaciones&#x27;},
+    {headerName: &#x27;Fecha&#x27;, field: &#x27;date&#x27;},
+    {headerName: &#x27;Tipo&#x27;, field: &#x27;type&#x27;},
+    {
+			headerName: &quot;status&quot;,
+			field: &quot;change_status&quot;,
+			width: 100,
+			hide: true,
+			suppressToolPanel: true
+		 }
+	]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/botoom-sheet/waste-upload/waste-upload.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="userRowData"></a>
+                        <span class="name">
+                            <b>
+                            userRowData</b>
+                            <a href="#userRowData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>any[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/botoom-sheet/waste-upload/waste-upload.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { MatApprovedPickerRenderComponent } from &#x27;src/app/components/utils/mat-approved-picker-render/mat-approved-picker-render.component&#x27;;
+import { MatServicesPickerRenderComponent } from &#x27;src/app/components/utils/mat-service-picker-render/mat-service-picker-render.component&#x27;;
+import { ServicesService } from &#x27;src/app/services/services.service&#x27;;
+
+import * as XLSX from &#x27;xlsx&#x27;
+@Component({
+  selector: &#x27;app-waste-upload&#x27;,
+  templateUrl: &#x27;./waste-upload.component.html&#x27;,
+  styleUrls: [&#x27;./waste-upload.component.scss&#x27;]
+})
+export class WasteUploadComponent implements OnInit {
+  file: any;
+  arrayBuffer;
+  serviceRowData: any[];
+  userRowData: any[];
+  dateSufix;
+  meses &#x3D; [&quot;ENERO&quot;,&quot;FEBRERO&quot;,&quot;MARZO&quot;,&quot;ABRIL&quot;,&quot;MAYO&quot;,&quot;JUNIO&quot;,&quot;JULIO&quot;,&quot;AGOSTO&quot;,&quot;SEPTIEMBRE&quot;,&quot;OCTUBRE&quot;,&quot;NOVIEMBRE&quot;,&quot;DICIEMBRE&quot;]
+  gridApi: any;
+  gridColumnApi: any;
+
+  servColumnsDefs &#x3D; [
+    {headerName: &#x27;Fecha&#x27;, field: &#x27;date&#x27;,
+        editable: true,
+        width: 150},
+		{headerName: &#x27;Contrato&#x27;, field: &#x27;contId&#x27;,valueGetter:this.contractGetterFormat.bind(this) },
+    {headerName: &#x27;Servicio&#x27;, field: &#x27;servTypeId&#x27;, editable: true,valueGetter:this.servicesGetterFormat.bind(this), cellEditorParams:{services: this.servicesGetter.bind(this)}, cellEditor: &#x27;servicePicker&#x27;},
+    {headerName: &#x27;Quantity&#x27;, field: &#x27;quantity&#x27; }
+  ];
+  
+  userColumnsDefs &#x3D; [
+		{headerName: &#x27;Contrato&#x27;, field: &#x27;Contrato&#x27;,
+        editable: false,
+        width: 150},
+		{headerName: &#x27;Empresa&#x27;,field: &#x27;contId&#x27;,valueGetter:this.contractGetterFormat.bind(this) },
+		{headerName: &#x27;Cantidad de Batea&#x27;, field: &#x27;Cantidad de\nBatea&#x27;},
+    {headerName: &#x27;Tipo Residuo&#x27;, field: &#x27;servTypeId&#x27;, editable: true,valueGetter:this.servicesGetterFormat.bind(this)},
+    {headerName: &#x27;Ubicacion&#x27;, field: &#x27;Ubicación&#x27;},
+    {headerName: &#x27;Detalle&#x27;, field: &#x27;detail&#x27;},
+    {headerName: &#x27;Observaciones&#x27;, field: &#x27;Observaciones&#x27;},
+    {headerName: &#x27;Fecha&#x27;, field: &#x27;date&#x27;},
+    {headerName: &#x27;Tipo&#x27;, field: &#x27;type&#x27;},
+    {
+			headerName: &quot;status&quot;,
+			field: &quot;change_status&quot;,
+			width: 100,
+			hide: true,
+			suppressToolPanel: true
+		 }
+	];
+  services: any[];
+  contracts: any[];
+  frameworkComponents: { servicePicker: any; statusPicker: any; };
+  serviceSelected: any;
+  constructor(private servicesService:ServicesService) { }
+
+  async ngOnInit(): Promise&lt;void&gt; {
+    this.frameworkComponents &#x3D; { servicePicker: MatServicesPickerRenderComponent,statusPicker:MatApprovedPickerRenderComponent};
+    this.contracts &#x3D; await this.contractGetterService()
+    this.servicesService.getAllServices().subscribe(data &#x3D;&gt;{
+      this.services &#x3D; data.filter(v&#x3D;&gt;{return v.moduTag &#x3D;&#x3D; &quot;waste-module&quot;})
+      console.log(this.services)
+      console.log(this.contracts)
+    })
+  }
+
+  onUserGridReady(params) {
+    this.gridApi &#x3D; params.api;
+  }
+  onServiceGridReady(params){
+    this.gridColumnApi &#x3D; params.api;
+  }
+
+  servicesGetter(){
+    return this.services
+  }
+
+  servicesGetterFormat(event){
+    
+    let id &#x3D; event.data.servTypeId
+    let showService &#x3D; this.services.filter(service &#x3D;&gt; {return service.servTypeId &#x3D;&#x3D; id})
+    if(showService[0]){
+      
+      this.serviceSelected &#x3D; showService[0].servName
+      return showService[0].servName
+    }else{
+      this.serviceSelected &#x3D; null
+      return null
+    }
+    
+  }
+
+  contractGetterFormat(event){
+    let servId &#x3D; event.data.servTypeId
+    let service &#x3D; this.services.filter(service &#x3D;&gt; {return service.servTypeId &#x3D;&#x3D; servId})
+    if(!service[0]){
+      return null
+    }
+    let contId &#x3D; service[0].contId
+    let contract &#x3D; this.contracts.filter(contract &#x3D;&gt;{return contract.contId &#x3D;&#x3D; contId})
+    if(!contract[0]){
+      return null
+    }
+    return contract[0].contName
+  }
+
+  changeServiceGridEvent(event){
+    
+
+    let rowNode &#x3D; this.gridColumnApi.getRowNode(event.rowIndex);
+    let service &#x3D; this.services.filter(v&#x3D;&gt;{return v.servTypeId &#x3D;&#x3D; event.data.servTypeId})
+    if(service[0]){
+      let contract &#x3D; this.contracts.filter(v&#x3D;&gt;{return v.contId &#x3D;&#x3D; service[0].contId})
+    }
+    
+
+    rowNode.setDataValue(&#x27;contId&#x27;, this.contracts[0].contId);
+
+    let rowData &#x3D; [];
+    this.gridApi.forEachNode(node &#x3D;&gt; rowData.push(node));
+
+    rowData &#x3D; rowData.filter(v&#x3D;&gt;{return (v.data.date &#x3D;&#x3D; event.data.date &amp;&amp; v.data.Contrato &#x3D;&#x3D; event.data.contract &amp;&amp; v.data[&quot;Tipo Residuo&quot;]&#x3D;&#x3D;event.data.service)})
+
+
+    rowData.forEach((v,k)&#x3D;&gt;{
+      let rowUserNode &#x3D; this.gridApi.getRowNode(v.rowIndex);
+      rowUserNode.setDataValue(&#x27;servTypeId&#x27;, event.data.servTypeId);
+      rowUserNode.setDataValue(&#x27;date&#x27;, event.data.date);
+      rowUserNode.setDataValue(&#x27;contId&#x27;, event.data.contId);
+    })
+    var params &#x3D; {
+      force: true
+    };
+    this.gridColumnApi.refreshCells(params)
+    this.gridApi.refreshCells(params)
+  }
+
+  changeUserGridEvent(event){
+    var params &#x3D; {
+      force: true
+    };
+    this.gridApi.refreshCells(params)
+    
+  }
+  
+  
+  contractGetterService(): any {
+    return new Promise((resolve, reject) &#x3D;&gt;{
+			this.servicesService.getAllContracts().subscribe(data &#x3D;&gt;{resolve(data);},err &#x3D;&gt;{reject(err);})
+		})
+  }
+
+  addFile(event){    
+    this.file&#x3D; event.target.files[0];     
+    let fileReader &#x3D; new FileReader();    
+    fileReader.readAsArrayBuffer(this.file);     
+    fileReader.onload &#x3D; (e) &#x3D;&gt; {    
+        this.arrayBuffer &#x3D; fileReader.result;    
+        var data &#x3D; new Uint8Array(this.arrayBuffer);    
+        var arr &#x3D; new Array();    
+        for(var i &#x3D; 0; i !&#x3D; data.length; ++i) arr[i] &#x3D; String.fromCharCode(data[i]);    
+        var bstr &#x3D; arr.join(&quot;&quot;);    
+        var workbook &#x3D; XLSX.read(bstr, {type:&quot;binary&quot;});    
+        var first_sheet_name &#x3D; workbook.SheetNames[0];    
+        
+        var worksheet &#x3D; workbook.Sheets[first_sheet_name];    
+        
+        let arrayList &#x3D; XLSX.utils.sheet_to_json(worksheet,{raw:true,range:2})
+        console.log(arrayList);
+
+
+        let arrayMap &#x3D; [];
+        let toData &#x3D; [];
+        let filters &#x3D; []
+
+
+        for (var key of Object.keys(arrayList[0])) {
+          if(this.meses.includes(key)){
+            let date &#x3D; new Date()
+            let month &#x3D; this.meses.indexOf(key) + 1
+            this.dateSufix &#x3D; date.getFullYear().toString() + &#x27;-&#x27; + month.toString() + &#x27;-&#x27; 
+          }
+
+          let insert &#x3D; {key:key,value:arrayList[0][key]}
+          arrayMap.push(insert)
+        }
+        
+        arrayList.shift()
+        
+        for(let waste of arrayList){
+          let date;
+          let detail;
+          let type;
+          for (var key of Object.keys(waste)) {
+            let filter &#x3D; arrayMap.filter(v&#x3D;&gt;{return v.key &#x3D;&#x3D; key})
+
+            if(filter[0]){
+              
+              if(isNumeric(filter[0].value)) {
+                
+                date &#x3D; this.dateSufix + filter[0].value
+                type &#x3D; waste[filter[0].key]
+
+              } else if(filter[0].value.toUpperCase() &#x3D;&#x3D;&#x27;DETALLE&#x27;){
+
+                detail &#x3D; waste[filter[0].key]
+
+              }
+
+            }
+          }
+
+          waste[&quot;date&quot;]&#x3D;date
+          waste[&quot;detail&quot;]&#x3D;detail
+          waste[&quot;type&quot;]&#x3D;type
+          filters.push({date:date,service:waste[&quot;Tipo Residuo&quot;],contract:waste[&quot;Contrato&quot;]})
+          toData.push(waste)
+        }
+
+
+        let secondArrayList
+        if(workbook.SheetNames[1]){
+          var second_sheet_name &#x3D; workbook.SheetNames[1];  
+        
+          var worksheet2 &#x3D; workbook.Sheets[second_sheet_name];
+          
+          secondArrayList &#x3D; XLSX.utils.sheet_to_json(worksheet2,{raw:true})
+        }
+        
+        var newDict &#x3D; {}
+        for(var i&#x3D;0; i&lt;filters.length; i++) {
+          newDict[filters[i][&#x27;date&#x27;] + filters[i][&#x27;service&#x27;] + filters[i][&#x27;contract&#x27;]] &#x3D; {service:filters[i][&#x27;service&#x27;], date:filters[i][&#x27;date&#x27;], contract:filters[i][&#x27;contract&#x27;]};
+        }
+
+        filters &#x3D; [];
+
+        for (var key of Object.keys(newDict)) {
+          filters.push({date:newDict[key][&#x27;date&#x27;],service:newDict[key][&#x27;service&#x27;],contract:newDict[key][&#x27;contract&#x27;]})
+        }
+
+
+        
+        //console.log(newDict);
+        //console.log(filters)
+
+        filters.forEach((v,k)&#x3D;&gt;{
+          let filteredServices &#x3D; toData.filter(v2&#x3D;&gt;{
+            return v.date &#x3D;&#x3D; v2.date &amp;&amp; v.service &#x3D;&#x3D; v2[&quot;Tipo Residuo&quot;] &amp;&amp; v.contract &#x3D;&#x3D; v2.Contrato
+          })
+          filters[k].quantity &#x3D; filteredServices.length
+          filters[k].services &#x3D; filteredServices
+        })
+
+
+        console.log(filters)
+        filters.pop()
+        this.serviceRowData &#x3D; []
+        this.userRowData &#x3D; toData
+        this.serviceRowData &#x3D; filters
+        var params &#x3D; {
+          force: true
+        };
+        this.gridApi.refreshCells(params)
+    }    
+  }    
+
+}
+
+
+function isNumeric(n) {
+  return !isNaN(parseFloat(n)) &amp;&amp; isFinite(n);
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;input style&#x3D;&quot;margin-left:1vw;margin-top: 1vw;&quot; type&#x3D;&quot;file&quot; class&#x3D;&quot;form-control&quot; (change)&#x3D;&quot;addFile($event)&quot; placeholder&#x3D;&quot;Upload file&quot; accept&#x3D;&quot;.csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel&quot;&gt;
+&lt;div style&#x3D;&quot;margin-left:2vw;margin-top: 1vw;&quot;&gt;&lt;h3&gt;Servicio&lt;/h3&gt;&lt;/div&gt;
+            &lt;ag-grid-angular 
+                style&#x3D;&quot;height: 25vh; margin:1%&quot; 
+                class&#x3D;&quot;ag-theme-balham&quot;
+                [rowData]&#x3D;&quot;serviceRowData&quot;
+                [columnDefs]&#x3D;&quot;servColumnsDefs&quot;
+                [frameworkComponents]&#x3D;&quot;frameworkComponents&quot;
+                (cellValueChanged)&#x3D;&quot;changeServiceGridEvent($event)&quot;
+                (gridReady)&#x3D;&quot;onServiceGridReady($event)&quot;
+                &gt;
+            &lt;/ag-grid-angular&gt;
+            &lt;div class&#x3D;&quot;divisor&quot;&gt;&lt;/div&gt;
+            &lt;div style&#x3D;&quot;margin-left:2vw;margin-top: 1vw;&quot;&gt;&lt;h3&gt;Servicios&lt;/h3&gt;&lt;/div&gt;
+&lt;ag-grid-angular 
+                style&#x3D;&quot;height: 44vh; margin:1%&quot; 
+                class&#x3D;&quot;ag-theme-balham&quot;
+                [rowData]&#x3D;&quot;userRowData&quot;
+                [columnDefs]&#x3D;&quot;userColumnsDefs&quot;
+                (cellValueChanged)&#x3D;&quot;changeUserGridEvent($event)&quot;
+                
+                (gridReady)&#x3D;&quot;onUserGridReady($event)&quot;
+                &gt;
+            &lt;/ag-grid-angular&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./waste-upload.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><input style="margin-left:1vw;margin-top: 1vw;" type="file" class="form-control" (change)="addFile($event)" placeholder="Upload file" accept=".csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"><div style="margin-left:2vw;margin-top: 1vw;"><h3>Servicio</h3></div>            <ag-grid-angular                 style="height: 25vh; margin:1%"                 class="ag-theme-balham"                [rowData]="serviceRowData"                [columnDefs]="servColumnsDefs"                [frameworkComponents]="frameworkComponents"                (cellValueChanged)="changeServiceGridEvent($event)"                (gridReady)="onServiceGridReady($event)"                >            </ag-grid-angular>            <div class="divisor"></div>            <div style="margin-left:2vw;margin-top: 1vw;"><h3>Servicios</h3></div><ag-grid-angular                 style="height: 44vh; margin:1%"                 class="ag-theme-balham"                [rowData]="userRowData"                [columnDefs]="userColumnsDefs"                (cellValueChanged)="changeUserGridEvent($event)"                                (gridReady)="onUserGridReady($event)"                >            </ag-grid-angular></div>'
+    var COMPONENTS = [{'name': 'AddProfilesModalComponent', 'selector': 'app-add-profiles-modal'},{'name': 'AddServiceModalComponent', 'selector': 'app-add-service-modal'},{'name': 'AddUserModalComponent', 'selector': 'app-add-user-modal'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BathroomsComponent', 'selector': 'app-bathrooms'},{'name': 'CommercialComponent', 'selector': 'app-commercial'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'GetServiceModalComponent', 'selector': 'app-get-service-modal'},{'name': 'InitialViewComponent', 'selector': 'app-initial-view'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MatApprovedPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatContractPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatModulesPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatPermissionsPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatProfilesPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatServicesPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatStatusPickerRenderComponent', 'selector': 'input-cell'},{'name': 'ServicesComponent', 'selector': 'app-services'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'WastesComponent', 'selector': 'app-wastes'},{'name': 'WasteUploadComponent', 'selector': 'app-waste-upload'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'WasteUploadComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'WasteUploadComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

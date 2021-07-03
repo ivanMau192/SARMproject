@@ -90,7 +90,7 @@ export class FileUploadComponent implements OnInit {
     this.frameworkComponents = { servicePicker: MatServicesPickerRenderComponent,statusPicker:MatApprovedPickerRenderComponent};
     this.servicesService.getAllServices().subscribe(data=>{
       console.log(data)
-      this.services = data.filter(v=>{return v.modutag=="bathroom-module"})
+      this.services = data.filter(v=>{return v.moduTag=="bathroom-module"})
       
     })
     this.contracts = await this.contractGetterService()

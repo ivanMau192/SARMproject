@@ -8,8 +8,26 @@ import { Services } from '../entity/Services';
 import { ServicesData } from '../entity/ServicesData';
 import { Modules } from '../entity/Modules';
 
+/** Controlador de servicios
+ * @module controllers/ServicesController
+ */
 
 export class ServicesController {
+
+
+    /**
+    * Funcion que agrega y/o modifica servicio
+    * @function addService
+    * @param {string} servName Nombre del servicio
+    * @param {string} contId Id de contrato del servicio
+    * @param {string} servPrice Precio del servicio 
+    * @param {string} moduId id del modulo correspondiente al servicio
+    * @param {string} servTypeId id de servicio a modificar (Vacio se se creara uno nuevo)
+    * @returns {Object} Objeto con Estado de peticion
+    *
+    */
+
+
     addService = async (req: Request, res: Response): Promise<Response> => {
         
         console.log(req.body);
@@ -41,6 +59,12 @@ export class ServicesController {
     }
 
    
+    /**
+    * Funcion que obtiene lista de servicios
+    * @function getAllServices
+    * @returns {Object} Objeto con servicios y Estado de peticion
+    *
+    */
 
     getAllServices = async (req: Request, res: Response): Promise<Response> => {
         let resp = await getRepository(ServicesTypes).find()
@@ -60,17 +84,40 @@ export class ServicesController {
     }
 
 
+    /**
+    * Funcion que obtiene lista de servicios
+    * @function getAllModules
+    * @returns {Object} Objeto con modulos y Estado de peticion
+    *
+    */
+
     getAllModules = async (req: Request, res: Response): Promise<Response> => {
         let modules = await getRepository(Modules).find()
         console.log(modules)
         return res.send(modules)
     }
 
+    /**
+    * Funcion que obtiene lista de contratos
+    * @function getAllContracts
+    * @returns {Object} Objeto con modulos y Estado de peticion
+    *
+    */
+
     getAllContracts = async (req: Request, res: Response): Promise<Response> => {
         let resp = await getRepository(Contracts).find()
         return res.send(resp);
     }
 
+
+    /**
+    * Funcion que Agrega datos de servicios
+    * @function addDataServices
+    * @param {Object} service Objeto con servicio a realizar
+    * @param {Object} data Objeto con detalle de servicio a realizar
+    * @returns {Object} Objeto con Estado de peticion
+    *
+    */
 
     addDataServices= async (req: Request, res: Response): Promise<Response> =>{
 
@@ -138,6 +185,14 @@ export class ServicesController {
     }
 
 
+    /**
+    * Funcion que obtiene datos de servicio
+    * @function getServicesDatas
+    * @param {id} servId id de servicio a consultar
+    * @returns {Object} Objeto con detalle de servicio y estado de peticion
+    *
+    */
+
     getServicesData= async (req: Request, res: Response): Promise<Response> =>{
 
         let id = req.body.servId
@@ -191,6 +246,15 @@ export class ServicesController {
 
     }
 
+
+    /**
+    * Funcion que obtiene datos de servicio segun fecha y contrato
+    * @function getServicesDatas
+    * @param {id} contId id de servicio a consultar
+    * @param {Date} fecha fecha de servicio a consultar
+    * @returns {Object} Objeto con detalle de servicio y estado de peticion
+    *
+    */
 
     getServicesFiltered = async (req: Request, res: Response): Promise<Response> =>{
 

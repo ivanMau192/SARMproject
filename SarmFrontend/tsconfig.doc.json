@@ -1,0 +1,4 @@
+{
+    "include": ["src/**/*.ts"],
+    "exclude": ["src/test.ts","src/environments/environment.ts","src/environments/environment.prod.ts","src/app/botoom-sheet/**/*.ts"]
+  }

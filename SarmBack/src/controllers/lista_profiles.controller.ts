@@ -4,8 +4,21 @@ import { Permissions } from '../entity/Permissions';
 import { Profiles } from '../entity/Profiles';
 import { ProfilesPermissions } from '../entity/ProfilesPermissions';
 
+
+/** Controlador de perfiles
+ * @module controllers/ProfileslistController
+ */
+
 export class ProfileslistController {
     
+
+    /**
+    * Funcion que obtiene lista de perfiles
+    * @function getlistPerms
+    * @returns {Object} Objeto con lista de perfiles actualizada y estado de peticion
+    *
+    */
+
     getlistProfiles = async (req: Request, res: Response): Promise<Response> => {
         let out = {status:false, data:[]}
         try{
@@ -34,6 +47,13 @@ export class ProfileslistController {
             }
         
     }
+
+    /**
+    * Funcion que obtiene lista de permisos
+    * @function getPermissionsList
+    * @returns {Object} Objeto con lista de permisos actualizada y estado de peticion
+    *
+    */
 
     getPermissionsList = async (req: Request, res: Response): Promise<Response> => {
         let out = {status:false, data:[]}

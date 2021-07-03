@@ -2,8 +2,20 @@ import {request, Request, Response} from 'express';
 import { getRepository } from "typeorm";
 import { Permissions } from '../entity/Permissions';
 
+
+/** Controlador de permisos
+ * @module controllers/PermslistController
+ */
+
 export class PermslistController {
-    
+
+    /**
+    * Funcion que obtiene lista de permisos
+    * @function getlistPerms
+    * @returns {Object} Objeto con lista de permisos actualizada y estado de peticion
+    *
+    */
+
     getlistPerms = async (req: Request, res: Response): Promise<Response> => {
         let out = {status:false, data:[]}
         try{

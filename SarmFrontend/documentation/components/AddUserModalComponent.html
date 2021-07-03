@@ -1,0 +1,982 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>sarm-frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">sarm-frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>AddUserModalComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/botoom-sheet/add-user-modal/add-user-modal.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-add-user-modal</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./add-user-modal.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./add-user-modal.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#_bottomSheetRef">_bottomSheetRef</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#data">data</a>
+                            </li>
+                            <li>
+                                <a href="#emailFormControl">emailFormControl</a>
+                            </li>
+                            <li>
+                                <a href="#emailMatcher">emailMatcher</a>
+                            </li>
+                            <li>
+                                <a href="#nameFormControl">nameFormControl</a>
+                            </li>
+                            <li>
+                                <a href="#nameMatcher">nameMatcher</a>
+                            </li>
+                            <li>
+                                <a href="#passwordFormControl">passwordFormControl</a>
+                            </li>
+                            <li>
+                                <a href="#passwordMatcher">passwordMatcher</a>
+                            </li>
+                            <li>
+                                <a href="#perfilSelected">perfilSelected</a>
+                            </li>
+                            <li>
+                                <a href="#profiles">profiles</a>
+                            </li>
+                            <li>
+                                <a href="#status">status</a>
+                            </li>
+                            <li>
+                                <a href="#statusSelected">statusSelected</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#createUser">createUser</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(data: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, userService: <a href="../injectables/UsersService.html">UsersService</a>, _bottomSheetRef: <a href="../components/AddUserModalComponent.html">MatBottomSheetRef<AddUserModalComponent></a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/botoom-sheet/add-user-modal/add-user-modal.component.ts:52</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>data</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>userService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UsersService.html" target="_self" >UsersService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_bottomSheetRef</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../components/AddUserModalComponent.html" target="_self" >MatBottomSheetRef&lt;AddUserModalComponent&gt;</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createUser"></a>
+                    <span class="name">
+                        <b>
+                            createUser
+                        </b>
+                        <a href="#createUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createUser()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="62"
+                            class="link-to-prism">src/app/botoom-sheet/add-user-modal/add-user-modal.component.ts:62</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="57"
+                            class="link-to-prism">src/app/botoom-sheet/add-user-modal/add-user-modal.component.ts:57</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_bottomSheetRef"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            _bottomSheetRef</b>
+                            <a href="#_bottomSheetRef"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../components/AddUserModalComponent.html" target="_self" >MatBottomSheetRef&lt;AddUserModalComponent&gt;</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/botoom-sheet/add-user-modal/add-user-modal.component.ts:55</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="data"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            data</b>
+                            <a href="#data"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @Inject(MAT_BOTTOM_SHEET_DATA)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/botoom-sheet/add-user-modal/add-user-modal.component.ts:53</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="emailFormControl"></a>
+                        <span class="name">
+                            <b>
+                            emailFormControl</b>
+                            <a href="#emailFormControl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new FormControl(&#x27;&#x27;, [
+    Validators.required,
+    Validators.email,
+  ])</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/botoom-sheet/add-user-modal/add-user-modal.component.ts:39</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="emailMatcher"></a>
+                        <span class="name">
+                            <b>
+                            emailMatcher</b>
+                            <a href="#emailMatcher"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new EmailErrorStateMatcher()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/botoom-sheet/add-user-modal/add-user-modal.component.ts:50</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="nameFormControl"></a>
+                        <span class="name">
+                            <b>
+                            nameFormControl</b>
+                            <a href="#nameFormControl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new FormControl(&#x27;&#x27;, [
+    Validators.required
+  ])</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/botoom-sheet/add-user-modal/add-user-modal.component.ts:46</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="nameMatcher"></a>
+                        <span class="name">
+                            <b>
+                            nameMatcher</b>
+                            <a href="#nameMatcher"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new NameErrorStateMatcher()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/botoom-sheet/add-user-modal/add-user-modal.component.ts:52</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="passwordFormControl"></a>
+                        <span class="name">
+                            <b>
+                            passwordFormControl</b>
+                            <a href="#passwordFormControl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new FormControl(&#x27;&#x27;, [
+    Validators.required
+  ])</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/botoom-sheet/add-user-modal/add-user-modal.component.ts:43</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="passwordMatcher"></a>
+                        <span class="name">
+                            <b>
+                            passwordMatcher</b>
+                            <a href="#passwordMatcher"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new PasswordErrorStateMatcher()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/botoom-sheet/add-user-modal/add-user-modal.component.ts:51</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="perfilSelected"></a>
+                        <span class="name">
+                            <b>
+                            perfilSelected</b>
+                            <a href="#perfilSelected"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/botoom-sheet/add-user-modal/add-user-modal.component.ts:36</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="profiles"></a>
+                        <span class="name">
+                            <b>
+                            profiles</b>
+                            <a href="#profiles"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/botoom-sheet/add-user-modal/add-user-modal.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="status"></a>
+                        <span class="name">
+                            <b>
+                            status</b>
+                            <a href="#status"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[&quot;ACTIVO&quot;, &quot;INACTIVO&quot;]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/botoom-sheet/add-user-modal/add-user-modal.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="statusSelected"></a>
+                        <span class="name">
+                            <b>
+                            statusSelected</b>
+                            <a href="#statusSelected"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;ACTIVO&quot;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/botoom-sheet/add-user-modal/add-user-modal.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject, OnInit } from &#x27;@angular/core&#x27;;
+import { FormControl, FormGroupDirective, NgForm, Validators } from &#x27;@angular/forms&#x27;;
+import { MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA } from &#x27;@angular/material/bottom-sheet&#x27;;
+import { ErrorStateMatcher } from &#x27;@angular/material/core&#x27;;
+import { UsersService } from &#x27;src/app/services/users.service&#x27;;
+
+
+export class EmailErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted &#x3D; form &amp;&amp; form.submitted;
+    return !!(control &amp;&amp; control.invalid &amp;&amp; (control.dirty || control.touched || isSubmitted));
+  }
+}
+
+export class PasswordErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted &#x3D; form &amp;&amp; form.submitted;
+    return !!(control &amp;&amp; control.invalid &amp;&amp; (control.dirty || control.touched || isSubmitted));
+  }
+}
+
+export class NameErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted &#x3D; form &amp;&amp; form.submitted;
+    return !!(control &amp;&amp; control.invalid &amp;&amp; (control.dirty || control.touched || isSubmitted));
+  }
+}
+
+@Component({
+  selector: &#x27;app-add-user-modal&#x27;,
+  templateUrl: &#x27;./add-user-modal.component.html&#x27;,
+  styleUrls: [&#x27;./add-user-modal.component.scss&#x27;]
+})
+export class AddUserModalComponent implements OnInit {
+  profiles: any;
+  perfilSelected;
+  statusSelected &#x3D; &quot;ACTIVO&quot;;
+  status &#x3D; [&quot;ACTIVO&quot;, &quot;INACTIVO&quot;]
+  emailFormControl &#x3D; new FormControl(&#x27;&#x27;, [
+    Validators.required,
+    Validators.email,
+  ]);
+  passwordFormControl &#x3D; new FormControl(&#x27;&#x27;, [
+    Validators.required
+  ]);
+  nameFormControl &#x3D; new FormControl(&#x27;&#x27;, [
+    Validators.required
+  ]);
+
+  emailMatcher &#x3D; new EmailErrorStateMatcher();
+  passwordMatcher &#x3D; new PasswordErrorStateMatcher();
+  nameMatcher &#x3D; new NameErrorStateMatcher();
+  constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public data: any,
+              private userService:UsersService,
+              public _bottomSheetRef: MatBottomSheetRef&lt;AddUserModalComponent&gt;) { }
+
+  ngOnInit(): void {
+    this.profiles &#x3D; this.data.profiles.data
+    console.log(this.profiles)
+  }
+
+  createUser(){
+    let userUsername &#x3D; this.emailFormControl.value
+    let password &#x3D; this.passwordFormControl.value
+    let status &#x3D; this.statusSelected
+    let profile &#x3D; this.perfilSelected
+    let userName &#x3D; this.nameFormControl.value
+    let dataToUpload &#x3D; [{
+
+      prof_name:profile,
+      userUsername:userName,
+      userName:userUsername,
+      password:password,
+      userActive:status
+
+    }];
+    
+    
+    this.userService.modifyUsers(dataToUpload).subscribe(data&#x3D;&gt;{
+      
+      console.log(&quot;OK&quot;)
+      this._bottomSheetRef.dismiss({reload:true});
+    })
+    
+  }
+  
+
+  
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div fxFlexFill fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+    
+    
+        
+            &lt;mat-grid-list cols&#x3D;&quot;1&quot; style&#x3D;&quot;width:100%&quot; rowHeight&#x3D;&quot;50vh&quot;&gt;
+                &lt;mat-grid-tile&gt;
+                    &lt;mat-card style&#x3D;&#x27;width: 300px&#x27;&gt;
+                        &lt;div class&#x3D;&quot;center&quot; style&#x3D;&quot;text-align: center;&quot;&gt;
+                            &lt;h2&gt;Creacion de usuario&lt;/h2&gt;
+                            &lt;mat-divider&gt;&lt;/mat-divider&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;form class&#x3D;&quot;Login-form&quot;&gt;
+                                &lt;mat-form-field style&#x3D;&quot;width: 100%;&quot; name&#x3D;&quot;other&quot; class&#x3D;&quot;example-full-width&quot;&gt;
+                                    &lt;mat-label&gt;Nombre&lt;/mat-label&gt;
+                                    &lt;input type&#x3D;&quot;email&quot; matInput [formControl]&#x3D;&quot;emailFormControl&quot; [errorStateMatcher]&#x3D;&quot;emailMatcher&quot; placeholder&#x3D;&quot;mail@codelco.cl&quot; &gt;
+                                    &lt;mat-error *ngIf&#x3D;&quot;emailFormControl.hasError(&#x27;required&#x27;)&quot;&gt;
+                                        Email es &lt;strong&gt;requerido&lt;/strong&gt;
+                                    &lt;/mat-error&gt;
+                                &lt;/mat-form-field&gt;
+                                &lt;mat-form-field style&#x3D;&quot;width: 100%;&quot; name&#x3D;&quot;other&quot; class&#x3D;&quot;example-full-width&quot;&gt;
+                                    &lt;mat-label&gt;Nombre&lt;/mat-label&gt;
+                                    &lt;input  matInput [formControl]&#x3D;&quot;nameFormControl&quot; [errorStateMatcher]&#x3D;&quot;nameMatcher&quot;&gt;
+                                    
+                                    &lt;mat-error *ngIf&#x3D;&quot;passwordFormControl.hasError(&#x27;required&#x27;)&quot;&gt;
+                                        La contraseña es &lt;strong&gt;requireda&lt;/strong&gt;
+                                    &lt;/mat-error&gt;
+                                &lt;/mat-form-field&gt;
+                                
+                                &lt;mat-form-field style&#x3D;&quot;width: 100%;&quot; name&#x3D;&quot;other&quot; class&#x3D;&quot;example-full-width&quot;&gt;
+                                    &lt;mat-label&gt;Contraseña&lt;/mat-label&gt;
+                                    &lt;input type&#x3D;&quot;password&quot; matInput [formControl]&#x3D;&quot;passwordFormControl&quot; [errorStateMatcher]&#x3D;&quot;passwordMatcher&quot;&gt;
+                                    
+                                    &lt;mat-error *ngIf&#x3D;&quot;passwordFormControl.hasError(&#x27;required&#x27;)&quot;&gt;
+                                        La contraseña es &lt;strong&gt;requireda&lt;/strong&gt;
+                                    &lt;/mat-error&gt;
+                                &lt;/mat-form-field&gt;
+
+                               
+                                  
+                                &lt;mat-form-field style&#x3D;&quot;width: 100%;&quot;&gt;
+                                    &lt;input matInput style&#x3D;&quot;display:none&quot;&gt;
+                                    &lt;mat-label *ngIf&#x3D;&quot;perfilSelected&#x3D;&#x3D;null&quot;&gt;Perfil&lt;/mat-label&gt;
+                                    &lt;mat-select [(ngModel)]&#x3D;&quot;perfilSelected&quot;  name&#x3D;&quot;something&quot; ngDefaultControl &gt;
+                                      &lt;mat-option *ngFor&#x3D;&quot;let profile of profiles&quot; [value]&#x3D;&quot;profile.p_prof_id&quot;&gt;{{profile.p_prof_name}}&lt;/mat-option&gt;
+                                    &lt;/mat-select&gt;
+                                    &lt;mat-error *ngIf&#x3D;&quot;!perfilSelected&quot;&gt;
+                                        El perfil es &lt;strong&gt;requerido&lt;/strong&gt;
+                                    &lt;/mat-error&gt;
+                                &lt;/mat-form-field&gt;
+
+                                &lt;mat-form-field style&#x3D;&quot;width: 100%;&quot;&gt;
+                                    &lt;input matInput style&#x3D;&quot;display:none&quot;&gt;
+                                    &lt;mat-select [(ngModel)]&#x3D;&quot;statusSelected&quot;  name&#x3D;&quot;something2&quot; ngDefaultControl &gt;
+                                      &lt;mat-option *ngFor&#x3D;&quot;let state of status&quot; [value]&#x3D;&quot;state&quot;&gt;{{state}}&lt;/mat-option&gt;
+                                    &lt;/mat-select&gt;
+                                &lt;/mat-form-field&gt;
+
+                                &lt;mat-form-field  appearance&#x3D;&quot;none&quot; style&#x3D;&quot;text-align: center; width: 100%;&quot; class&#x3D;&quot;center example-full-width&quot;&gt;
+                                    &lt;input type&#x3D;&quot;password&quot; style&#x3D;&quot;display:none&quot; matInput&gt;
+                                    &lt;button mat-raised-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;createUser()&quot;&gt;Crear Usuario&lt;/button&gt;
+                                &lt;/mat-form-field&gt;   
+                            &lt;/form&gt;
+                        &lt;/div&gt;
+                        
+                    &lt;/mat-card&gt;
+                &lt;/mat-grid-tile&gt;
+            &lt;/mat-grid-list&gt;
+        
+      
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./add-user-modal.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div fxFlexFill fxLayoutAlign="center center">                            <mat-grid-list cols="1" style="width:100%" rowHeight="50vh">                <mat-grid-tile>                    <mat-card style=\'width: 300px\'>                        <div class="center" style="text-align: center;">                            <h2>Creacion de usuario</h2>                            <mat-divider></mat-divider>                        </div>                        <div>                            <form class="Login-form">                                <mat-form-field style="width: 100%;" name="other" class="example-full-width">                                    <mat-label>Nombre</mat-label>                                    <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="emailMatcher" placeholder="mail@codelco.cl" >                                    <mat-error *ngIf="emailFormControl.hasError(\'required\')">                                        Email es <strong>requerido</strong>                                    </mat-error>                                </mat-form-field>                                <mat-form-field style="width: 100%;" name="other" class="example-full-width">                                    <mat-label>Nombre</mat-label>                                    <input  matInput [formControl]="nameFormControl" [errorStateMatcher]="nameMatcher">                                                                        <mat-error *ngIf="passwordFormControl.hasError(\'required\')">                                        La contraseña es <strong>requireda</strong>                                    </mat-error>                                </mat-form-field>                                                                <mat-form-field style="width: 100%;" name="other" class="example-full-width">                                    <mat-label>Contraseña</mat-label>                                    <input type="password" matInput [formControl]="passwordFormControl" [errorStateMatcher]="passwordMatcher">                                                                        <mat-error *ngIf="passwordFormControl.hasError(\'required\')">                                        La contraseña es <strong>requireda</strong>                                    </mat-error>                                </mat-form-field>                                                                                                 <mat-form-field style="width: 100%;">                                    <input matInput style="display:none">                                    <mat-label *ngIf="perfilSelected==null">Perfil</mat-label>                                    <mat-select [(ngModel)]="perfilSelected"  name="something" ngDefaultControl >                                      <mat-option *ngFor="let profile of profiles" [value]="profile.p_prof_id">{{profile.p_prof_name}}</mat-option>                                    </mat-select>                                    <mat-error *ngIf="!perfilSelected">                                        El perfil es <strong>requerido</strong>                                    </mat-error>                                </mat-form-field>                                <mat-form-field style="width: 100%;">                                    <input matInput style="display:none">                                    <mat-select [(ngModel)]="statusSelected"  name="something2" ngDefaultControl >                                      <mat-option *ngFor="let state of status" [value]="state">{{state}}</mat-option>                                    </mat-select>                                </mat-form-field>                                <mat-form-field  appearance="none" style="text-align: center; width: 100%;" class="center example-full-width">                                    <input type="password" style="display:none" matInput>                                    <button mat-raised-button color="primary" (click)="createUser()">Crear Usuario</button>                                </mat-form-field>                               </form>                        </div>                                            </mat-card>                </mat-grid-tile>            </mat-grid-list>              </div></div>'
+    var COMPONENTS = [{'name': 'AddProfilesModalComponent', 'selector': 'app-add-profiles-modal'},{'name': 'AddServiceModalComponent', 'selector': 'app-add-service-modal'},{'name': 'AddUserModalComponent', 'selector': 'app-add-user-modal'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BathroomsComponent', 'selector': 'app-bathrooms'},{'name': 'CommercialComponent', 'selector': 'app-commercial'},{'name': 'FileUploadComponent', 'selector': 'app-file-upload'},{'name': 'GetServiceModalComponent', 'selector': 'app-get-service-modal'},{'name': 'InitialViewComponent', 'selector': 'app-initial-view'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MatApprovedPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatContractPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatModulesPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatPermissionsPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatProfilesPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatServicesPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatStatusPickerRenderComponent', 'selector': 'input-cell'},{'name': 'ServicesComponent', 'selector': 'app-services'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'WastesComponent', 'selector': 'app-wastes'},{'name': 'WasteUploadComponent', 'selector': 'app-waste-upload'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'AddUserModalComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AddUserModalComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

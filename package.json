@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "jsdoc": "^3.6.7",
     "ng2-charts": "^2.4.2"
   }
 }

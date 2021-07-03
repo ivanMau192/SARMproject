@@ -1,0 +1,1224 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>sarm-frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">sarm-frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Componentes</li>
+  <li>MatPermissionsPickerRenderComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>Fichero</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/utils/mat-permissions-picker-render/mat-permissions-picker-render.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Descripción</h3>
+    </p>
+    <p class="comment">
+        <p>Util de permisos
+Este componente es un picker renderizado para asignar permisos a un perfil</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implementa</h3>
+    </p>
+    <p class="comment">
+                <code>ICellEditorAngularComp</code>
+    </p>
+
+
+<section>
+    <h3>Meta datos</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>input-cell</code></td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">styles</td>
+                <td class="col-md-9"><code>
+      .container {
+        width: 350px;
+        height: 250px;
+      }
+    </code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">template</td>
+                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">&lt;mat-form-field appearance&#x3D;&quot;fill&quot;&gt;
+  &lt;input matInput style&#x3D;&quot;display:none&quot;&gt;
+  &lt;mat-label&gt;Perfiles&lt;/mat-label&gt;
+  &lt;mat-select [(ngModel)]&#x3D;&quot;dias&quot; ngDefaultControl multiple&gt;
+    &lt;mat-option *ngFor&#x3D;&quot;let permission of permissions&quot; [value]&#x3D;&quot;permission.p_perm_id&quot;&gt;{{permission.p_perm_name}}&lt;/mat-option&gt;
+  &lt;/mat-select&gt;
+&lt;/mat-form-field&gt;
+</code></pre></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Índice</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Propiedades</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#dias">dias</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#focusedInput">focusedInput</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#input">input</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#inputs">inputs</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#params">params</a>
+                            </li>
+                            <li>
+                                <a href="#permissions">permissions</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Métodos</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#agInit">agInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#focusOnInputNextTick">focusOnInputNextTick</a>
+                            </li>
+                            <li>
+                                <a href="#getValue">getValue</a>
+                            </li>
+                            <li>
+                                <a href="#isPopup">isPopup</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterViewInit">ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                <a href="#onKeyDown">onKeyDown</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#preventDefaultAndPropagation">preventDefaultAndPropagation</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Métodos
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="agInit"></a>
+                    <span class="name">
+                        <b>
+                            agInit
+                        </b>
+                        <a href="#agInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>agInit(params: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="80"
+                            class="link-to-prism">src/app/components/utils/mat-permissions-picker-render/mat-permissions-picker-render.component.ts:80</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo se usa cuando se inicia el componente</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Tipo</td>
+                                    <td>Opcional</td>
+                                    <td>Descripción</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>params</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Objeto de tipo params obtenido desde componente padre</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <b>Ejemplo :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">agInit(params: any)</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Vacio</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="focusOnInputNextTick"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            focusOnInputNextTick
+                        </b>
+                        <a href="#focusOnInputNextTick"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>focusOnInputNextTick(input: <a href="https://angular.io/api/core/ViewContainerRef" target="_blank">ViewContainerRef</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="108"
+                            class="link-to-prism">src/app/components/utils/mat-permissions-picker-render/mat-permissions-picker-render.component.ts:108</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo se usa para obtener los focus sobre el modal</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Tipo</td>
+                                    <td>Opcional</td>
+                                    <td>Descripción</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>input</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/core/ViewContainerRef" target="_blank" >ViewContainerRef</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Objeto de tipo ViewContainerRef</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <b>Ejemplo :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">focusOnInputNextTick(input)</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Vacio</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getValue"></a>
+                    <span class="name">
+                        <b>
+                            getValue
+                        </b>
+                        <a href="#getValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getValue()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="119"
+                            class="link-to-prism">src/app/components/utils/mat-permissions-picker-render/mat-permissions-picker-render.component.ts:119</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo se usa para obtener el valor final</p>
+</div>
+
+                    <div>
+                        <b>Ejemplo :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">getValue()</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Valor seleccionado</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isPopup"></a>
+                    <span class="name">
+                        <b>
+                            isPopup
+                        </b>
+                        <a href="#isPopup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isPopup()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="132"
+                            class="link-to-prism">src/app/components/utils/mat-permissions-picker-render/mat-permissions-picker-render.component.ts:132</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo se usa para verificar popUp</p>
+</div>
+
+                    <div>
+                        <b>Ejemplo :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">isPopup()</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <b>
+                            ngAfterViewInit
+                        </b>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="97"
+                            class="link-to-prism">src/app/components/utils/mat-permissions-picker-render/mat-permissions-picker-render.component.ts:97</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo se usa cuando se inicia el componente</p>
+</div>
+
+                    <div>
+                        <b>Ejemplo :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">agInit(params: any)</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Vacio</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onKeyDown"></a>
+                    <span class="name">
+                        <b>
+                            onKeyDown
+                        </b>
+                        <a href="#onKeyDown"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onKeyDown(event)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="144"
+                            class="link-to-prism">src/app/components/utils/mat-permissions-picker-render/mat-permissions-picker-render.component.ts:144</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo se usa para verificar si se ha presionado una tecla</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                    <td>Descripción</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Objeto de tipo evento</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <b>Ejemplo :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">onKeyDown(event)</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="preventDefaultAndPropagation"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            preventDefaultAndPropagation
+                        </b>
+                        <a href="#preventDefaultAndPropagation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>preventDefaultAndPropagation(event)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="182"
+                            class="link-to-prism">src/app/components/utils/mat-permissions-picker-render/mat-permissions-picker-render.component.ts:182</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo se usa para evitar propagacion completa y cerradco de modal involuntario</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                    <td>Descripción</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Objeto de tipo evento</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <b>Ejemplo :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">preventDefaultAndPropagation(event)</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Propiedades
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dias"></a>
+                        <span class="name">
+                            <b>
+                            dias</b>
+                            <a href="#dias"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="50" class="link-to-prism">src/app/components/utils/mat-permissions-picker-render/mat-permissions-picker-render.component.ts:50</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para guardar seleccion</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="focusedInput"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            focusedInput</b>
+                            <a href="#focusedInput"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="65" class="link-to-prism">src/app/components/utils/mat-permissions-picker-render/mat-permissions-picker-render.component.ts:65</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para detectar si existe focus sobre el componente</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="input"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            input</b>
+                            <a href="#input"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://angular.io/api/core/ViewContainerRef" target="_blank" >ViewContainerRef</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decoradores : </b>
+                            <br />
+                            <code>
+                                @ViewChildren(&#x27;input&#x27;, {read: ViewContainerRef})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="55" class="link-to-prism">src/app/components/utils/mat-permissions-picker-render/mat-permissions-picker-render.component.ts:55</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para obtener la referencia de datos suministrados desde componente padre</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="inputs"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            inputs</b>
+                            <a href="#inputs"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>    <code>QueryList&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="60" class="link-to-prism">src/app/components/utils/mat-permissions-picker-render/mat-permissions-picker-render.component.ts:60</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para guardar entradas procesadas desde componente padre</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="params"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            params</b>
+                            <a href="#params"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="45" class="link-to-prism">src/app/components/utils/mat-permissions-picker-render/mat-permissions-picker-render.component.ts:45</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para guardar parametros</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="permissions"></a>
+                        <span class="name">
+                            <b>
+                            permissions</b>
+                            <a href="#permissions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Tipo : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Valor por defecto : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Definido en <a href="" data-line="70" class="link-to-prism">src/app/components/utils/mat-permissions-picker-render/mat-permissions-picker-render.component.ts:70</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable para guardar tipos de permisos</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  Component,
+  QueryList,
+  ViewChildren,
+  ViewContainerRef
+} from &quot;@angular/core&quot;;
+import { ICellEditorAngularComp } from &quot;ag-grid-angular&quot;;
+import * as moment from &quot;moment&quot;;
+
+/**
+ * Util de permisos
+ * Este componente es un picker renderizado para asignar permisos a un perfil
+ */
+
+@Component({
+  selector: &quot;input-cell&quot;,
+  template: &#x60;
+    &lt;mat-form-field appearance&#x3D;&quot;fill&quot;&gt;
+      &lt;input matInput style&#x3D;&quot;display:none&quot;&gt;
+      &lt;mat-label&gt;Perfiles&lt;/mat-label&gt;
+      &lt;mat-select [(ngModel)]&#x3D;&quot;dias&quot; ngDefaultControl multiple&gt;
+        &lt;mat-option *ngFor&#x3D;&quot;let permission of permissions&quot; [value]&#x3D;&quot;permission.p_perm_id&quot;&gt;{{permission.p_perm_name}}&lt;/mat-option&gt;
+      &lt;/mat-select&gt;
+    &lt;/mat-form-field&gt;
+  &#x60;,
+  styles: [
+    &#x60;
+      .container {
+        width: 350px;
+        height: 250px;
+      }
+    &#x60;
+  ]
+})
+
+
+
+
+export class MatPermissionsPickerRenderComponent implements ICellEditorAngularComp {
+  /**
+     * Variable para guardar parametros
+     * @type Array
+     */
+  private params: any;
+    /**
+     * Variable para guardar seleccion
+     * @type Array
+     */
+    dias;
+    /**
+     * Variable para obtener la referencia de datos suministrados desde componente padre
+     * @type ViewContainerRef
+     */
+    @ViewChildren(&quot;input&quot;, { read: ViewContainerRef })  public input: ViewContainerRef;
+    /**
+     * Variable para guardar entradas procesadas desde componente padre
+     * @type QueryList
+     */
+    public inputs: QueryList&lt;any&gt;;
+    /**
+     * Variable para detectar si existe focus sobre el componente
+     * @type number
+     */
+    private focusedInput: number &#x3D; 0;
+    /**
+     * Variable para guardar tipos de permisos
+     * @type Array
+     */
+    permissions&#x3D;[];
+  
+    /**
+    * Este metodo se usa cuando se inicia el componente
+    * @example
+    * agInit(params: any)
+    * @param {Object} params
+    * Objeto de tipo params obtenido desde componente padre
+    * @returns  {Void} Vacio
+    */
+    agInit(params: any): void {
+      
+      this.dias &#x3D; params.data.permissions
+      this.params &#x3D; params
+      this.permissions &#x3D; this.params.permissions().data
+      
+    }
+  
+    /**
+    * Este metodo se usa cuando se inicia el componente
+    * @example
+    * agInit(params: any)
+    * @param {Object} params
+    * Objeto de tipo params obtenido desde componente padre
+    * @returns  {Void} Vacio
+    */
+    // dont use afterGuiAttached for post gui events - hook into ngAfterViewInit instead for this
+    ngAfterViewInit() {
+      //this.focusOnInputNextTick(this.inputs.first);
+    }
+    /**
+    * Este metodo se usa para obtener los focus sobre el modal
+    * @example
+    * focusOnInputNextTick(input)
+    * @param {ViewContainerRef} input
+    * Objeto de tipo ViewContainerRef
+    * @returns  {Void} Vacio
+    */
+    private focusOnInputNextTick(input: ViewContainerRef) {
+      window.setTimeout(() &#x3D;&gt; {
+        input.element.nativeElement.focus();
+      }, 0);
+    }
+     /**
+    * Este metodo se usa para obtener el valor final
+    * @example
+    * getValue()
+    * @returns  {String} Valor seleccionado
+    */
+    getValue() {
+      
+
+      return this.dias;
+     
+      
+    }
+    /**
+    * Este metodo se usa para verificar popUp
+    * @example
+    * isPopup()
+    * @returns  {Bool} 
+    */
+    isPopup(): boolean {
+      return true;
+    }
+  
+    /**
+    * Este metodo se usa para verificar si se ha presionado una tecla
+    * @example
+    * onKeyDown(event)
+    * @param {ViewContainerRef} event
+    * Objeto de tipo evento
+    * @returns  {Bool} 
+    */
+    onKeyDown(event): void {
+      let key &#x3D; event.which || event.keyCode;
+      if (key &#x3D;&#x3D; 9) {
+        // tab
+        this.preventDefaultAndPropagation(event);
+  
+        // either move one input along, or cycle back to 0
+        this.focusedInput &#x3D;
+          this.focusedInput &#x3D;&#x3D;&#x3D; this.inputs.length - 1
+            ? 0
+            : this.focusedInput + 1;
+  
+        let focusedInput &#x3D; this.focusedInput;
+        let inputToFocusOn &#x3D; this.inputs.find((item: any, index: number) &#x3D;&gt; {
+          return index &#x3D;&#x3D;&#x3D; focusedInput;
+        });
+  
+        this.focusOnInputNextTick(inputToFocusOn);
+      } else if (key &#x3D;&#x3D; 13) {
+        // enter
+        // perform some validation on enter - in this example we assume all inputs are mandatory
+        // in a proper application you&#x27;d probably want to inform the user that an input is blank
+        this.inputs.forEach(input &#x3D;&gt; {
+          if (!input.element.nativeElement.value) {
+            this.preventDefaultAndPropagation(event);
+            this.focusOnInputNextTick(input);
+          }
+        });
+      }
+    }
+     /**
+    * Este metodo se usa para evitar propagacion completa y cerradco de modal involuntario
+    * @example
+    * preventDefaultAndPropagation(event)
+    * @param {ViewContainerRef} event
+    * Objeto de tipo evento
+    * @returns  {Bool} 
+    */
+    private preventDefaultAndPropagation(event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+}
+
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-styleData">
+            <pre class="line-numbers"><code class="language-scss">
+      .container {
+        width: 350px;
+        height: 250px;
+      }
+    
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Leyenda</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Elemento Html</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Componente</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Elemento Html con directiva</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><mat-form-field appearance="fill">  <input matInput style="display:none">  <mat-label>Perfiles</mat-label>  <mat-select [(ngModel)]="dias" ngDefaultControl multiple>    <mat-option *ngFor="let permission of permissions" [value]="permission.p_perm_id">{{permission.p_perm_name}}</mat-option>  </mat-select></mat-form-field></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BathroomsComponent', 'selector': 'app-bathrooms'},{'name': 'CommercialComponent', 'selector': 'app-commercial'},{'name': 'InitialViewComponent', 'selector': 'app-initial-view'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MatApprovedPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatContractPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatModulesPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatPermissionsPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatProfilesPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatServicesPickerRenderComponent', 'selector': 'input-cell'},{'name': 'MatStatusPickerRenderComponent', 'selector': 'input-cell'},{'name': 'ServicesComponent', 'selector': 'app-services'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'WastesComponent', 'selector': 'app-wastes'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'MatPermissionsPickerRenderComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'MatPermissionsPickerRenderComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
